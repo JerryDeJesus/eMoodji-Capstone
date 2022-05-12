@@ -7,7 +7,7 @@ users.get('/', async (req, res) => {
         const allUsers = await getAllUsers();
         res.status(200).json(allUsers);
     }catch(error){
-        res.status(500).json({error: "?"})
+        res.status(500).json({error: "server error"})
     }
 });
 

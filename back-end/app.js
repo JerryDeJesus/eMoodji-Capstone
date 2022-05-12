@@ -1,7 +1,7 @@
 const cors = require("cors");
 const express = require("express");
 const userController = require("./controllers/userController.js");
-// const entryController = require("./controllers/entryController.js");
+const entryController = require("./controllers/entryController.js");
 const app = express();
 app.use(cors());
 app.use(express.json()); 
@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 });
 
 app.use('/users', userController);
-// app.use('/entries', entryController);
+app.use('/entries', entryController);
 
 app.get("*", (req, res) => {
     res.status(404).send("Page not found");

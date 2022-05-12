@@ -13,9 +13,9 @@ CREATE TABLE users (
 
 CREATE TABLE entries (
     eid SERIAL PRIMARY KEY,
-    userId INTEGER REFERENCES users (uid)
+    userid INTEGER REFERENCES users (uid)
     ON DELETE CASCADE,
-    date TIMESTAMP NOT NULL,
+    date_created TIMESTAMP NOT NULL,
     mood TEXT NOT NULL,
     interest TEXT NOT NULL,
     activity TEXT NOT NULL
