@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
-export default function User({users}){
-    let { fname, lname, email, password, uid } = users;
+export default function User({user}){
+    let { fname, lname, email, password, uid } = user;
 
     return(
         <article className="User">
-            <Link >
+            <Link to={`/users/${uid}`}>
                 <div>
                     <h3>First name: {fname}</h3>
                     <h3>Last name: {lname}</h3>
