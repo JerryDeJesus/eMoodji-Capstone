@@ -5,7 +5,7 @@ import axios from "axios";
 const API = process.env.REACT_APP_API_URL;
 
 export default function EditEntry () {
-    let {eid} = useParams();
+    let {id} = useParams();
     const navigate = useNavigate();
     
     const [entry,setEntry] = useState({
@@ -16,13 +16,13 @@ export default function EditEntry () {
         activity: "",
     });
     
-    let {userid, date_created, mood, interest, activity} = entry;
+    let {date_created, mood, interest, activity} = entry;
     
     useEffect(()=> {
-        axios.get(`${API}/entries/${eid}`)
+        axios.get(`${API}/entries/${id}`)
             .then((res) => setEntry(res.data))
             .catch(error => console.log(error))
-    },[eid])
+    },[id])
 
     const handleText = (e) => {
         setEntry({...entry, [e.target.id]: e.target.value})
@@ -31,7 +31,7 @@ export default function EditEntry () {
     const handleEdit = (e) => {
         e.preventDefault();
 
-        axios.put(`${API}/entries/${eid}`, entry)
+        axios.put(`${API}/entries/${id}`, entry)
             .then((res) => navigate("/entries"))
             .catch(error => console.log(error))
     }
@@ -56,7 +56,7 @@ export default function EditEntry () {
                 <br />
 
                 <button type="submit">Edit Entry</button>
-                <Link to={`/entries/${eid}`}><button>Back</button></Link>
+                <Link to={`/entries/${id}`}><button>Back</button></Link>
             </form>
         </div>
     )

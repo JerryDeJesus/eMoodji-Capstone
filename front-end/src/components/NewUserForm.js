@@ -45,7 +45,7 @@ const handleSubmit = (e) => {
          .catch(error => console.log(error))
 };
 
-let { fname, lname, email, password , uid } = user;
+let { fname, lname, email, password } = user;
 
     return(
         <div id="new-form">

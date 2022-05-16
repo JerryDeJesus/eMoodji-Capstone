@@ -28,8 +28,8 @@ export default function App() {
           <Route path="*" element={<Four0Four />} /> */}
 
           <Route path="/entries" element={<ShowEntries />} />
-          <Route path="/entries/:eid" element={<ShowEntry />} />
-          <Route path="/entries/:eid/edit" element={<EditEntry />} />
+          <Route path="/entries/:id" element={<ShowEntry />} />
+          <Route path="/entries/:id/edit" element={<EditEntry />} />
           <Route path="/entries/new" element={<NewEntry />} />
 
           <Route path="/users" element = {<ShowUsers />} />

@@ -13,7 +13,7 @@ export default function UserDetails(){
     useEffect(() => {
         axios.get(`${API}/users/${id}`)
         .then((res) => {
-            if(res.data.uid){
+            if(res.data.id){
                 setUser(res.data);
             }else{
                 navigate(`/not-found`)
@@ -22,7 +22,7 @@ export default function UserDetails(){
         })
     }, [id, navigate]);
 
-    let { fname, lname, email, password, uid } = user;
+    let { fname, lname, email, password } = user;
 
     const handleDelete = () => {
         axios.delete(`${API}/users/${id}`)
@@ -38,11 +38,11 @@ export default function UserDetails(){
                     <h3>Last name: {lname}</h3>
                     <h3>Email: {email}</h3>
                     <h3>Password: {password}</h3>
-                    {/* <h3>User ID: {uid}</h3> */}
+                    {/* <h3>User ID: {id}</h3> */}
                 </div>
             
-            <button id="delete-button" onClick={handleDelete}>Delete Account</button>
-            <Link to={`/users/${uid}/edit`}><button>Edit User Information</button></Link>
+            <button onClick={handleDelete}>Delete Account</button>
+            <Link to={`/users/${id}/edit`}><button>Edit User Information</button></Link>
         </article>
     )
 }
