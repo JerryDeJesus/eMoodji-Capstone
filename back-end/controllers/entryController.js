@@ -1,8 +1,6 @@
 const express = require("express");
-
 const entries = express.Router({mergeParams: true});
-
-const {getAllEntries, getEntry, createEntry, deleteEntry, updateEntry} = require("../queries/entries.js");
+const { getAllEntries, getEntry, createEntry, deleteEntry, updateEntry} = require("../queries/entries.js");
 
 entries.get("/", async (req, res) => {
     try {
