@@ -15,8 +15,8 @@ export default function Users(){
             .catch((err) => console.log(err))
     }, [API]);
 
-    let displayUsers = user.map((user, uid) => {
-        return < User key = { uid } user = { user } />
+    let displayUsers = user.map((user, id) => {
+        return < User key = { id } user = { user } />
     });
 
     return(

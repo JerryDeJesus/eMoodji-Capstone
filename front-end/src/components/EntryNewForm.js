@@ -14,7 +14,7 @@ export default function EntryNewForm (){
         interest: "",
         activity: "",
     });
-    let {userid, date_created, mood, interest, activity} = entry;
+    let {date_created, mood, interest, activity} = entry;
     
     const handleText = (e) => {
         setEntry({...entry, [e.target.id]: e.target.value})

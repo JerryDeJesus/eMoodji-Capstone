@@ -53,7 +53,7 @@ const handleEdit = (e) => {
         .catch(error => console.log(error))
 };
 
-let { fname, lname, email, password , uid } = user;
+let { fname, lname, email, password } = user;
 
     return(
         <div id="edit-form">
@@ -105,7 +105,7 @@ let { fname, lname, email, password , uid } = user;
                 <br/>
 
                 <br/>
-                <Link to={`/users/${uid}`}><button>Back</button></Link>
+                <Link to={`/users/${id}`}><button>Back</button></Link>
                 
                 <button type="submit">Update User </button>
                 </form>
