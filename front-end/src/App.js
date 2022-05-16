@@ -9,6 +9,11 @@ import Home from "./pages/Home";
 
 import NavBar from "./components/NavBar";
 
+import ShowEntries from "./pages/ShowEntries.js";
+import ShowEntry from "./pages/ShowEntry.js";
+import EditEntry from "./pages/EditEntry.js";
+import NewEntry from "./pages/NewEntry.js";
+
 export default function App() {
   return(
     <div>
@@ -21,6 +26,12 @@ export default function App() {
           <Route path="/:id" element={<Show/>} />
           <Route path="/:id/edit" element={<Edit />} />
           <Route path="*" element={<Four0Four />} /> */}
+
+          <Route path="/entries" element={<ShowEntries />} />
+          <Route path="/entries/:eid" element={<ShowEntry />} />
+          <Route path="/entries/:eid/edit" element={<EditEntry />} />
+          <Route path="/entries/new" element={<NewEntry />} />
+
         </Routes>
       </main>
       </Router>
