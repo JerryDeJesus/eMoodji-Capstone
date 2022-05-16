@@ -61,7 +61,7 @@ let { fname, lname, email, password , uid } = user;
                     
                 <label htmlFor = "fname">First Name</label>
                 <input 
-                    name = "fname" 
+                    id = "fname" 
                     value = {fname} 
                     type = "text" 
                     onChange = {handleTextChange} 
@@ -73,7 +73,7 @@ let { fname, lname, email, password , uid } = user;
                 
                 <label htmlFor = "lname">Last Name</label>
                 <input 
-                    name = "lname"
+                    id = "lname"
                     value = {lname} 
                     type = "text" 
                     onChange = {handleTextChange} 
@@ -84,7 +84,7 @@ let { fname, lname, email, password , uid } = user;
 
                 <label htmlFor = "lname">Email</label>
                 <input 
-                    name = "email"
+                    id = "email"
                     value = {email} 
                     type = "text" 
                     onChange = {handleTextChange} 
@@ -95,7 +95,7 @@ let { fname, lname, email, password , uid } = user;
 
                 <label htmlFor = "lname">Password</label>
                 <input 
-                    name = "password"
+                    id = "password"
                     value = {password} 
                     type = "password" 
                     onChange = {handleTextChange} 
