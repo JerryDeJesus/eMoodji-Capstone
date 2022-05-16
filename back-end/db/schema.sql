@@ -20,3 +20,4 @@ CREATE TABLE entries (
     interest TEXT NOT NULL,
     activity TEXT NOT NULL
 );
+-- should be id not eid or uid

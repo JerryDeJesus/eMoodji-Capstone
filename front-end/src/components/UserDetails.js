@@ -8,12 +8,18 @@ export default function UserDetails(){
     const [user, setUser] = useState([]);
     let { id } = useParams();
     let navigate = useNavigate();
+    // (error) => navigate(`/not-found`)
 
     useEffect(() => {
         axios.get(`${API}/users/${id}`)
-            .then((res) => setUser(res.data),
-            (error) => navigate(`/not-found`)
-            );
+        .then((res) => {
+            if(res.data.uid){
+                setUser(res.data);
+            }else{
+                navigate(`/not-found`)
+                // error handling revisit
+            }
+        })
     }, [id, navigate]);
 
     let { fname, lname, email, password, uid } = user;
