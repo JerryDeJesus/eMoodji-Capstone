@@ -20,7 +20,7 @@ export default function App() {
           <Route path="/users" element = {<ShowUsers />} />
           <Route path="/users/:id" element = {<ShowUserDetails />} />
           <Route path="/createaccount" element={<NewUser />} />
-          <Route path="/:id/edit" element={<EditUser />} />
+          <Route path="/users/:id/edit" element={<EditUser />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>
       </main>

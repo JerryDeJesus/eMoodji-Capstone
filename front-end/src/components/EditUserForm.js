@@ -14,7 +14,7 @@ export default function EditUserForm(){
         email: "",
         password: ""
     });
-    
+
     const navigate = useNavigate();
 
     const validateEmail = (email) => {
@@ -53,18 +53,11 @@ const handleEdit = (e) => {
         .catch(error => console.log(error))
 };
 
-const handleSubmit = (e) => {
-    e.preventDefault();
-    axios.post(`${API}/users`, user)
-         .then(res => navigate("/users"))
-         .catch(error => console.log(error))
-};
-
 let { fname, lname, email, password , uid } = user;
 
     return(
         <div id="edit-form">
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleEdit}>
                     
                 <label htmlFor = "fname">First Name</label>
                 <input 
@@ -112,6 +105,8 @@ let { fname, lname, email, password , uid } = user;
                 <br/>
 
                 <br/>
+                <Link to={`/users/${uid}`}>Back</Link>
+                
                 <button type="submit">Submit</button>
                 </form>
             </div>
