@@ -9,9 +9,9 @@ const getAllEntries = async () => {
     }
 };
 
-const getEntry = async (eid) => {
+const getEntry = async (id) => {
     try {
-        const oneEntry = await db.one("SELECT * FROM entries WHERE eid = $1", eid);
+        const oneEntry = await db.one("SELECT * FROM entries WHERE id = $1", id);
         return oneEntry;
     } catch (error) {
         return error;
@@ -29,19 +29,19 @@ const createEntry = async (entry) => {
     }
 };
 
-const deleteEntry = async (eid) => {
+const deleteEntry = async (id) => {
     try {
-        const deletedEntry = await db.one("DELETE FROM entries WHERE eid = $1 RETURNING *", eid);
+        const deletedEntry = await db.one("DELETE FROM entries WHERE id = $1 RETURNING *", id);
         return deletedEntry;
     } catch (error) {
         return error;
     }
 };
 
-const updateEntry = async (eid, entry) => {
+const updateEntry = async (id, entry) => {
     try {
-        const updatedEntry = await db.one("UPDATE entries SET userid = $1, date_created = $2, mood = $3, interest = $4, activity = $5 WHERE eid = $6 RETURNING * ", 
-        [entry.userid, entry.date_created, entry.mood, entry.interest, entry.activity, eid]
+        const updatedEntry = await db.one("UPDATE entries SET userid = $1, date_created = $2, mood = $3, interest = $4, activity = $5 WHERE id = $6 RETURNING * ", 
+        [entry.userid, entry.date_created, entry.mood, entry.interest, entry.activity, id]
         );
         return updatedEntry;
     } catch (error) {

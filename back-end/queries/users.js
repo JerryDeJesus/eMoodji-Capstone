@@ -9,9 +9,9 @@ const getAllUsers = async () => {
     }
 };
 
-const getUser = async (uid) => {
+const getUser = async (id) => {
     try {
-        const user = await db.one("SELECT * FROM users WHERE uid=$1", uid)
+        const user = await db.one("SELECT * FROM users WHERE id=$1", id)
         return user;        
     } catch (error) {
         return error;
@@ -29,20 +29,20 @@ const createUser = async (user) =>{
     }
 };
 
-const deleteUser = async (uid) => {
+const deleteUser = async (id) => {
     try {
-        const deletedUser = await db.one("DELETE FROM users WHERE uid=$1 RETURNING *", uid);
+        const deletedUser = await db.one("DELETE FROM users WHERE id=$1 RETURNING *", id);
         return deletedUser;
     } catch (error) {
         return error;
     }
 };
 
-const updateUser = async (uid, user) => {
+const updateUser = async (id, user) => {
     try {
         const updatedUser = await db.one(
-            "UPDATE users SET fname=$1, lname=$2, email=$3, password=$4 WHERE uid=$5 RETURNING *",
-            [user.fname, user.lname, user.email, user.password, uid]
+            "UPDATE users SET fname=$1, lname=$2, email=$3, password=$4 WHERE id=$5 RETURNING *",
+            [user.fname, user.lname, user.email, user.password, id]
         );
         return updatedUser;
     } catch (error) {
