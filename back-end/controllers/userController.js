@@ -13,10 +13,10 @@ users.get('/', async (req, res) => {
     }
 });
 
-users.get("/:uid", async (req,res) => {
+users.get("/:id", async (req,res) => {
     try {
-        const {uid} = req.params;
-        const user = await getUser(uid);
+        const {id} = req.params;
+        const user = await getUser(id);
         res.status(200).json(user);
     } catch (error) {
         res.status(404).json({error: "user not found"})
@@ -33,21 +33,21 @@ users.post("/", async (req,res) => {
     }
 });
 
-users.delete("/:uid", async( req, res) => {
+users.delete("/:id", async( req, res) => {
     try {
-        const {uid} = req.params;
-        const deletedUser = await deleteUser(uid);
+        const {id} = req.params;
+        const deletedUser = await deleteUser(id);
         res.status(200).json(deletedUser);
     } catch (error) {
         res.status(404).json({error: "cannot delete user"})
     }
 });
 
-users.put("/:uid", async (req, res) => {
+users.put("/:id", async (req, res) => {
     try {
-        const {uid} = req.params;
+        const {id} = req.params;
         const {body} = req;
-        const updatedUser = await updateUser(uid, body);
+        const updatedUser = await updateUser(id, body);
         res.status(200).json(updatedUser);
     } catch (error) {
         res.status(404).json({error: "cannot update user"})

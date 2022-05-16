@@ -4,7 +4,7 @@ CREATE DATABASE capstone_dev;
 \c capstone_dev; 
 
 CREATE TABLE users (
-    uid SERIAL PRIMARY KEY,
+    id SERIAL PRIMARY KEY,
     fname TEXT NOT NULL, 
     lname TEXT NOT NULL,
     email TEXT NOT NULL,
@@ -12,12 +12,12 @@ CREATE TABLE users (
 );
 
 CREATE TABLE entries (
-    eid SERIAL PRIMARY KEY,
-    userid INTEGER REFERENCES users (uid)
+    id SERIAL PRIMARY KEY,
+    userid INTEGER REFERENCES users (id)
     ON DELETE CASCADE,
     date_created TIMESTAMP NOT NULL,
     mood TEXT NOT NULL,
     interest TEXT NOT NULL,
     activity TEXT NOT NULL
 );
--- should be id not eid or uid
+-- should be id not id or id
