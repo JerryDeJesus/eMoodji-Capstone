@@ -1,6 +1,8 @@
 const express = require("express");
 const users = express.Router({ mergeParams: true });
 const { getAllUsers, getUser, createUser, deleteUser, updateUser } = require('../queries/users');
+const userEntriesController = require("./userEntriesController");
+users.use("/:userid/entries", userEntriesController);
 
 users.get('/', async (req, res) => {
     try{
@@ -12,7 +14,6 @@ users.get('/', async (req, res) => {
 });
 
 users.get("/:uid", async (req,res) => {
-
     try {
         const {uid} = req.params;
         const user = await getUser(uid);
