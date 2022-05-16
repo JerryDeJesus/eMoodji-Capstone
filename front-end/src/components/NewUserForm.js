@@ -15,27 +15,27 @@ export default function NewUserForm(){
     
     const navigate = useNavigate();
 
-    const validateEmail = (email) => {
-        return String(email)
-          .toLowerCase()
-          .match(
-            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-          );
-      }
+    // const validateEmail = (email) => {
+    //     return String(email)
+    //       .toLowerCase()
+    //       .match(
+    //         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+    //       );
+    //   }
 
 const handleTextChange = (e) => {
     //email validation suggestion by Greg
-    if(e.target.id === "email" ){
-        let results = validateEmail(e.target.value);
-        if(results.length === 0){
-             console.log("invalid");
-            return
-        }else{
-            console.log("valid");
-        }
-    }
+    // if(e.target.id === "email" ){
+    //     let results = validateEmail(e.target.value);
+    //     if(results.length === 0){
+    //          console.log("invalid");
+    //         return
+    //     }else{
+    //         console.log("valid");
+    //     }
+    // }
 
-    setUser({...user, [e.target.name]: e.target.value})
+    setUser({...user, [e.target.id]: e.target.value})
 };
 
 const handleSubmit = (e) => {
@@ -74,7 +74,7 @@ let { fname, lname, email, password } = user;
                 />
                 <br/>
 
-                <label htmlFor = "lname">Email</label>
+                <label htmlFor = "email">Email</label>
                 <input 
                     id = "email"
                     value = {email} 
@@ -85,10 +85,10 @@ let { fname, lname, email, password } = user;
                 />
                 <br/>
 
-                <label htmlFor = "lname">Password</label>
+                <label htmlFor = "password">Password</label>
                 <input 
-                    name = "password"
-                    id = {password} 
+                    id = "password"
+                    value = {password} 
                     type = "password" 
                     onChange = {handleTextChange} 
                     placeholder = "Password"
