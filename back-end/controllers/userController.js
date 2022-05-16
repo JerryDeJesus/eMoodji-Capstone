@@ -12,6 +12,7 @@ users.get('/', async (req, res) => {
 });
 
 users.get("/:uid", async (req,res) => {
+
     try {
         const {uid} = req.params;
         const user = await getUser(uid);
