@@ -105,9 +105,9 @@ let { fname, lname, email, password , uid } = user;
                 <br/>
 
                 <br/>
-                <Link to={`/users/${uid}`}>Back</Link>
+                <Link to={`/users/${uid}`}><button>Back</button></Link>
                 
-                <button type="submit">Submit</button>
+                <button type="submit">Update User </button>
                 </form>
             </div>
     )
