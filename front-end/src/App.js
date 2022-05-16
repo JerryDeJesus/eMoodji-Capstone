@@ -9,6 +9,11 @@ import FourOFour from "./pages/FourOFour";
 
 import NavBar from "./components/NavBar";
 
+import ShowEntries from "./pages/ShowEntries.js";
+import ShowEntry from "./pages/ShowEntry.js";
+import EditEntry from "./pages/EditEntry.js";
+import NewEntry from "./pages/NewEntry.js";
+
 export default function App() {
   return(
     <div>
@@ -17,6 +22,16 @@ export default function App() {
       <main>
         <Routes>
           <Route path="/" element={<Home />} />
+          {/* <Route path="/create" element={<Create />} />
+          <Route path="/:id" element={<Show/>} />
+          <Route path="/:id/edit" element={<Edit />} />
+          <Route path="*" element={<Four0Four />} /> */}
+
+          <Route path="/entries" element={<ShowEntries />} />
+          <Route path="/entries/:eid" element={<ShowEntry />} />
+          <Route path="/entries/:eid/edit" element={<EditEntry />} />
+          <Route path="/entries/new" element={<NewEntry />} />
+
           <Route path="/users" element = {<ShowUsers />} />
           <Route path="/users/:id" element = {<ShowUserDetails />} />
           <Route path="/createaccount" element={<NewUser />} />
