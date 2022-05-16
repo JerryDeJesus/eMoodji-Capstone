@@ -97,7 +97,7 @@ let { fname, lname, email, password , uid } = user;
                 <br/>
 
                 <br/>
-                <button type="submit">Submit</button>
+                <button type="submit">Create Account</button>
                 </form>
             </div>
     )
