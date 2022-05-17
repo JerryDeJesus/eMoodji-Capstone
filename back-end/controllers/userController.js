@@ -24,7 +24,6 @@ users.get("/:id", async (req,res) => {
 
 users.get("/:id/entries", async (req,res) => {
     const  { id } = req.params;
-    // console.log(id)
     try{
         const allUserEntries = await getUserEntries(id);
         res.status(200).json(allUserEntries);
