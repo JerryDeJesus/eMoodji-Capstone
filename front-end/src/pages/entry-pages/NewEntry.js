@@ -1,4 +1,4 @@
-import EntryNewForm from "../components/EntryNewForm.js";
+import EntryNewForm from "../../components/entry-components/EntryNewForm.js";
 
 export default function NewEntry (){
     return(

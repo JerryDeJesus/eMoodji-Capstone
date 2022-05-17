@@ -1,4 +1,4 @@
-import Entries from "../components/Entries.js";
+import Entries from "../../components/entry-components/Entries.js";
 
 export default function ShowEntries (){
     return(

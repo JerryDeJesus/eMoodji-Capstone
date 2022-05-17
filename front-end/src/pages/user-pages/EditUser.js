@@ -1,4 +1,4 @@
-import EditUserForm from  "../components/EditUserForm.js";
+import EditUserForm from  "../../components/user-components/EditUserForm.js";
 
 export default function EditUser(){
     return(
