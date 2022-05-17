@@ -1,4 +1,4 @@
-import EntryDetails from "../components/entry-components/EntryDetails.js";
+import EntryDetails from "../../components/entry-components/EntryDetails.js";
 
 export default function ShowEntry (){
     return(

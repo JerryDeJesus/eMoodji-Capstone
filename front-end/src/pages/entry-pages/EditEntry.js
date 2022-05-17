@@ -1,4 +1,4 @@
-import EntryEditForm from "../components/entry-components/EntryEditForm.js";
+import EntryEditForm from "../../components/entry-components/EntryEditForm.js";
 
 export default function EditEntry() {
     return(
@@ -7,4 +7,4 @@ export default function EditEntry() {
             <EntryEditForm />
         </div>
     )
-}
+};

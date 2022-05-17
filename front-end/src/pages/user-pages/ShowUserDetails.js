@@ -1,4 +1,4 @@
-import UserDetails from "../components/user-components/UserDetails";
+import UserDetails from "../../components/user-components/UserDetails";
 
 export default function ShowUserDetails(){
     return(

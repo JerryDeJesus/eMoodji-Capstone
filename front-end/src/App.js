@@ -2,17 +2,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
-import ShowUsers from "./pages/ShowUsers";
-import ShowUserDetails from './pages/ShowUserDetails';
-import EditUser from "./pages/EditUser";
-import NewUser from "./pages/NewUser";
+import ShowUsers from "./pages/user-pages/ShowUsers";
+import ShowUserDetails from './pages/user-pages/ShowUserDetails';
+import EditUser from "./pages/user-pages/EditUser";
+import NewUser from "./pages/user-pages/NewUser";
 import FourOFour from "./pages/FourOFour";
 
-import ShowEntries from "./pages/ShowEntries.js";
-import ShowEntry from "./pages/ShowEntry.js";
-import EditEntry from "./pages/EditEntry.js";
+import ShowEntries from "./pages/entry-pages/ShowEntries.js";
+import ShowEntry from "./pages/entry-pages/ShowEntry.js";
+import EditEntry from "./pages/entry-pages/EditEntry.js";
 import ShowUserEntries from "./pages/ShowUserEntries.js"
-import NewEntry from "./pages/NewEntry.js";
+import NewEntry from "./pages/entry-pages//NewEntry.js";
 
 export default function App() {
   return(
