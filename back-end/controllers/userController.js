@@ -1,8 +1,7 @@
 const express = require("express");
 const users = express.Router({ mergeParams: true });
 const { getAllUsers, getUser, createUser, deleteUser, updateUser } = require('../queries/users');
-const userEntriesController = require("./userEntriesController");
-users.use("/:userid/entries", userEntriesController);
+const {getUserEntries} = require("../queries/entries.js");
 
 users.get('/', async (req, res) => {
     try{
@@ -22,6 +21,17 @@ users.get("/:id", async (req,res) => {
         res.status(404).json({error: "user not found"})
     }
 });
+
+users.get("/:id/entries", async (req,res) => {
+    const  { id } = req.params;
+    // console.log(id)
+    try{
+        const allUserEntries = await getUserEntries(id);
+        res.status(200).json(allUserEntries);
+    }catch(error){
+        res.status(500).json({error: 'user entries not found'});
+    }
+})
 
 users.post("/", async (req,res) => {
     try {
