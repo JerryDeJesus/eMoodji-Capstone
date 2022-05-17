@@ -1,4 +1,4 @@
-import Users from  "../components/Users.js";
+import Users from  "../components/user-components/Users.js";
 
 export default function ShowUsers(){
     return(

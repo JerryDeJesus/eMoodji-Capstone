@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useState, useEffect } from "react";
-import User from "./User";
+import User from "./User.js";
 
 export default function Users(){
     const [user, setUser] = useState([]);
