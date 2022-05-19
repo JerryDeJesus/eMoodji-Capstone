@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
+import Footer from './components/Footer';
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import ShowUsers from "./pages/user-pages/ShowUsers";
@@ -13,6 +14,8 @@ import ShowEntry from "./pages/entry-pages/ShowEntry.js";
 import EditEntry from "./pages/entry-pages/EditEntry.js";
 import ShowUserEntries from "./pages/ShowUserEntries.js"
 import NewEntry from "./pages/entry-pages//NewEntry.js";
+
+import ShowWizard from './pages/ShowWizard';
 
 export default function App() {
   return(
@@ -34,8 +37,11 @@ export default function App() {
           <Route path="/users/:id/entries" element={<ShowUserEntries />} />
           <Route path="/users/:id/edit" element={<EditUser />} />
           <Route path="*" element={<FourOFour />} />
+
+          <Route path ="wizard" element={<ShowWizard />} />
         </Routes>
       </main>
+      <Footer />
       </Router>
     </div>
   )

@@ -22,9 +22,9 @@ entries.get("/:id", async (req, res) => {
 });
 
 entries.post("/", async (req, res) => {
-    console.log(req.body);
     try {
         const entry = await createEntry(req.body);
+        console.log(entry);
         res.status(200).json(entry);
     } catch(error) {
         res.status(500).json({error: "entry creation error"})

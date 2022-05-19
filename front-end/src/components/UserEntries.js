@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, Link, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -22,7 +22,7 @@ export default function UserEntries (){
         })
     }, [id, navigate]);
 
-    let displayUserEntries = userEntries.map((entry, index)=>{
+    let displayUserEntries = userEntries.map((entry)=>{
         return(
             <div>
                 <h3>Date Created: {entry.date_created}</h3>
