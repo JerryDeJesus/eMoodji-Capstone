@@ -6,6 +6,7 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function StepSubmit(props) {
     const {entry} = props;
+    console.log(entry);
     const navigate = useNavigate();
     const listItems = Object.entries(entry).map(([key, value]) => {
         return (

@@ -7,6 +7,7 @@ import StepSubmit from "./StepSubmit.js";
 
 export default function StepForm() {
     const [currentStep, setCurrentStep] = useState(1);
+    
     const [entry, setEntry] = useState({
         date_created: "",
         mood: "",

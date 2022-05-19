@@ -14,7 +14,7 @@ export default function Step1(props) {
             <div>
                 <h2>Hi, There!</h2>
                 <label htmlFor="mood">What's your emoodji for this moment?</label>
-                <input type="text" id = "mood" value = {entry.mood ?? ""} onChange = {handleText} />
+                <input type="text" id = "mood" value = {entry.mood} onChange = {handleText} />
                 <br />
                 <button type = "button" onClick={next}>Next</button>
             </div>

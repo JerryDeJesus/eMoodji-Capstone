@@ -19,9 +19,11 @@ const getEntry = async (id) => {
 };
 
 const createEntry = async (entry) => {
+    let date_created = new Date(Date.now());
+    console.log(date_created);
     try {
         const newEntry = await db.one("INSERT INTO entries (userid, date_created, mood, interest, activity) VALUES ($1, $2, $3, $4, $5) RETURNING *",
-        [entry.userid, entry.date_created, entry.mood, entry.interest, entry.activity]    
+        [entry.userid, date_created, entry.mood, entry.interest, entry.activity]    
         );
         return newEntry
     } catch (error) {
