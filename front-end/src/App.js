@@ -15,6 +15,8 @@ import EditEntry from "./pages/entry-pages/EditEntry.js";
 import ShowUserEntries from "./pages/ShowUserEntries.js"
 import NewEntry from "./pages/entry-pages//NewEntry.js";
 
+import ShowWizard from './pages/ShowWizard';
+
 export default function App() {
   return(
     <div>
@@ -35,6 +37,8 @@ export default function App() {
           <Route path="/users/:id/entries" element={<ShowUserEntries />} />
           <Route path="/users/:id/edit" element={<EditUser />} />
           <Route path="*" element={<FourOFour />} />
+
+          <Route path ="wizard" element={<ShowWizard />} />
         </Routes>
       </main>
       <Footer />
