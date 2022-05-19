@@ -10,3 +10,4 @@ INSERT INTO entries (userid, date_created, mood, interest, activity) VALUES
 (2, '02/14/2022 14:14:00', 'sad', 'social, animals', 'hug therapy'),
 (3, '06/10/2022 18:00:00', 'excited', 'social, exercise','zumba'),
 (2, '03/21/2022 00:00:00', 'happy', 'social, food, dance', 'karaoke');
+
