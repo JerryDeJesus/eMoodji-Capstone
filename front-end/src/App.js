@@ -14,10 +14,13 @@ import ShowEntry from "./pages/entry-pages/ShowEntry.js";
 import EditEntry from "./pages/entry-pages/EditEntry.js";
 import ShowUserEntries from "./pages/ShowUserEntries.js"
 import NewEntry from "./pages/entry-pages//NewEntry.js";
+import ShowActivities from './pages/ShowActivities';
 
 import ShowWizard from './pages/ShowWizard';
 
 export default function App() {
+  //state for entry here, cannot pass laterally
+
   return(
     <div>
       <Router>
@@ -37,8 +40,8 @@ export default function App() {
           <Route path="/users/:id/entries" element={<ShowUserEntries />} />
           <Route path="/users/:id/edit" element={<EditUser />} />
           <Route path="*" element={<FourOFour />} />
-
-          <Route path ="wizard" element={<ShowWizard />} />
+          <Route path="/showactivities" element={<ShowActivities/>} />
+          <Route path ="/wizard" element={<ShowWizard />} />
         </Routes>
       </main>
       <Footer />
