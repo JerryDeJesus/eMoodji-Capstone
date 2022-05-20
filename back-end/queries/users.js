@@ -1,8 +1,18 @@
 const db = require("../db/dbConfig.js");
 
+//used for the sign in
+const userByEmail = async (email) => {
+    try {
+        const user = await db.one("SELECT * FROM users WHERE email=$1", email);
+        return user;
+    } catch (error) {
+        console.log( "Invalid signin attempt");
+    }
+};
+
 const getAllUsers = async () => {
     try {
-        const allUsers = await db.any("SELECT * FROM users")
+        const allUsers = await db.any("SELECT * FROM users");
         return allUsers;
     } catch (error) {
         return error;
@@ -11,7 +21,7 @@ const getAllUsers = async () => {
 
 const getUser = async (id) => {
     try {
-        const user = await db.one("SELECT * FROM users WHERE id=$1", id)
+        const user = await db.one("SELECT * FROM users WHERE id=$1", id);
         return user;        
     } catch (error) {
         return error;
@@ -57,4 +67,5 @@ module.exports = {
     createUser,
     deleteUser,
     updateUser,
+    userByEmail,
 }
