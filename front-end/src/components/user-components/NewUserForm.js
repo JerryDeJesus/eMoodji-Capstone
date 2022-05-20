@@ -78,7 +78,7 @@ let { fname, lname, email, password } = user;
                 <input 
                     id = "email"
                     value = {email} 
-                    type = "text" 
+                    type = "email" 
                     onChange = {handleTextChange} 
                     placeholder = "Email"
                     required
