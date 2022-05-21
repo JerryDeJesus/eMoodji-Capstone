@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Step2(props) {
     const {entry, handleText, next, back} = props;
+    
     return(
         <form>
             <div>
