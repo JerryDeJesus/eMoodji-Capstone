@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import data from "../data/";
+import logo from "../data/eMoodji_logo_cropped.png";
 
 export default function NavBar () {
     let navigate = useNavigate();
@@ -12,9 +12,10 @@ export default function NavBar () {
 
 
     return (
-        <nav><Link to="/"><img src={data} alt="Logo"/></Link> 
+        <nav id = "NavBar">
+            <Link to="/"><img id="logo" src={logo} alt="Logo" style={{'width': "200px"}}/></Link> 
             <Link to="/"><button>eMoodji</button></Link>
-           <Link to="/"><button onClick={handleLogOut}>Log out</button></Link>
+            <Link to="/"><button onClick={handleLogOut}>Log out</button></Link>
         </nav>
     
         
