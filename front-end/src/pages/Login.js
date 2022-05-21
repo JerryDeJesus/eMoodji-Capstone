@@ -31,7 +31,7 @@ export default function Login(){
             }
          )
 
-         .catch(error => console.log("invalid login credentials"))
+         .catch(error => alert("invalid login credentials"))
     };
 
     
