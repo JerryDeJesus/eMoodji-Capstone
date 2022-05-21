@@ -13,7 +13,7 @@ export default function UserEntries (){
     useEffect(()=>{
         axios.get(`${API}/users/${id}/entries`)
         .then((res)=> {
-            console.log(res.data)
+            // console.log(res.data)
             if(res.data){
                 setUserEntries(res.data)
             } else {
@@ -22,9 +22,9 @@ export default function UserEntries (){
         })
     }, [id, navigate]);
 
-    let displayUserEntries = userEntries.map((entry)=>{
+    let displayUserEntries = userEntries.map((entry, index)=>{
         return(
-            <div>
+            <div key = {index} >
                 <h3>Date Created: {entry.date_created}</h3>
                 <h3>Mood: {entry.mood}</h3>
                 <h3>Interest: {entry.interest}</h3>
