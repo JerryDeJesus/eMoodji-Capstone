@@ -22,7 +22,7 @@ export default function StepForm() {
     const back = () => setCurrentStep(currentStep - 1);
 
     switch (currentStep) {
-        case 1: return <Step1 entry = {entry} handleText = {handleText} next = {next} />;
+        case 1: return <Step1 entry = {entry} setEntry = {setEntry} handleText = {handleText} next = {next} />;
         case 2: return <Step2 entry = {entry} handleText = {handleText} next = {next} back = {back} />;
         case 3: return <Step3 entry = {entry} handleText = {handleText} next = {next} back = {back} />;
         case 4: return <Step4 entry = {entry} handleText = {handleText} next = {next} back = {back} />;

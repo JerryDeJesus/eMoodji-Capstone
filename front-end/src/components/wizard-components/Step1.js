@@ -1,12 +1,46 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
+const ACCESS_KEY = process.env.REACT_APP_API_KEY;
+
 export default function Step1(props) {
-    const {entry, handleText, next} = props;
+    const {entry, setEntry, next} = props;
+    const [emojis, setEmojis] = useState([]);
+    const [moodInput, setMoodInput] = useState("");
 
     useEffect (() => {
-        axios("https://emoji-api.com/emojis?access_key=744076d35cc355d8260e77156e70486fed3d0694")
-            .then(res => console.log(res.data))
+        axios(`https://emoji-api.com/emojis?access_key=${ACCESS_KEY}`)
+            .then(res => {
+                console.log(res.data)
+                setEmojis(res.data);
+            })
+            .catch(error => console.log(error))
+        
+    }, []);
+
+    const handleSelectEmoji = (emoji) => {
+        setEntry({...entry, mood : emoji.character});
+        console.log(emoji);
+    }
+
+    const handleMoodInput = (e) => {
+        setMoodInput(e.target.value);
+    }
+
+    const filteredEmojis = emojis.filter((el, i) => {
+        if(i > 10 && moodInput.length === 0) {
+            return false;
+        } else {
+            return el.unicodeName.includes(moodInput);
+        }
+    })
+
+    const renderedFilteredEmojis = filteredEmojis.map((el, i) => {
+        return(
+            <li key = {i} onClick = {()=>handleSelectEmoji(el)}>
+                {el.character}
+            </li>
+        )
     })
 
     return(
@@ -14,8 +48,9 @@ export default function Step1(props) {
             <div>
                 <h2>Hi, There!</h2>
                 <label htmlFor="mood">What's your emoodji for this moment?</label>
-                <input type="text" id = "mood" value = {entry.mood} onChange = {handleText} />
+                <input type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} />
                 <br />
+                {renderedFilteredEmojis}
                 <button type = "button" onClick={next}>Next</button>
             </div>
         </form>

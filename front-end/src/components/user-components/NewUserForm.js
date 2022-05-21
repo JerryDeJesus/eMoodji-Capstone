@@ -13,7 +13,7 @@ export default function NewUserForm(){
         password: ""
     });
     
-    const navigate = useNavigate();
+    let navigate = useNavigate();
 
     // const validateEmail = (email) => {
     //     return String(email)
@@ -38,10 +38,22 @@ const handleTextChange = (e) => {
     setUser({...user, [e.target.id]: e.target.value})
 };
 
+let userSignUp = {};
+
 const handleSubmit = (e) => {
     e.preventDefault();
+    
     axios.post(`${API}/users`, user)
-         .then(res => navigate("/users"))
+         .then(res => {
+            //  if(!res.data.id)){
+                //  error here
+            // }
+            console.log(res);
+            userSignUp = res.data.id;
+            localStorage.setItem("user_id", userSignUp);
+            console.log(localStorage.getItem("user_id"));
+            navigate("/");
+        })
          .catch(error => console.log(error))
 };
 
