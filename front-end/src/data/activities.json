@@ -1,5 +1,5 @@
 {
-  "artTherapy":[
+  "art":[
                  {"name" : "The Art Therapy Project:Affected by 9/11", "address" : "132 West 21st St. New York, NY 10011", "description" : "The Art Therapy project is a nonprofit mental health organization providing free group art therapy. The effects if September 11 2001 are still being felt by thousands of local residents, area workers, rescue workers and many others", "phone" : "212 590 2755", "email" : "info@thearttherapyproject.org"},
                  {"name" : "The Art Therapy Project:Caregiver", "address" : "132 West 21st St. new York, nY 10011", "description" :  "Secondary, or vicarious truma, is often seen when caring for others. It can take a toll on emotional wellness and increase the need for self-care practies", "phone" : "212 590 2755", "email" : "info@thearttherapyproject.org"},
                  {"name" : "The Art Therapy Project:Domestic & Intimate Partner Violence", "address" : "132 West 21st St. new York, nY 10011", "description" :  "Breaking the the cycle of dominance, control and violence can have long lasting on the mental and physical health of those who have managed to get out of these relationships", "phone" : "212 590 2755", "email" : "info@thearttherapyproject.org"},
@@ -9,7 +9,7 @@
                  {"name" : "The Art Therapy Project:Veterans", "address" : "132 West 21st St. New York, NY 10011", "description" : "", "phone" : "212 590 2755", "email" : "info@thearttherapyproject.org"}
 ],
 
- "hugTherapy":[
+ "hug":[
                 {"name" : "Nora Hug Therapy", "address" : "Online", "description" : "Therapy for those looking to heal from relationship trauma", "phone" : "585 348-7178", "email" : "norahug@therapyemail.com"},
                 {"name" : "Cow Hug Terapy", "address" : "Only in California, Missouri & Tennessee at Gentle Barn Animals",  "description" : "Need a hug? Feeling sad, lonely, stressed out and scared? Going through a hard time? Come heal with the cows! ", "phone" : "661 252-2440", "email" : "gentlebarn.org"}
 ],
@@ -23,14 +23,14 @@
           {"name" : "Yoga Care", "address" :  "121 Fulton St. New York NY 10038", "description" : "Yoga Care is a meditation and yoga studio that has been serving the residents of New York City and the surrounding areas for more than 13 years.", "phone" : "212 964-6411", "email" : "yogacare.com"}
  ],
 
-  "musicTherapy":[
+  "music":[
                    {"name" : "NY MUSIC THERAPY", "address" : "Online", "description" : "Music psychotherapy is a combination of talk therapy and music/music-making to foster self-awareness, healing and growth for adults and adolescents.", "phone" : "", "email" : "nymusictherapy.com"},
                    {"name" : "The Louis Armstrong Department of Music Therapy, Mount Sinai Beth Israel", "address" : "281 1st Avenue (First Avenue at 16th Street) New York, NY 10003", "description" : "Our clinical services, research projects and on-going programs are guided by experts in the fields of medicine, music, and music therapy.", "phone" : "212-420-2704", "email" : "info@musicandmedicine.org"},
                    {"name" : "Nordoff-Robbins Center for Music Therapy, NYU Steinhardt", "address" : "35 W 4th Street, 11th Floor New York, NY 10012", "description" : "The Nordoff-Robbins approach to music therapy is based on the belief that everyone possesses a sensitivity to music that can be utilized for personal growth and development.", "phone" : "212-998-5162", "email" : "steinhardt.nyu.edu/nordoff"},
                    {"name" : "Manhatten Music Therapy", "address" : "Online", "description" : "Therapy can be healing. It can be communicative. It can be an avenue to self-awareness, and discovery.", "phone" : "833 NYC-Therapy", "email" : "manhattanmusictherapy.com"}
   ],
   
-  "petTherapy":[
+  "pet":[
                   {"name" : "NAMI-NYC", "address" : "505 Eighth Avenue Suite 1103 New York, NY 10018", "description" : "Our mission is to help families and individuals affected by mental illness build better lives through education, support, and advocacy.", "phone" : "212-684-3365", "email" : "naminycmetro.org"},
                   {"name" : "Bideawee's Pet Therapy Program", "address" : "410 East 38th Street, New York, NY 10016", "description" : "Recognizing the myriad of benefits that the relationship between people and pets can provide.", "phone" : "212-271-2984", "email" : "bideawee.org"}
   ],
