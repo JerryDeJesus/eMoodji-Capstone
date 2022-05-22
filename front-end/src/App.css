@@ -2,6 +2,7 @@
   text-align: center;
 }
 
-#NavBar {
-  
+#NavBar{
+  background-color: gray;
+  padding : 50px;
 }
