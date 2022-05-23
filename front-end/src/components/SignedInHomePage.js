@@ -12,13 +12,13 @@ export default function SignedInHomePage(){
         })  
     }, []);
 
-    const works = `/users/${localStorage.getItem('user_id')}/entries`;
+    const userEntriesLink = `/users/${localStorage.getItem('user_id')}/entries`;
     return(
     <div className="Home">
         <h1>Signed in Home Page</h1>
-        <h1>Quote of the Day: {quote.text} - {quote.author} </h1>
+        <h1>{quote.text} - {quote.author} </h1>
         <Link to="/entries/new"><button> New Entry </button></Link>
-        <Link to={works}><button>All Entries</button></Link>
+        <Link to={userEntriesLink}><button>All Entries</button></Link>
     </div>
     )
 }
