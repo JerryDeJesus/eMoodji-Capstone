@@ -1,12 +1,12 @@
 import React from "react";
 import { useState } from "react";
-const activitiesData = require('../../data/activities.json');
+// const activitiesData = require('../../data/activities.json');
 
 export default function Step3(props) {
-    const {entry, setEntry, next, back} = props;
-    const [activities, setActivities] = useState(activitiesData);
-
-    const getInterestActivities = activities[entry.interest].map((el, i) => {
+    const {entry, setEntry, next, back, activitiesData} = props;
+    // console.log(activitiesData)
+    console.log(props)
+    const getInterestActivities = activitiesData?.[entry.interest].map((el, i) => {
         return(
             <li key = {i} onClick = {(e) => handleSelectActivity(e)}>{el.name}</li>
         )
@@ -20,8 +20,6 @@ export default function Step3(props) {
     return(
         <form>
             <div>
-                {/* <label htmlFor="activity">What Float's Your Boat?</label> */}
-                {/* <input type = "text" id = "activity" value={entry.activity ?? ""} onChange={handleText} /> */}
                 <h2>What Float's Your Boat?</h2>
                 <div>
                 {getInterestActivities}

@@ -11,7 +11,6 @@ export default function Step1(props) {
     useEffect (() => {
         axios(`https://emoji-api.com/emojis?access_key=${ACCESS_KEY}`)
             .then(res => {
-                console.log(res.data)
                 setEmojis(res.data);
             })
             .catch(error => console.log(error))
@@ -20,7 +19,6 @@ export default function Step1(props) {
 
     const handleSelectEmoji = (emoji) => {
         setEntry({...entry, mood : emoji.character});
-        console.log(emoji);
     }
 
     const handleMoodInput = (e) => {
