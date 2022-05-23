@@ -12,10 +12,9 @@ export default function NavBar () {
 
 
     return (
-        <nav id = "NavBar">
+        <nav id="NavBar">
             <Link to="/"><img id="logo" src={logo} alt="Logo" style={{'width': "200px"}}/></Link> 
-            <Link to="/"><button>eMoodji</button></Link>
-            <Link to="/"><button onClick={handleLogOut}>Log out</button></Link>
+            <Link to="/"><button id='logout' onClick={handleLogOut}>Log out</button></Link>
         </nav>
     
         
