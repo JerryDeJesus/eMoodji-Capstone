@@ -5,17 +5,17 @@ import Step3 from "./Step3.js";
 import Step4 from "./Step4.js";
 import StepSubmit from "./StepSubmit.js";
 
+const activitiesFileData = require('../../data/activities.json');
+
 export default function StepForm() {
     const [currentStep, setCurrentStep] = useState(1);
+    const [activitesData, setActivitiesData] = useState(activitiesFileData);
     
     const [entry, setEntry] = useState({
-        date_created: "",
         mood: "",
         interest: "",
         activity: "",
     });
-
-    // const handleText = (e) => setEntry({...entry, [e.target.id]: e.target.value});
 
     const next = () => setCurrentStep(currentStep + 1);
 
@@ -24,8 +24,8 @@ export default function StepForm() {
     switch (currentStep) {
         case 1: return <Step1 entry = {entry} setEntry = {setEntry} next = {next} />;
         case 2: return <Step2 entry = {entry} setEntry = {setEntry} next = {next} back = {back} />;
-        case 3: return <Step3 entry = {entry} setEntry = {setEntry} next = {next} back = {back} />;
-        case 4: return <Step4 entry = {entry} next = {next} back = {back} />;
+        case 3: return <Step3 entry = {entry} setEntry = {setEntry} next = {next} back = {back} activitiesData = {activitesData} />;
+        case 4: return <Step4 entry = {entry} next = {next} back = {back} activitiesData = {activitesData} />;
         default: return <StepSubmit entry = {entry} back = {back} />;
     }
 }
