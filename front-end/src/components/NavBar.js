@@ -8,6 +8,7 @@ export default function NavBar () {
         localStorage.clear();
         console.log(localStorage.getItem("userid"));
         navigate('/');
+        window.location.reload();
     };
 
 
