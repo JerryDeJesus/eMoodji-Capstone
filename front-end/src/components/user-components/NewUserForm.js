@@ -50,8 +50,8 @@ const handleSubmit = (e) => {
             // }
             console.log(res);
             userSignUp = res.data.id;
-            localStorage.setItem("user_id", userSignUp);
-            console.log(localStorage.getItem("user_id"));
+            localStorage.setItem("userid", userSignUp);
+            console.log(localStorage.getItem("userid"));
             navigate("/");
         })
          .catch(error => console.log(error))

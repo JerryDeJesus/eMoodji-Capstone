@@ -8,7 +8,7 @@ export default function EntryNewForm (){
     const navigate = useNavigate();
     
     const [entry,setEntry] = useState({
-        userid: null,
+        userid: "",
         date_created: "",
         mood: "",
         interest: "",

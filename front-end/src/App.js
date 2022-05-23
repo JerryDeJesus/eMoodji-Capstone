@@ -13,7 +13,7 @@ import ShowEntries from "./pages/entry-pages/ShowEntries.js";
 import ShowEntry from "./pages/entry-pages/ShowEntry.js";
 import EditEntry from "./pages/entry-pages/EditEntry.js";
 import ShowUserEntries from "./pages/ShowUserEntries.js"
-import NewEntry from "./pages/entry-pages//NewEntry.js";
+// import NewEntry from "./pages/entry-pages//NewEntry.js";
 import ShowActivities from './pages/ShowActivities';
 
 import ShowWizard from './pages/ShowWizard';
@@ -34,19 +34,18 @@ export default function App() {
           <Route path="/entries" element={<ShowEntries />} />
           <Route path="/entries/:id" element={<ShowEntry />} />
           <Route path="/entries/:id/edit" element={<EditEntry />} />
-          <Route path="/entries/new" element={<NewEntry />} />
+          {/* <Route path="/entries/new" element={<NewEntry />} /> */}
 
           <Route path="/users" element = {<ShowUsers />} />
           <Route path="/users/:id" element = {<ShowUserDetails />} />
           <Route path="/createaccount" element={<NewUser />} />
           <Route path="/users/:id/entries" element={<ShowUserEntries />} />
           <Route path="/users/:id/edit" element={<EditUser />} />
-          <Route path="*" element={<FourOFour />} />
 
           <Route path="/showactivities" element={<ShowActivities/>} />
           <Route path ="/wizard" element={<ShowWizard />} />
           <Route path="/loginpage" element={<Login />} />
-          <Route path ="wizard" element={<ShowWizard />} />
+          <Route path="*" element={<FourOFour />} />
         </Routes>
       </main>
       <Footer />
