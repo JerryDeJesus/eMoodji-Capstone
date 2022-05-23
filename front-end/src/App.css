@@ -2,6 +2,7 @@
   text-align: center;
 }
 
-#NavBar {
-  
+#NavBar{
+  background-color: rgb(153, 186, 221);
+  padding : 50px;
 }

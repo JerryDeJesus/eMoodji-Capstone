@@ -1,5 +1,5 @@
 import { Link, useNavigate } from 'react-router-dom';
-import logo from "../data/eMoodji_logo_cropped.png";
+import logo from "../assets/logo/eMoodji_logo_white.png";
 
 export default function NavBar () {
     let navigate = useNavigate();
