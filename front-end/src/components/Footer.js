@@ -3,13 +3,13 @@
 
 export default function Footer () {
     return (
-        <nav>
-            Footer
-            <button>Fb</button>
-            <button>IG</button>
-            <button>TWT</button>
-            <button>SC</button>
-            <button>Copyright 2022</button>
+        <nav className='footer'>
+            
+            <button id='fb'>Fb</button>
+            <button id='ig'>IG</button>
+            <button id='twt'>TWT</button>
+            <button id='gh'>GH</button>
+            <button id='cr'>Copyright 2022</button>
         </nav>
     
         

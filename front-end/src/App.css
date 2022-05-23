@@ -4,5 +4,21 @@
 
 #NavBar{
   background-color: rgb(153, 186, 221);
-  padding : 50px;
+  padding : 40px;
+  display : grid;
+  height : 50px;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+#logout{
+   
+}
+
+.footer{
+  display : grid;
+  height : 10px;
+  gap: 5px;
+  grid-template-columns: repeat(6, 1fr);
+
 }
