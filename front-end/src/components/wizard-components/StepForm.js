@@ -9,7 +9,7 @@ const activitiesFileData = require('../../data/activities.json');
 
 export default function StepForm() {
     const [currentStep, setCurrentStep] = useState(1);
-    const [activitesData, setActivitiesData] = useState(activitiesFileData);
+    const [activitiesData, setActivitiesData] = useState(activitiesFileData);
     
     const [entry, setEntry] = useState({
         mood: "",
@@ -24,8 +24,8 @@ export default function StepForm() {
     switch (currentStep) {
         case 1: return <Step1 entry = {entry} setEntry = {setEntry} next = {next} />;
         case 2: return <Step2 entry = {entry} setEntry = {setEntry} next = {next} back = {back} />;
-        case 3: return <Step3 entry = {entry} setEntry = {setEntry} next = {next} back = {back} activitiesData = {activitesData} />;
-        case 4: return <Step4 entry = {entry} next = {next} back = {back} activitiesData = {activitesData} />;
+        case 3: return <Step3 entry = {entry} setEntry = {setEntry} next = {next} back = {back} activitiesData = {activitiesData} />;
+        case 4: return <Step4 entry = {entry} next = {next} back = {back} activitiesData = {activitiesData} />;
         default: return <StepSubmit entry = {entry} back = {back} />;
     }
 }
