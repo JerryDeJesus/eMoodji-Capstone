@@ -8,6 +8,7 @@ export default function StepSubmit(props) {
     const {entry} = props;
     console.log(entry);
     const navigate = useNavigate();
+    const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
     const listItems = Object.entries(entry).map(([key, value]) => {
         return (
             <li key = {key}>
@@ -16,12 +17,11 @@ export default function StepSubmit(props) {
             </li>
         )
     });
-
     const handleSubmit = (e) => {
         e.preventDefault();
 
         axios.post(`${API}/entries`, entry)
-            .then(res=> navigate("/entries"))
+            .then(res=> navigate(userEntriesLink))
             .catch(error=> console.log(error))
     };
 

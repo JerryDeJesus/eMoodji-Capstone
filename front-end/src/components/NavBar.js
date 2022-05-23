@@ -6,7 +6,7 @@ export default function NavBar () {
 
     const handleLogOut = () => {
         localStorage.clear();
-        console.log(localStorage.getItem("user_id"));
+        console.log(localStorage.getItem("userid"));
         navigate('/');
     };
 
