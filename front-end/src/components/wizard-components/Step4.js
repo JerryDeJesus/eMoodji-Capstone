@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { Link } from "react-router-dom";
 
 export default function Step4(props) {
     const {entry, next, back, activitiesData} = props;
@@ -41,7 +41,8 @@ export default function Step4(props) {
                 <h3>Address: {address} </h3>
                 <h3>Description: {description} </h3>
                 <h3>Phone: {phone} </h3>
-                <h3>Website: {website} </h3>
+                {/* link to be fixed */}
+                <h3>Website: <a href={website} target="_blank" rel="noreferrer noopener">{website}</a></h3>
             </div>
 
             <form>

@@ -13,7 +13,7 @@ export default function UserEntries (){
     useEffect(()=>{
         axios.get(`${API}/users/${id}/entries`)
         .then((res)=> {
-            // console.log(res.data)
+            console.log(res.data);
             if(res.data){
                 setUserEntries(res.data)
             } else {
