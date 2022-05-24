@@ -4,6 +4,17 @@ import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
+// export default function QuoteInHomePage(){
+//     const [quote, setQuote] = useState([]);
+//     useEffect(() => {
+//         axios("https://type.fit/api/quotes")
+//         .then(res => {
+//           setQuote(res.data[Math.floor(Math.random() * 10)]);
+//           console.log(res.data[Math.floor(Math.random() * 10)]);
+//         })  
+        
+//     }, []);
+
 export default function Login(){
     const [user, setUser] = useState({
         email: "",
@@ -39,7 +50,8 @@ export default function Login(){
     
     return(
         <div className='login'>
-            <h1>Login Page</h1>
+            {/* <h1>Login Page</h1> */}
+            {/* <h1 id='homeQuote'>"{quote.text} - {quote.author}"</h1> */}
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email"></label>
                 <input 
