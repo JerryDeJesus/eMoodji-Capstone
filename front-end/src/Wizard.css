@@ -1,0 +1,15 @@
+.parent-container {
+    width: 90%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-areas:
+    "left left left right";
+}
+
+.float-right {
+    grid-area: right;
+}
+
+.float-left{
+    grid-area: left;
+}
