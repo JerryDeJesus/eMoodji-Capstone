@@ -1,4 +1,4 @@
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState, useEffect } from  "react";
 import axios from "axios";
 
@@ -16,7 +16,7 @@ export default function SignedInHomePage(){
 
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
     return(
-        
+       
         <body className="sIHomePage">
             <div>
                 {/* <h1>Signed in Home Page</h1> */}
@@ -25,6 +25,5 @@ export default function SignedInHomePage(){
                 <Link id='aEntry'  to={userEntriesLink}><button>All Entries</button></Link>
             </div>
         </body>
-    
     )
 }
