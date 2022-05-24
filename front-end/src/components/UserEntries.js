@@ -24,7 +24,7 @@ export default function UserEntries (){
 
     let displayUserEntries = userEntries.map((entry, index)=>{
         return(
-            <div key = {index} >
+            <div calssName='usEntri' key = {index} >
                 <h3>Date Created: {entry.date_created}</h3>
                 <h3>Mood: {entry.mood}</h3>
                 <h3>Interest: {entry.interest}</h3>

@@ -14,7 +14,7 @@ export default function NavBar () {
 
     return (
         <nav id="NavBar">
-            <Link to="/"><img id="logo" src={logo} alt="Logo" style={{'width': "200px"}}/></Link> 
+            <Link to="/"><img id="logo" src={logo} alt="Logo" style={{'width': "225px"}}/></Link>
             <Link to="/"><button id='logout' onClick={handleLogOut}>Log out</button></Link>
         </nav>
     
