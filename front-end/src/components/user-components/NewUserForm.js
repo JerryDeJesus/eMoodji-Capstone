@@ -39,6 +39,7 @@ const handleTextChange = (e) => {
 };
 
 let userSignUp = {};
+let userFirstName = {};
 
 const handleSubmit = (e) => {
     e.preventDefault();
@@ -50,8 +51,9 @@ const handleSubmit = (e) => {
             // }
             console.log(res);
             userSignUp = res.data.id;
-            localStorage.setItem("user_id", userSignUp);
-            console.log(localStorage.getItem("user_id"));
+            userFirstName = res.data.fname;
+            localStorage.setItem("userid", userSignUp);
+            localStorage.setItem("firstName", userFirstName);
             navigate("/");
         })
          .catch(error => console.log(error))

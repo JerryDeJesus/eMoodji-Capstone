@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import hugIcon from "../../assets/icon-interests/hug.png"
 import massageIcon from "../../assets/icon-interests/massage.png"
 import musicIcon from "../../assets/icon-interests/music.png"
@@ -10,6 +9,7 @@ export default function Step2(props) {
     const {entry, setEntry, next, back} = props;
     
     const handleSelectInterest = (e) => {
+        console.log(e)
         setEntry({...entry, interest: e})
     }
 
