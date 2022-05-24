@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -22,9 +22,12 @@ export default function UserEntries (){
         })
     }, [id, navigate]);
 
+    
     let displayUserEntries = userEntries.map((entry, index)=>{
+        let linkToEntry = `/entries/${entry.id}`;
         return(
-            <div calssName='usEntri' key = {index} >
+            <div className='usEntri' key = {index} >
+                <Link to={linkToEntry}><h3>Entry Number : {entry.id}</h3></Link>
                 <h3>Date Created: {entry.date_created}</h3>
                 <h3>Mood: {entry.mood}</h3>
                 <h3>Interest: {entry.interest}</h3>
