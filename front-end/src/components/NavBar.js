@@ -16,7 +16,7 @@ export default function NavBar () {
         <nav id="NavBar">
             <Link to="/"><img id="logo" src={logo} alt="Logo" style={{'width': "225px"}}/></Link>
             {localStorage.getItem("userid") ? <h3>Welcome, {localStorage.getItem('firstName')}!</h3> : null}
-            <Link to="/"><button id='logout' onClick={handleLogOut}>Log out</button></Link>
+            {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut}>Log out</button></Link> : null}
         </nav>
     
         

@@ -67,6 +67,7 @@
 }
 
 .footer{
+  position: fixed;
   background-color: rgb(153, 186, 221);
   bottom: 0;
   width: 100%;
