@@ -29,12 +29,12 @@ export default function Step4(props) {
     const {name, address, description, phone, website} = activitiesData[entry.interest][selectedActivityData];
 
     return(
-        <div>
-            <div>
-                <div>
-                    {progressBarComponent}
-                </div>
+        <div className="parent-container">
+            <div className="float-right">
+                {progressBarComponent}
+            </div>
 
+            <div className="float-left">
                 <h2>Details Page </h2>
                 
                 <div>
@@ -49,9 +49,7 @@ export default function Step4(props) {
                     <button type = "button" onClick={back}>Back</button> 
                     <button type = "button" onClick={next}>Next</button>
                 </form> 
-            </div>
-
-            <div>
+           
                 <label htmlFor="user_address">Enter Your Starting Address</label>
                 <input type="text" id="user_address" onChange={handleUserAddressInput}/>
                 
