@@ -18,15 +18,16 @@ export default function Login(){
     }
 
     let userLogIn = {};
+    let userFirstName = {};
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post(`${API}/users/loginpage`, user)
          .then(res => {
-            console.log(res.data.id);
             userLogIn = res.data.id;
-            localStorage.setItem("user_id", userLogIn);
-            console.log(localStorage.getItem("user_id"));
+            userFirstName = res.data.fname;
+            localStorage.setItem("userid", userLogIn);
+            localStorage.setItem("firstName", userFirstName);
             navigate("/");
             }
          )
