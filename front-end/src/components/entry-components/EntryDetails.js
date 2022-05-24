@@ -21,7 +21,7 @@ export default function EntryDetails () {
 
     const handleDelete = () => {
         axios.delete(`${API}/entries/${id}`)
-            .then(() => navigate("/entries"))
+            .then(() => navigate(`/users/${id}/entries`))
             .catch(error => console.log(error))
     }
 
@@ -31,7 +31,7 @@ export default function EntryDetails () {
             <h3>Mood: {mood}</h3>
             <h3>Interest: {interest}</h3>
             <h3>Activity: {activity}</h3>  
-            <Link to={`/entries`}><button>BACK</button></Link>
+            <Link to={`/users/${id}/entries`}><button>BACK</button></Link>
             <Link to={`/entries/${id}/edit`}><button>EDIT</button></Link>
             <button onClick={handleDelete}>DELETE</button>
         </div>

@@ -40,7 +40,7 @@ export default function UserEntries (){
 
     return(
         <div>
-            {displayUserEntries}
+            {userEntries.length ? displayUserEntries : "No Entries"}
         </div>
     )
 }
