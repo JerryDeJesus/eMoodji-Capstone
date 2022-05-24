@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from 'react-bootstrap/Modal';
@@ -10,6 +11,7 @@ export default function WizardModal() {
 
   return (
     <>
+
     <button className="testing" onClick={handleShow}>SHOW BUTTTONNN</button>
       <Modal show={show} onHide={handleHide} backdrop = "true">
         <Modal.Header closeButton>
