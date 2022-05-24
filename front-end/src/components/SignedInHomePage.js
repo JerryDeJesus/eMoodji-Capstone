@@ -20,7 +20,7 @@ export default function SignedInHomePage(){
         <body className="sIHomePage">
             <div>
                 {/* <h1>Signed in Home Page</h1> */}
-                <h1 id='quote'>{quote.text} - {quote.author} </h1>
+                <h1 id='quote'>"{quote.text} - {quote.author}"</h1>
                 <Link id='nEntry' to="/entries/new"><button> New Entry </button></Link><br />
                 <Link id='aEntry'  to={userEntriesLink}><button>All Entries</button></Link>
             </div>

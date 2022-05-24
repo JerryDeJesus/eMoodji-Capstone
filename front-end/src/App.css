@@ -1,20 +1,40 @@
 
 #NavBar{
+  align-items: center;
+  justify-items: center;
   background-color: rgb(153, 186, 221);
-  padding-left: 10px;
-  padding-top: 25px;
-  display : grid;
-  grid-template-columns: 4fr 1fr;
+  padding-top: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 
 }
 
+#logo{
+  padding-left: 10px;
+  display : grid;
+  grid-column-start: 1;
+  grid-column-end: 1;
+}
+
+#welcome{
+  padding-left: 95px;
+  color: white;
+  display : grid; 
+  grid-column-start: 3;
+  grid-column-end: 3;
+}
+
 #logout{
-  align-items: right;
+  text-decoration: none;
+  display : grid; 
+  grid-column-start: 4;
+  grid-column-end: 4;
 }
 
 .sIHomePage{
   background-color: rgb(153, 186, 221);
   padding-top: 10px;
+  display : grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(3, 1fr);
 }
@@ -39,7 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 200px;
+  /* padding-bottom: 200px; */
 }
 
 #usEntri{
