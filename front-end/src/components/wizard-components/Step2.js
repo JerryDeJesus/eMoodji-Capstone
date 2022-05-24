@@ -13,28 +13,26 @@ export default function Step2(props) {
     }
 
     return(
-        <form>
-            <div>
+        <form className="parent-container">
+            <div className="float-right">
+                {progressBarComponent}
+            </div>
+
+            <div className="float-left">
+                <h2>Tell me what's your interest</h2>
+
                 <div>
-                    {progressBarComponent}
+                    <img src={hugIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="hug"/>
+                    <img src={massageIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="acupuncture"/>
+                    <img src={musicIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="music"/>
+                    <img src={paintIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="art"/>
+                    <img src={petsIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="pet"/>
+                    <img src={yogaIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="yoga"/>
                 </div>
-
+                
                 <div>
-                    <h2>Tell me what's your interest</h2>
-
-                    <div>
-                        <img src={hugIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="hug"/>
-                        <img src={massageIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="acupuncture"/>
-                        <img src={musicIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="music"/>
-                        <img src={paintIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="art"/>
-                        <img src={petsIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="pet"/>
-                        <img src={yogaIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="yoga"/>
-                    </div>
-                    
-                    <div>
-                        <button type = "button" onClick={back}>Back</button> 
-                        <button type = "button" onClick={next}>Next</button>
-                    </div>
+                    <button type = "button" onClick={back}>Back</button> 
+                    <button type = "button" onClick={next}>Next</button>
                 </div>
             </div>
         </form>

@@ -26,8 +26,8 @@ export default function StepSubmit(props) {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
+        <div className="parent-container">
+            <form onSubmit={handleSubmit} >
                 <ul>{listItems}</ul>
                 <button>Submit</button>
             </form>

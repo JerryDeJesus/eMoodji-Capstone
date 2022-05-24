@@ -42,24 +42,22 @@ export default function Step1(props) {
     })
     
     return(
-        <form className="form-container">
-            <div>
+        <form className="parent-container">
+            <div className="float-right">
+                {progressBarComponent}
+            </div>
+
+            <div className="float-left">
+                <h2>Hi, There!</h2>
+                <label htmlFor="mood">What's your emoodji for this moment?</label>
+                <input type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} />
+                
                 <div>
-                    {progressBarComponent}
+                    {renderedFilteredEmojis}
                 </div>
 
                 <div>
-                    <h2>Hi, There!</h2>
-                    <label htmlFor="mood">What's your emoodji for this moment?</label>
-                    <input type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} />
-                    
-                    <div>
-                        {renderedFilteredEmojis}
-                    </div>
-
-                    <div>
-                        <button type = "button" onClick={next}>Next</button>
-                    </div>
+                    <button type = "button" onClick={next}>Next</button>
                 </div>
             </div>
         </form>

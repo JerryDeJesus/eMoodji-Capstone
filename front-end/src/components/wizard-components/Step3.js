@@ -10,12 +10,12 @@ export default function Step3(props) {
     const handleSelectActivity = (e) => setEntry({...entry, activity: e.target.outerText});
 
     return(
-        <form>
-            <div>
+        <form className="parent-container">
+            <div className="float-right">
                 {progressBarComponent}
             </div>
 
-            <div>
+            <div className="float-left">
                 <h2>What Float's Your Boat?</h2>
 
                 <div>
