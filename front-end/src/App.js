@@ -21,7 +21,7 @@ import Login from './pages/Login';
 import "../src/App.css";
 
 export default function App() {
-  //state for entry here, cannot pass laterally
+  
 
   return(
     <div>
