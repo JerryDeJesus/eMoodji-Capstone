@@ -4,7 +4,6 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 
 const API = process.env.REACT_APP_API_URL;
-// const parseISO = require('date-fns/parseISO');
 
 export default function UserEntries (){
     const [userEntries, setUserEntries] = useState([]);
@@ -15,7 +14,6 @@ export default function UserEntries (){
     useEffect(()=>{
         axios.get(`${API}/users/${id}/entries`)
         .then((res)=> {
-            // console.log(res.data);
             if(res.data){
                 setUserEntries(res.data)
             } else {
