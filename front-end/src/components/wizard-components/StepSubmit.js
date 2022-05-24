@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import WizardModal from "./WizardModal";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -25,12 +26,27 @@ export default function StepSubmit(props) {
             .catch(error=> console.log(error))
     };
 
+    const checkUserAccount = () => {
+        if(localStorage.getItem('userid')){
+            return (
+                <form onSubmit={handleSubmit} >
+                    <button>Submit</button>
+                </form>)
+        } else {
+            return (
+                <form onSubmit={handleSubmit} >
+                    <button>Create An Account</button>
+                </form>)
+        }
+    }
+
     return (
         <div className="parent-container">
-            <form onSubmit={handleSubmit} >
-                <ul>{listItems}</ul>
-                <button>Submit</button>
-            </form>
+         
+            <ul>{listItems}</ul>
+            <WizardModal />
+            {checkUserAccount()}
+
         </div>
     )
 }
