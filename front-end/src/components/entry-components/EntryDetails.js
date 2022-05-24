@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import {Link, useParams, useNavigate} from "react-router-dom";
 import axios from "axios";
+import { parseISO, format } from "date-fns";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -21,17 +22,19 @@ export default function EntryDetails () {
 
     const handleDelete = () => {
         axios.delete(`${API}/entries/${id}`)
-            .then(() => navigate("/entries"))
+            .then(() => navigate(`/users/${id}/entries`))
             .catch(error => console.log(error))
     }
 
+    let formattedDate = format(parseISO(date_created), "MM/dd/yyyy HH:mm");
+
     return(
         <div>
-            <h3>Date Created: {date_created}</h3>
+            <h3>Date Created: {formattedDate}</h3>
             <h3>Mood: {mood}</h3>
             <h3>Interest: {interest}</h3>
             <h3>Activity: {activity}</h3>  
-            <Link to={`/entries`}><button>BACK</button></Link>
+            <Link to={`/users/${localStorage.getItem('userid')}/entries`}><button>BACK</button></Link>
             <Link to={`/entries/${id}/edit`}><button>EDIT</button></Link>
             <button onClick={handleDelete}>DELETE</button>
         </div>

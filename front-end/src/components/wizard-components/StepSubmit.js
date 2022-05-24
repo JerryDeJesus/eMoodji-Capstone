@@ -1,6 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import WizardModal from "./WizardModal.js";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -17,7 +18,7 @@ export default function StepSubmit(props) {
             </li>
         )
     });
-    const handleSubmit = (e) => {
+    const handleSubmitForSignIn = (e) => {
         e.preventDefault();
 
         axios.post(`${API}/entries`, entry)
@@ -25,12 +26,34 @@ export default function StepSubmit(props) {
             .catch(error=> console.log(error))
     };
 
+    const handleSubmitForNotSignIn = (e) => {
+        e.preventDefault();
+
+        axios.post(`${API}/entries`, entry)
+            .catch(error=> console.log(error))
+    };
+
+    const checkUserAccount = () => {
+        if(localStorage.getItem('userid')){
+            return (
+                <form onSubmit={handleSubmitForSignIn} >
+                    <button>Submit</button>
+                </form>)
+        } else {
+            return (
+                <form onSubmit={handleSubmitForNotSignIn} >
+                    <WizardModal />
+                    {/* <button>Create An Account</button> */}
+                </form>)
+        }
+    }
+
     return (
-        <div className="parent-container">
-            <form onSubmit={handleSubmit} >
-                <ul>{listItems}</ul>
-                <button>Submit</button>
-            </form>
+        <div className="parent-container"> 
+            <ul>{listItems}</ul>
+            {/* <WizardModal /> */}
+            {checkUserAccount()}
+
         </div>
     )
 }

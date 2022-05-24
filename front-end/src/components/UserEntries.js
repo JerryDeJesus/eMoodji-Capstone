@@ -1,8 +1,10 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
+import { format, parseISO } from "date-fns";
 
 const API = process.env.REACT_APP_API_URL;
+// const parseISO = require('date-fns/parseISO');
 
 export default function UserEntries (){
     const [userEntries, setUserEntries] = useState([]);
@@ -13,7 +15,7 @@ export default function UserEntries (){
     useEffect(()=>{
         axios.get(`${API}/users/${id}/entries`)
         .then((res)=> {
-            console.log(res.data);
+            // console.log(res.data);
             if(res.data){
                 setUserEntries(res.data)
             } else {
@@ -24,14 +26,15 @@ export default function UserEntries (){
 
     
     let displayUserEntries = userEntries.map((entry, index)=>{
+        let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy HH:mm");
         let linkToEntry = `/entries/${entry.id}`;
         return(
             <div className='usEntri' key = {index} >
-                <Link to={linkToEntry}><h3>Entry Number : {entry.id}</h3></Link>
-                <h3>Date Created: {entry.date_created}</h3>
+                <Link to={linkToEntry}>
+                <h3>Date Created: {formattedDate}</h3>
                 <h3>Mood: {entry.mood}</h3>
                 <h3>Interest: {entry.interest}</h3>
-                <h3>Activity: {entry.activity}</h3>
+                <h3>Activity: {entry.activity}</h3></Link>
                 <br />
             </div>
         )
@@ -40,7 +43,7 @@ export default function UserEntries (){
 
     return(
         <div>
-            {displayUserEntries}
+            {userEntries.length ? displayUserEntries : "No Entries"}
         </div>
     )
 }
