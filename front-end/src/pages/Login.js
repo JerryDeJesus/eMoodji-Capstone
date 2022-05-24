@@ -8,7 +8,6 @@ export default function Login(){
     const [user, setUser] = useState({
         email: "",
         password: "",
-        id: null
     });
     let navigate = useNavigate();
 
@@ -24,6 +23,7 @@ export default function Login(){
         e.preventDefault();
         axios.post(`${API}/users/loginpage`, user)
          .then(res => {
+            console.log(res.data);
             userLogIn = res.data.id;
             userFirstName = res.data.fname;
             localStorage.setItem("userid", userLogIn);
