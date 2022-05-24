@@ -1,6 +1,6 @@
 import {Link} from "react-router-dom"
 export default function Entry ({entry}){
-    let {id, date_created, mood, interest, activity, userid} = entry;
+    let {id, date_created, mood, interest, activity} = entry;
     return(
         <div>
             <div>
