@@ -1,24 +1,87 @@
-.App {
-  text-align: center;
-}
 
 #NavBar{
   background-color: rgb(153, 186, 221);
-  padding : 40px;
+  padding-left: 10px;
+  padding-top: 25px;
   display : grid;
-  height : 50px;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 4fr 1fr;
 
 }
 
 #logout{
-   
+  align-items: right;
+}
+
+.sIHomePage{
+  background-color: rgb(153, 186, 221);
+  padding-top: 10px;
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+#quote{
+  padding-top: 100px;
+  text-align: center;
+  font-family:Arial, Helvetica, sans-serif;
+  font-style: italic;
+}
+
+#nEntry{
+ text-decoration: none;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+#aEntry{
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 200px;
+}
+
+#usEntri{
+  background-color: rgb(153, 186, 221);
 }
 
 .footer{
-  display : grid;
-  height : 10px;
-  gap: 5px;
-  grid-template-columns: repeat(6, 1fr);
+  background-color: rgb(153, 186, 221);
+  bottom: 0;
+  width: 100%;
+}
 
+.footer{
+  padding-left: 10px;
+  display : grid;
+  gap: 5px;
+  grid-template-columns: repeat(27, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+}
+
+#cr{
+  text-align: center;
+  font-size: 12px;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row-start: 2;
+  grid-row-end: 2; 
+}
+
+#fb{
+  padding-top: 14px;
+  padding-left: 5px;
+}
+
+#twt{
+  padding-top: 9px;
+}
+
+#ig{
+  padding-top: 14px;
+}
+
+#gh{
+  padding-top: 14px;
 }
