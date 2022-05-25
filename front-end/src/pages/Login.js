@@ -17,6 +17,7 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function Login(){
     const [user, setUser] = useState({
+        id: null,
         email: "",
         password: "",
     });
@@ -27,25 +28,41 @@ export default function Login(){
         setUser({...user, [e.target.id]: e.target.value})
     }
 
-    let userLogIn = {};
-    let userFirstName = {};
+
+    let userFirstName = "";
+    // let entry = {
+    //     userid: null,
+    //     mood: localStorage.getItem("tempEntryMood"),
+    //     interest: localStorage.getItem("tempEntryInterest"),
+    //     activity: localStorage.getItem("tempEntryActivity")
+    //     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post(`${API}/users/loginpage`, user)
          .then(res => {
             console.log(res.data);
-            userLogIn = res.data.id;
             userFirstName = res.data.fname;
-            localStorage.setItem("userid", userLogIn);
+            setUser({...user, id: res.data.id});
+            localStorage.setItem("userid", res.data.id);
             localStorage.setItem("firstName", userFirstName);
-            
-
-
             navigate("/");
         })
+        .catch(error => alert("invalid login credentials"))
 
-         .catch(error => alert("invalid login credentials"))
+        // let entry = {
+        //     userid: usersId,
+        //     mood: localStorage.getItem("tempEntryMood"),
+        //     interest: localStorage.getItem("tempEntryInterest"),
+        //     activity: localStorage.getItem("tempEntryActivity")
+        //     };
+
+        // axios.post(`${API}/entries`, entry)
+        // .then(res =>{
+        //     console.log(res);
+        // })
+        // .catch(err => console.log(err))
+        
     };
 
     
