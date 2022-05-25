@@ -9,7 +9,7 @@ export default function SignedInHomePage(){
     useEffect(() => {
         axios("https://type.fit/api/quotes")
         .then(res => {
-          setQuote(res.data[Math.floor(Math.random() * 10)]);
+          setQuote(res.data[Math.floor(Math.random() * 50)]);
         });
         //change the if contents, objects are still truthy
         console.log("local storage type: ",typeof localStorage.getItem("tempEntryMood"));
@@ -42,7 +42,7 @@ export default function SignedInHomePage(){
        
             <div className="sIHomePage">
                 {/* <h1>Signed in Home Page</h1> */}
-                <h1 id='quote'>"{quote.text}" <br /> - {quote.author}</h1>
+                <h1 id='quote'>"{quote.text}" <br /> - {quote.author ? quote.author : "Unknown"}</h1>
                 <div className='eBGrid'>
                     <div className='entryBox'>
                     <Link id='nEntry' to="/wizard"><button> New Entry </button></Link><br />
