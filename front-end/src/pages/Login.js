@@ -75,7 +75,7 @@ export default function Login(){
                     required
                 />
                 <br />
-                <button type="submit">Log In</button>
+                <button id='logIn' type="submit">Log In</button>
             </form>
         </div>
     )
