@@ -13,7 +13,7 @@ const activitiesFileData = require('../../data/activities.json');
 
 export default function StepForm() {
     const [currentStep, setCurrentStep] = useState(1);
-    const [activitiesData, setActivitiesData] = useState(activitiesFileData);
+    const [activitiesData] = useState(activitiesFileData);
     
     const [entry, setEntry] = useState({
         userid: localStorage.getItem("userid"),

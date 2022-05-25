@@ -28,7 +28,11 @@ export default function StepSubmit(props) {
 
     const handleSubmitForNotSignIn = (e) => {
         e.preventDefault();
-
+        //add entry to localstorage for navigating???
+        // localStorage.setItem("tempEntryMood", entry.mood);
+        // localStorage.setItem("tempEntryInterest", entry.interest);
+        // localStorage.setItem("tempEntryActivity", entry.activity);
+        // console.log(localStorage.getItem("tempEntryActivity"));
         axios.post(`${API}/entries`, entry)
              .catch(error=> console.log(error))
     };
