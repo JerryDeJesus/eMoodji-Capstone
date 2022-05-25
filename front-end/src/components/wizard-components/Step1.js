@@ -26,7 +26,7 @@ export default function Step1(props) {
     }
 
     const filteredEmojis = emojis.filter((el, i) => {
-        if(i > 10 && moodInput.length === 0) {
+        if(i > 14 && moodInput.length === 0) {
             return false;
         } else {
             return el.unicodeName.includes(moodInput);
@@ -35,31 +35,32 @@ export default function Step1(props) {
 
     const renderedFilteredEmojis = filteredEmojis.map((el, i) => {
         return(
-            <li key = {i} onClick = {()=>handleSelectEmoji(el)}>
+            <div className="child-emoji" key = {i} onClick = {()=>handleSelectEmoji(el)}>
                 {el.character}
-            </li>
+            </div>
         )
-    })
+    });
     
     return(
         <form className="parent-container">
-            <div className="float-right">
-                {progressBarComponent}
-            </div>
-
-            <div className="float-left">
-                <h2>Hi, There!</h2>
-                <label htmlFor="mood">What's your emoodji for this moment?</label>
-                <input type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} />
-                
-                <div>
-                    {renderedFilteredEmojis}
+                <div className="float-right">
+                    {progressBarComponent}
                 </div>
 
-                <div>
-                    <button type = "button" onClick={next}>Next</button>
+                <div className="float-left">
+                    <div className="wizard-question-search">
+                        <label className="wizard-question" htmlFor="mood">Hi there! What's your emoodji for this moment?</label>
+                        <input className="mood-search" type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} placeholder="eMoodji search..."/>
+                    </div>
+                    
+                    <div className="parent-emoji">
+                        {renderedFilteredEmojis}
+                    </div>
+
+                    <div>
+                        <button type = "button" onClick={next}>Next</button>
+                    </div>
                 </div>
-            </div>
         </form>
     )
 }

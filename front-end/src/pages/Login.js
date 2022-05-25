@@ -39,9 +39,11 @@ export default function Login(){
             userFirstName = res.data.fname;
             localStorage.setItem("userid", userLogIn);
             localStorage.setItem("firstName", userFirstName);
+            
+
+
             navigate("/");
-            }
-         )
+        })
 
          .catch(error => alert("invalid login credentials"))
     };

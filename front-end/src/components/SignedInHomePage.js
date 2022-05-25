@@ -17,7 +17,7 @@ export default function SignedInHomePage(){
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
     return(
        
-    
+       
             <div className="sIHomePage">
                 {/* <h1>Signed in Home Page</h1> */}
                 <h1 id='quote'>"{quote.text}" <br /> - {quote.author}</h1>
@@ -28,6 +28,6 @@ export default function SignedInHomePage(){
                     </div>
                 </div>
             </div>
-    
+     
     )
 }
