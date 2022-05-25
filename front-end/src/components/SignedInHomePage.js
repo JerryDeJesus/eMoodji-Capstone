@@ -17,13 +17,17 @@ export default function SignedInHomePage(){
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
     return(
        
-        <body className="sIHomePage">
-            <div>
+    
+            <div className="sIHomePage">
                 {/* <h1>Signed in Home Page</h1> */}
-                <h1 id='quote'>{quote.text} - {quote.author} </h1>
-                <Link id='nEntry' to="/wizard"><button> New Entry </button></Link><br />
-                <Link id='aEntry'  to={userEntriesLink}><button>All Entries</button></Link>
+                <h1 id='quote'>"{quote.text}" <br /> - {quote.author}</h1>
+                <div className='eBGrid'>
+                    <div className='entryBox'>
+                    <Link id='nEntry' to="/wizard"><button> New Entry </button></Link><br />
+                    <Link id='aEntry'  to={userEntriesLink}><button>All Entries</button></Link>
+                    </div>
+                </div>
             </div>
-        </body>
+    
     )
 }

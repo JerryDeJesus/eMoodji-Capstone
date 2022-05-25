@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
+// import 'bootstrap/dist/css/bootstrap.min.css';
 import Modal from 'react-bootstrap/Modal';
 import { Link } from "react-router-dom";
 
