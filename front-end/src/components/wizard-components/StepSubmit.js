@@ -30,7 +30,7 @@ export default function StepSubmit(props) {
         e.preventDefault();
 
         axios.post(`${API}/entries`, entry)
-            .catch(error=> console.log(error))
+             .catch(error=> console.log(error))
     };
 
     const checkUserAccount = () => {
@@ -43,7 +43,6 @@ export default function StepSubmit(props) {
             return (
                 <form onSubmit={handleSubmitForNotSignIn} >
                     <WizardModal />
-                    {/* <button>Create An Account</button> */}
                 </form>)
         }
     }
