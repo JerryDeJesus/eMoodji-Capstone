@@ -30,7 +30,7 @@ export default function Step2(props) {
                     <img src={yogaIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="yoga"/>
                 </div>
                 
-                <div className="button-container step2">
+                <div className="button-container step">
                     <button className="wizard-button" type = "button" onClick={back}>Back</button> 
                     <button className="wizard-button" type = "button" onClick={next}>Next</button>
                 </div>

@@ -3,7 +3,7 @@ export default function Step3(props) {
 
     const getInterestActivities = activitiesData?.[entry.interest].map((el, i) => {
         return(
-            <li key = {i} onClick = {(e) => handleSelectActivity(e)}>{el.name}</li>
+            <li className="activity-box" key = {i} onClick = {(e) => handleSelectActivity(e)}>{el.name}</li>
         )
     })
 
@@ -16,15 +16,15 @@ export default function Step3(props) {
             </div>
 
             <div className="float-left">
-                <h2>What Float's Your Boat?</h2>
+                <p className="wizard-question">What Float's Your Boat?</p>
 
-                <div>
+                <div className="activity-container">
                     {getInterestActivities}
                 </div>
 
-                <div>
-                    <button type = "button" onClick={back}>Back</button> 
-                    <button type = "button" onClick={next}>Next</button>
+                <div className="button-container step">
+                    <button className="wizard-button" type = "button" onClick={back}>Back</button> 
+                    <button className="wizard-button" type = "button" onClick={next}>Next</button>
                 </div>
             </div>
         </form>
