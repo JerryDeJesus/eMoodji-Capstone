@@ -34,7 +34,7 @@ export default function StepSubmit(props) {
         localStorage.setItem("tempEntryActivity", entry.activity);
         // console.log(localStorage.getItem("tempEntryActivity"));
         axios.post(`${API}/entries`, entry)
-            .catch(error=> console.log(error))
+             .catch(error=> console.log(error))
     };
 
     const checkUserAccount = () => {
@@ -47,7 +47,6 @@ export default function StepSubmit(props) {
             return (
                 <form onSubmit={handleSubmitForNotSignIn} >
                     <WizardModal />
-                    {/* <button>Create An Account</button> */}
                 </form>)
         }
     }
