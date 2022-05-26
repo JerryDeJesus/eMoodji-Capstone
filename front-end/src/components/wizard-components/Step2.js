@@ -19,9 +19,9 @@ export default function Step2(props) {
             </div>
 
             <div className="float-left">
-                <h2>Tell me what's your interest</h2>
+                <p className="wizard-question">Tell me, what's your interest?</p>
 
-                <div>
+                <div className="interest-container">
                     <img src={hugIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="hug"/>
                     <img src={massageIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="acupuncture"/>
                     <img src={musicIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="music"/>
@@ -30,9 +30,9 @@ export default function Step2(props) {
                     <img src={yogaIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="yoga"/>
                 </div>
                 
-                <div>
-                    <button type = "button" onClick={back}>Back</button> 
-                    <button type = "button" onClick={next}>Next</button>
+                <div className="button-container step2">
+                    <button className="wizard-button" type = "button" onClick={back}>Back</button> 
+                    <button className="wizard-button" type = "button" onClick={next}>Next</button>
                 </div>
             </div>
         </form>
