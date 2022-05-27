@@ -7,15 +7,18 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function StepSubmit(props) {
     const {entry} = props;
-    console.log(entry);
     const navigate = useNavigate();
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
     const listItems = Object.entries(entry).map(([key, value]) => {
         return (
-            <li key = {key}>
-                <h3>{key}:</h3>
-                <p>{value}</p>
-            </li>
+            <div key = {key} className="display-entry-result">
+                <div className="flip-card-front">
+                    <h3>{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
+                </div>
+                <div className="flip-card-back">
+                    <p>{value}</p>
+                </div>
+            </div>
         )
     });
     const handleSubmitForSignIn = (e) => {
@@ -52,11 +55,14 @@ export default function StepSubmit(props) {
     }
 
     return (
-        <div className="parent-container"> 
-            <ul>{listItems}</ul>
-            {/* <WizardModal /> */}
-            {checkUserAccount()}
+        <div> 
+            <p className="wizard-question">Entry</p>
 
+            <div className="display-entry-result-container">
+                {listItems}
+            </div>
+
+            {checkUserAccount()}
         </div>
     )
 }

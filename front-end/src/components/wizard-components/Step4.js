@@ -48,9 +48,9 @@ export default function Step4(props) {
                     <div>
                         <div className="result-container">
                             <p className="bi bi-telephone">{" "}{phone}</p>
-                            <p class="bi bi-globe">{" "}<a href={`https://` + website} target="_blank" rel="noreferrer noopener">{website}</a></p>
-                            <p class="bi bi-building">{" "}{address} </p>
-                            <p class="bi bi-blockquote-left">{" "}{description}</p>
+                            <p className="bi bi-globe">{" "}<a href={`https://` + website} target="_blank" rel="noreferrer noopener">{website}</a></p>
+                            <p className="bi bi-building">{" "}{address} </p>
+                            <p className="bi bi-blockquote-left">{" "}{description}</p>
                         </div>
 
                         <form className="last-step-btn">
