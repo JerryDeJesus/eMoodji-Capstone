@@ -14,15 +14,15 @@ export default function Step4(props) {
 
     const showMap = <iframe
                         title = "myMap"
-                        width = "550" 
-                        height = "350"
+                        width = "400" 
+                        height = "300"
                         frameBorder = "0" style={{border: "0"}}
                         referrerPolicy="no-referrer-when-downgrade"
                         src={`https://www.google.com/maps/embed/v1/directions?key=${MAP_KEY}&origin=${addressInput(userAddress)}&destination=${activityAddress}`}
                         allowFullScreen>
                     </iframe>;
 
-    const displayMessage = <div>Direction is needed to navigate!</div>;   
+    const displayMessage = <div className="display-msg">Direction is needed to navigate!</div>;   
     
     const selectedActivityData = activitiesData[entry.interest].findIndex((el) => el.name === entry.activity);
 
@@ -35,13 +35,12 @@ export default function Step4(props) {
             </div>
 
             <div className="float-left">
-                <p className="wizard-question">{name}</p>
+                <p className="wizard-question format-name">{name}</p>
 
                 <div className="map-info">
-                    <div>
-                        <label htmlFor="user_address">Enter Your Starting Address</label>
-                        <input type="text" id="user_address" onChange={handleUserAddressInput}/>
-                        <div>
+                    <div className="map-container">
+                        <input type="text" id="user_address" onChange={handleUserAddressInput} placeholder="Enter starting address.."/>
+                        <div className="map-display">
                             {userAddress ? showMap : displayMessage}
                         </div>
                     </div>
@@ -49,14 +48,14 @@ export default function Step4(props) {
                     <div>
                         <div className="result-container">
                             <p className="bi bi-telephone">{" "}{phone}</p>
-                            <p class="bi bi-globe">{" "}<a href={`https://` + website} target="_blank" rel="noreferrer noopener">{website}</a></p>
-                            <p class="bi bi-building">{" "}{address} </p>
-                            <p class="bi bi-blockquote-left">{" "}{description}</p>
+                            <p className="bi bi-globe">{" "}<a href={`https://` + website} target="_blank" rel="noreferrer noopener">{website}</a></p>
+                            <p className="bi bi-building">{" "}{address} </p>
+                            <p className="bi bi-blockquote-left">{" "}{description}</p>
                         </div>
 
-                        <form>
-                            <button className="wizard-button" type = "button" onClick={back}>Back</button> 
-                            <button className="wizard-button" type = "button" onClick={next}>Next</button>
+                        <form className="last-step-btn">
+                            <button className="wizard-button-small" type = "button" onClick={back}>Back</button> 
+                            <button className="wizard-button-small" type = "button" onClick={next}>Next</button>
                         </form> 
                     </div>
                 </div>
