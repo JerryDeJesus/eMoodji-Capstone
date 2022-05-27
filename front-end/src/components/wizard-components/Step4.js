@@ -35,27 +35,32 @@ export default function Step4(props) {
             </div>
 
             <div className="float-left">
-                <h2>Details Page </h2>
-                
-                <div>
-                    <h3>Name: {name}</h3>
-                    <h3>Address: {address} </h3>
-                    <h3>Description: {description} </h3>
-                    <h3>Phone: {phone} </h3>
-                    <h3>Website: <a href={`https://` + website} target="_blank" rel="noreferrer noopener">{website}</a></h3>
-                </div>
+                <p className="wizard-question">{name}</p>
 
-                <form>
-                    <button type = "button" onClick={back}>Back</button> 
-                    <button type = "button" onClick={next}>Next</button>
-                </form> 
-           
-                <label htmlFor="user_address">Enter Your Starting Address</label>
-                <input type="text" id="user_address" onChange={handleUserAddressInput}/>
-                
-                <div>
-                    {userAddress ? showMap : displayMessage}
+                <div className="map-info">
+                    <div>
+                        <label htmlFor="user_address">Enter Your Starting Address</label>
+                        <input type="text" id="user_address" onChange={handleUserAddressInput}/>
+                        <div>
+                            {userAddress ? showMap : displayMessage}
+                        </div>
+                    </div>
+
+                    <div>
+                        <div className="result-container">
+                            <p className="bi bi-telephone">{" "}{phone}</p>
+                            <p class="bi bi-globe">{" "}<a href={`https://` + website} target="_blank" rel="noreferrer noopener">{website}</a></p>
+                            <p class="bi bi-building">{" "}{address} </p>
+                            <p class="bi bi-blockquote-left">{" "}{description}</p>
+                        </div>
+
+                        <form>
+                            <button className="wizard-button" type = "button" onClick={back}>Back</button> 
+                            <button className="wizard-button" type = "button" onClick={next}>Next</button>
+                        </form> 
+                    </div>
                 </div>
+                
             </div>               
         </div>
     )
