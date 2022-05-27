@@ -50,6 +50,8 @@
 
 
 .mood-search {
+    font-size: 20px;
+    color: rgb(153, 186, 221);
     border: 0px solid white;
     outline: none;
     text-align: center;
@@ -59,7 +61,7 @@
     border-bottom: 2px solid rgb(153, 186, 221);
 }
 
-.mood-search::placeholder {
+.mood-search::placeholder, #user_address::placeholder {
     color: rgb(153, 186, 221);
     font-size: 20px;
 }
@@ -77,6 +79,17 @@
     background-color: rgb(153, 186, 221);
     color: white;
     font-weight: 700;
+    font-size: 25px;
+    border: none;
+}
+.wizard-button-small {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px 25px;
+    background-color: rgb(153, 186, 221);
+    color: white;
+    font-weight: 500;
     font-size: 25px;
     border: none;
 }
@@ -138,4 +151,54 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     width: 70%;
+}
+
+.format-name {
+    width: 75%;
+}
+
+#user_address {    
+    font-size: 18px;
+    color: rgb(153, 186, 221);
+    border: 0px solid white;
+    outline: none;
+    text-align: center;
+    width: 75%;
+    margin: 10px 45px;
+    padding: 5px;
+    border-bottom: 2px solid rgb(153, 186, 221);
+}
+
+.map-display {
+    width: 300px;
+    text-align: center;
+}
+
+.result-container {
+    margin: 60px 25px 0px 25px;
+}
+
+.result-container p {
+    font-size: 20px;
+}
+
+.result-container p a{
+    text-decoration: none;
+    color: black;
+}
+.result-container p a:hover{
+    color: rgb(153, 186, 221);
+    cursor: alias;
+}
+
+.last-step-btn {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.display-msg {
+    text-align: center;
+    width: 400px;
+    color: coral;
+    font-family: sans-serif;
 }
