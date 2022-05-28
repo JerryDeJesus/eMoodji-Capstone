@@ -26,7 +26,7 @@ export default function Step1(props) {
             setIsActiveClick(!isActiveClick);
         } 
         else {
-            e.target.style.border = "none";
+           e.target.style.border = "none";
            setEntry({...entry, mood : ""});
            setIsActiveClick(!isActiveClick);
         }    
@@ -46,7 +46,7 @@ export default function Step1(props) {
 
     const renderedFilteredEmojis = filteredEmojis.map((el, i) => {
         return(
-            <div className={`child-emoji`} 
+            <div className = "child-emoji" 
                  key = {i} 
                  onClick = {e => handleSelectEmoji(e, el)}>{el.character}
             </div>
