@@ -83,6 +83,7 @@
     font-size: 25px;
     border: none;
 }
+
 .wizard-button-small {
     width: 150px;
     height: 40px;
@@ -110,13 +111,13 @@
 .interest-container {
     margin: 0 auto;
     justify-items: center;
-    width: 50%;
+    width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: rgb(153, 186, 221);
     border-radius: 20px;
-    padding: 20px;
-    gap: 50px 25px;
+    padding: 25px;
+    gap: 25px 25px;
 }
 
 .step {
@@ -246,8 +247,14 @@ div.vertical-align-emoji {
     border: none;
 }
 
-.interest-hover:hover {
+.interest-img {
+    width: 100px;
+    padding: 10px;
+}
+
+.interest-img:hover {
     cursor: pointer;
-    border-radius: 50px;
-    border: 8px solid white;
+    /* border: 8px solid white;
+    border-radius: inherit; */
+    width: 150px;
 }
