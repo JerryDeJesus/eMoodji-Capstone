@@ -254,7 +254,5 @@ div.vertical-align-emoji {
 
 .interest-img:hover {
     cursor: pointer;
-    /* border: 8px solid white;
-    border-radius: inherit; */
-    width: 150px;
+    transform: scale(1.8);
 }

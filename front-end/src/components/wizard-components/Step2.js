@@ -7,13 +7,11 @@ export default function Step2(props) {
     
     const handleSelectInterest = (e) => {
         if(!isActiveClick) {
-            // e.target.style.border = "8px solid white";
-            // e.target.style.borderRadius = "inherit";
-            e.target.style.width = "150px";
+            e.target.style.transform = "scale(1.8)";
             setEntry({...entry, interest: e.target.alt});
             setIsActiveClick(!isActiveClick);
         } else {
-            e.target.style.width = "100px";
+            e.target.style.transform = "none";
             setEntry({...entry, interest: ""});
             setIsActiveClick(!isActiveClick);
         }
