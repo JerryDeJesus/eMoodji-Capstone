@@ -1,15 +1,19 @@
-import {Link} from "react-router-dom"
+import {Link} from "react-router-dom";
+import { format, parseISO } from "date-fns";
+
 export default function Entry ({entry}){
-    let {id, date_created, mood, interest, activity} = entry;
+    console.log(entry);
+
+    let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy hh:mm aaaaa'm'");
     return(
         <div>
             <div>
-                <Link to={`/entries/${id}`}>
-                    <h3>id:{id }</h3>
-                    <h3>Date Created: {date_created}</h3>
-                    <h3>Mood: {mood}</h3>
-                    <h3>Interest: {interest}</h3>
-                    <h3>Activity: {activity}</h3>                
+                <Link to={`/entries/${entry.id}`}>
+                    <h3>id:{ entry.id }</h3>
+                    <h3>Created At: {formattedDate}</h3>
+                    <h3>Mood: {entry.mood}</h3>
+                    <h3>Interest: {entry.interest}</h3>
+                    <h3>Activity: {entry.activity}</h3>                
                 </Link>
             </div>
         </div>
