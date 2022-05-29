@@ -11,15 +11,15 @@ export default function Step2(props) {
             setEntry({...entry, interest: e.target.alt});
             setIsActiveClick(!isActiveClick);
         } else {
-            e.target.style.transform = "none";
+            e.target.style.transform = "none"
             setEntry({...entry, interest: ""});
             setIsActiveClick(!isActiveClick);
         }
-    }
+    };
 
     const displayInterestIcons = interestIcons.map(({id, imgSrc, alt}) => {
         return <img className="interest-img" key = {id} src = {imgSrc} alt = {alt} onClick={(e)=> handleSelectInterest(e)} />
-    })
+    });
 
     return(
         <form className="parent-container">
@@ -32,6 +32,10 @@ export default function Step2(props) {
 
                 <div className="interest-container">
                     {displayInterestIcons}
+                </div>
+
+                <div className="warning-msg2-container">
+                    <p className="warning-msg2">* To deselect, click your selected interest again *</p>
                 </div>
                 
                 <div className="button-container step">

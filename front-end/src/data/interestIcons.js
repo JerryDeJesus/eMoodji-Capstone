@@ -7,7 +7,7 @@ import yogaIcon from "../assets/icon-interests/yoga.png";
 const interestIcons =
 [
     {id: 1, imgSrc: hugIcon, alt: "hug"},
-    {id: 2, imgSrc: massageIcon, alt: "massage"},
+    {id: 2, imgSrc: massageIcon, alt: "acupuncture"},
     {id: 3, imgSrc: musicIcon, alt: "music"},
     {id: 4, imgSrc: artIcon, alt: "art"},
     {id: 5, imgSrc: petIcon, alt: "pet"},
