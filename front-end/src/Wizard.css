@@ -6,7 +6,7 @@
     "left left left right";
 }
 
-.float-left{
+.float-left {
     grid-area: left;
     padding: 5%;
 }
@@ -25,14 +25,16 @@
     width: 75px;
     height: 75px;
 }
-.child-emoji:hover{
+
+.child-emoji:hover {
     cursor: pointer;
     border-radius: 50px;
-    border: 2px solid rgb(153, 186, 221);
+    border: 2px solid white;
 }
 
 .parent-emoji {
-    width: 70%;
+    justify-items: center;
+    width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     background-color: rgb(153, 186, 221);
@@ -42,9 +44,15 @@
 .wizard-question {
     text-align: center;
     font-size: 35px;
+    color: rgb(153, 186, 221);
+    font-weight: 800;
+    font-family: sans-serif;
 }
 
+
 .mood-search {
+    font-size: 20px;
+    color: rgb(153, 186, 221);
     border: 0px solid white;
     outline: none;
     text-align: center;
@@ -54,7 +62,199 @@
     border-bottom: 2px solid rgb(153, 186, 221);
 }
 
-.wizard-question-search{
+.mood-search::placeholder, #user_address::placeholder {
+    color: rgb(153, 186, 221);
+    font-size: 20px;
+}
+
+.wizard-question-search {
     text-align: center;
+    width: 75%;
+}
+
+.wizard-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 25px 0px;
+    background-color: rgb(153, 186, 221);
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
+}
+
+.wizard-button-small {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px 25px;
+    background-color: rgb(153, 186, 221);
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    border: none;
+}
+
+.wizard-button:hover {
+    background-color: white;
+    color: rgb(153, 186, 221);
+    box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+}
+
+.button-container {
+    width: 75%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.interest-container {
+    margin: 0 auto;
+    justify-items: center;
     width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(153, 186, 221);
+    border-radius: 20px;
+    padding: 25px;
+    gap: 25px 25px;
+}
+
+.step {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 0 auto;
+}
+
+.activity-container {
+    list-style: none;
+    margin: 0 auto;
+    justify-items: center;
+    width: 60%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: rgb(153, 186, 221);
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.activity-box {
+    display: grid;
+    width: 150px;
+    height: 100px;
+    align-items: center;
+    text-align: center;
+    color: white;
+    font-weight: 800;
+}
+
+.map-info{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 70%;
+}
+
+.format-name {
+    width: 75%;
+}
+
+#user_address {    
+    font-size: 18px;
+    color: rgb(153, 186, 221);
+    border: 0px solid white;
+    outline: none;
+    text-align: center;
+    width: 75%;
+    margin: 10px 45px;
+    padding: 5px;
+    border-bottom: 2px solid rgb(153, 186, 221);
+}
+
+.map-display {
+    width: 300px;
+    text-align: center;
+}
+
+.result-container {
+    margin: 60px 25px 0px 25px;
+}
+
+.result-container p {
+    font-size: 20px;
+}
+
+.result-container p a{
+    text-decoration: none;
+    color: black;
+}
+.result-container p a:hover{
+    color: rgb(153, 186, 221);
+    cursor: alias;
+}
+
+.last-step-btn {
+    width: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.display-msg {
+    text-align: center;
+    width: 400px;
+    color: coral;
+    font-family: sans-serif;
+}
+
+.display-entry-result-container {
+    display: flex;
+    margin: 0 auto;
+    width: 75%;
+    justify-content: center;
+}
+
+div.vertical-align-text {
+    width: 275px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: -20px;
+}
+
+div.vertical-align-emoji {
+    margin: -15px;
+}
+
+.center-button {
+    text-align: center;
+}
+
+.modal-div {
+    width: 450px;
+    color:rgb(153, 186, 221);
+    text-align: center;
+}
+
+.modal-button {
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: rgb(153, 186, 221);
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
+}
+
+.interest-img {
+    width: 100px;
+    padding: 10px;
+}
+
+.interest-img:hover {
+    cursor: pointer;
+    /* border: 8px solid white;
+    border-radius: inherit; */
+    width: 150px;
 }
