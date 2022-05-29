@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import {Link, useParams, useNavigate} from "react-router-dom";
 import axios from "axios";
-import { parseISO, format } from "date-fns";
+import { format, parseISO } from "date-fns";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -15,7 +15,7 @@ export default function EntryDetails () {
         axios.get(`${API}/entries/${id}`)
             .then((res) => {
                 console.log(res.data)
-                setEntry(res.data)
+                setEntry(res.data);
             })
             .catch(error => console.log(error))
     }, [id]);
@@ -26,11 +26,11 @@ export default function EntryDetails () {
             .catch(error => console.log(error))
     }
 
-    let formattedDate = format(parseISO(date_created), "MM/dd/yyyy HH:mm");
-
+    let formattedDate = typeof date_created === "string" ? format(parseISO(entry.date_created), "MM/dd/yyyy hh:mm aaaaa'm'") : "";
+    
     return(
         <div>
-            <h3>Date Created: {formattedDate}</h3>
+            <h3>Created At: {formattedDate}</h3>
             <h3>Mood: {mood}</h3>
             <h3>Interest: {interest}</h3>
             <h3>Activity: {activity}</h3>  
