@@ -20,15 +20,14 @@ export default function Step1(props) {
 
     const handleSelectEmoji = (e, emoji) => {
         if(!isActiveClick) {
-            e.target.style.border = "2px solid white";
-            e.target.style.borderRadius = "50px"; 
+            e.target.style.transform = "scale(1.8)"
             setEntry({...entry, mood : emoji.character});
             setIsActiveClick(!isActiveClick);
         } 
         else {
-           e.target.style.border = "none";
-           setEntry({...entry, mood : ""});
-           setIsActiveClick(!isActiveClick);
+            e.target.style.transform = "none"
+            setEntry({...entry, mood : ""});
+            setIsActiveClick(!isActiveClick);
         }    
     }
 
@@ -67,6 +66,10 @@ export default function Step1(props) {
                     
                     <div className="parent-emoji">
                         {renderedFilteredEmojis}
+                    </div>
+
+                    <div>
+                        <p className="warning-msg1">* To deselect, click your selected emoodjí again *</p>
                     </div>
 
                     <div className="button-container">

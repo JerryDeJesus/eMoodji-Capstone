@@ -28,8 +28,7 @@
 
 .child-emoji:hover {
     cursor: pointer;
-    border-radius: 50px;
-    border: 2px solid white;
+    transform: scale(1.5);
 }
 
 .parent-emoji {
@@ -76,7 +75,7 @@
     width: 200px;
     height: 50px;
     border-radius: 10px;
-    margin: 25px 0px;
+    margin: 15px 0px;
     background-color: rgb(153, 186, 221);
     color: white;
     font-weight: 700;
@@ -97,6 +96,7 @@
 }
 
 .wizard-button:hover {
+    cursor: pointer;
     background-color: white;
     color: rgb(153, 186, 221);
     box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
@@ -116,7 +116,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     background-color: rgb(153, 186, 221);
     border-radius: 20px;
-    padding: 25px;
+    padding: 40px 5px;
     gap: 25px 25px;
 }
 
@@ -131,22 +131,28 @@
     list-style: none;
     margin: 0 auto;
     justify-items: center;
-    width: 60%;
+    width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     background-color: rgb(153, 186, 221);
     border-radius: 20px;
-    padding: 20px;
+    padding: 25px;
+    grid-gap: 10px;
 }
 
 .activity-box {
     display: grid;
-    width: 150px;
-    height: 100px;
+    width: 210px;
+    height: 80px;
     align-items: center;
     text-align: center;
     color: white;
     font-weight: 800;
+}
+
+.activity-box:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 .map-info{
@@ -156,7 +162,8 @@
 }
 
 .format-name {
-    width: 75%;
+    width: 70%;
+    font-size: 24px;
 }
 
 #user_address {    
@@ -254,7 +261,39 @@ div.vertical-align-emoji {
 
 .interest-img:hover {
     cursor: pointer;
-    /* border: 8px solid white;
-    border-radius: inherit; */
-    width: 150px;
+    transform: scale(1.5) rotate(15deg);
+}
+
+.warning-msg1 {
+    color: rgb(153, 186, 221);
+    text-align: center;
+    width: 75%;
+    margin-top: 8px;
+    font-size: 17px;
+}
+
+.warning-msg2-container {
+    width: 70%;
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+}
+
+.warning-msg2 {
+    color: rgb(153, 186, 221);
+    margin-top: 8px;
+    font-size: 17px;
+}
+
+.warning-msg3-container {
+    width: 75%;
+    display: grid;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.warning-msg3 {
+    color: rgb(153, 186, 221);
+    margin-top: 8px;
+    font-size: 17px;
 }
