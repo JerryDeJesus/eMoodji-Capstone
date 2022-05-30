@@ -37,13 +37,13 @@
   /* transition: .66s; */
 }
 
-#logout:link{
-  /* align-items: center;
-  text-decoration: none; */
+/* #logout:hover{
+  align-items: center;
+  text-decoration: none;
   background-color: white;
   color: rgb(153, 186, 221);
   transition: .66s;
-}
+} */
 
 /* - Home.js ---------------------------------------------------- */
 
@@ -199,7 +199,7 @@
   display : grid;
   grid-column-start: 3;
   grid-column-end: 3;
-  width: 225px;
+  width: 315px;
   text-align: center;
   gap: 40px;
   padding: 40px;
