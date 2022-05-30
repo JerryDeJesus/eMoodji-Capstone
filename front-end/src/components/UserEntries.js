@@ -5,6 +5,8 @@ import { format, parseISO } from "date-fns";
 import Flippy, {FrontSide, BackSide} from "react-flippy";
 
 const API = process.env.REACT_APP_API_URL;
+const activitiesData = require('../data/activities.json');
+
 
 export default function UserEntries (){
     const [userEntries, setUserEntries] = useState([]);
@@ -47,38 +49,38 @@ export default function UserEntries (){
         display: "flex",
     }
 
-    const enlargeEmojiStyle = {
-        fontSize: "50px",
-        boxShadow: "4px 0.7px 20px 3px rgb(153, 186, 221)",
-        borderRadius: "20px",
-        color: "rgb(153, 186, 221)",
-    }
-
-    
     let displayUserEntries = userEntries.map((entry, index)=>{
         let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy hh:mm aaaaa'm'");
         let linkToEntry = `/entries/${entry.id}`;
 
+        let resourceLink = "";
+        let resourceArray = entry.interest && entry.activity ? activitiesData[entry.interest] : null;
+        for(let each of resourceArray){
+            if(each.name === entry.activity){
+                resourceLink = each.website;
+            }
+        }
+
         return(
             <div className='usEntri' key = {index} >
                 <Flippy 
-    key={index}
-    flipOnClick = {true}
-    flipDirection = "horizontal"
-    style={cardStyle}
-    >
-        <FrontSide style = {frontStyle}>
-            <h3>{formattedDate}</h3>
-            <h3>{entry.mood}</h3>
-        </FrontSide>
-        <BackSide style={backStyle}>
-            <div >
-                
-                <h3>Interest: {entry.interest}</h3>
-                <h3>Activity: {entry.activity}</h3>
-            </div>
-        </BackSide>
-</Flippy>
+                key={index}
+                flipOnClick = {true}
+                flipDirection = "horizontal"
+                style={cardStyle}
+                >
+                    <FrontSide style = {frontStyle}>
+                        <h3>{formattedDate}</h3>
+                        <h3>{entry.mood}</h3>
+                    </FrontSide>
+                    
+                    <BackSide style={backStyle}>
+                        <div>
+                            <h3>Interest: {entry.interest}</h3>
+                            <h3>Activity: <a href={resourceLink} target="_blank" rel="noreferrer noopener">{entry.activity}</a></h3>
+                        </div>
+                    </BackSide>
+                </Flippy>
                 {/* <Link to={linkToEntry}>
                     <h3>Created At: {formattedDate}</h3>
                     <h3>Mood: {entry.mood}</h3>
