@@ -37,7 +37,6 @@ export default function App() {
           <Route path="/users/:id" element = {<ShowUserDetails />} />
           <Route path="/createaccount" element={<NewUser />} />
           <Route path="/users/:id/entries" element={<ShowUserEntries />} />
-          {/* <Route path="/users/:userid/entries/:id" element={<ShowEntry />} /> */}
           <Route path="/users/:id/edit" element={<EditUser />} />
 
           <Route path ="/wizard" element={<ShowWizard />} />
