@@ -4,17 +4,6 @@ import { useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
-// export default function QuoteInHomePage(){
-//     const [quote, setQuote] = useState([]);
-//     useEffect(() => {
-//         axios("https://type.fit/api/quotes")
-//         .then(res => {
-//           setQuote(res.data[Math.floor(Math.random() * 10)]);
-//           console.log(res.data[Math.floor(Math.random() * 10)]);
-//         })  
-        
-//     }, []);
-
 export default function Login(){
     const [user, setUser] = useState({
         id: null,
@@ -28,15 +17,8 @@ export default function Login(){
         setUser({...user, [e.target.id]: e.target.value})
     }
 
-
     let userFirstName = "";
-    // let entry = {
-    //     userid: null,
-    //     mood: localStorage.getItem("tempEntryMood"),
-    //     interest: localStorage.getItem("tempEntryInterest"),
-    //     activity: localStorage.getItem("tempEntryActivity")
-    //     };
-
+    
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post(`${API}/users/loginpage`, user)
@@ -49,28 +31,11 @@ export default function Login(){
             navigate("/");
         })
         .catch(error => alert("invalid login credentials"))
-
-        // let entry = {
-        //     userid: usersId,
-        //     mood: localStorage.getItem("tempEntryMood"),
-        //     interest: localStorage.getItem("tempEntryInterest"),
-        //     activity: localStorage.getItem("tempEntryActivity")
-        //     };
-
-        // axios.post(`${API}/entries`, entry)
-        // .then(res =>{
-        //     console.log(res);
-        // })
-        // .catch(err => console.log(err))
-        
-    };
-
-    
+    }
     
     return(
         <div className='login'>
-            {/* <h1>Login Page</h1> */}
-            {/* <h1 id='homeQuote'>"{quote.text} - {quote.author}"</h1> */}
+            {/* <h1>Log in</h1> */}
             <form onSubmit={handleSubmit}>
                 <label htmlFor="email"></label>
                 <input 

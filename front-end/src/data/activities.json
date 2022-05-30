@@ -27,7 +27,7 @@
                    {"name" : "NY MUSIC THERAPY", "address" : "Online", "description" : "Music psychotherapy is a combination of talk therapy and music/music-making to foster self-awareness, healing and growth for adults and adolescents.", "phone" : "online", "website" : "nymusictherapy.com"},
                    {"name" : "The Louis Armstrong Department of Music Therapy, Mount Sinai Beth Israel", "address" : "281 1st Avenue (First Avenue at 16th Street) New York, NY 10003", "description" : "Our clinical services, research projects and on-going programs are guided by experts in the fields of medicine, music, and music therapy.", "phone" : "(212) 420-2704", "website" : "musicandmedicine.org"},
                    {"name" : "Nordoff-Robbins Center for Music Therapy, NYU Steinhardt", "address" : "35 W 4th Street, 11th Floor New York, NY 10012", "description" : "The Nordoff-Robbins approach to music therapy is based on the belief that everyone possesses a sensitivity to music that can be utilized for personal growth and development.", "phone" : "(212) 998-5162", "website" : "steinhardt.nyu.edu/nordoff"},
-                   {"name" : "Manhatten Music Therapy", "address" : "Online", "description" : "Therapy can be healing. It can be communicative. It can be an avenue to self-awareness, and discovery.", "phone" : "(833) NYC-Therapy", "website" : "manhattanmusictherapy.com"}
+                   {"name" : "Manhattan Music Therapy", "address" : "Online", "description" : "Therapy can be healing. It can be communicative. It can be an avenue to self-awareness, and discovery.", "phone" : "(833) NYC-Therapy", "website" : "manhattanmusictherapy.com"}
   ],
   
   "pet":[
