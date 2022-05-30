@@ -53,29 +53,27 @@ export default function Login(){
     return(
         <div className='login'>
             {/* <h1>Login Page</h1> */}
-            {/* <h1 id='homeQuote'>"{quote.text} - {quote.author}"</h1> */}
-            <form onSubmit={handleSubmit}>
-                <label htmlFor="email"></label>
-                <input 
+            <h1 id='descript' style={{'padding-top': '50px'}}> 🥰🤪😂🥳😬🙃😎🤩 <p> Practice mindfulness with eMoodji! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you ! </p></h1>
+            <form onSubmit={handleSubmit} style={{'color':'white'}} >
+
+                <input    
                     id = "email"
                     value = {user.email} 
                     type = "email" 
                     onChange = {handleTextChange} 
                     placeholder="example@email.com"
                     required
-                />
-
-                <label htmlFor="password"></label>
-                <input
+                    />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+              
+                    <input
                     id = "password"
                     value = {user.password}
                     type = "password"
                     onChange = {handleTextChange} 
                     placeholder="Password"
                     required
-                />
-                <br />
-                <button id='logIn' type="submit">Log In</button>
+                    /><br />
+                <button id='logIn' type="submit" >Log In</button>
             </form>
         </div>
     )

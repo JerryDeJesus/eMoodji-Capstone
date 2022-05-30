@@ -20,11 +20,11 @@ export default function SignedInHomePage(){
        
             <div className="sIHomePage">
                 {/* <h1>Signed in Home Page</h1> */}
-                <h1 id='quote'>"{quote.text}" <br /> - {quote.author}</h1>
+                <h1 id='quote'>"{quote.text}" <br /> - {quote.author}</h1><br /><br /><br />
                 <div className='eBGrid'>
                     <div className='entryBox'>
-                    <Link id='nEntry' to="/wizard"><button> New Entry </button></Link><br />
-                    <Link id='aEntry'  to={userEntriesLink}><button>All Entries</button></Link>
+                    <Link id='nEntry' to="/wizard"><button style={{'width': '200px', 'height': '50px', 'border-radius': '10px', 'background-color': 'rgb(153, 186, 221)', 'color': 'white', 'font-weight': '700', 'font-size': '25px'}}> New Entry </button></Link>
+                    <Link id='aEntry'  to={userEntriesLink}><button style={{'width': '200px', 'height': '50px', 'border-radius': '10px', 'background-color': 'rgb(153, 186, 221)', 'color': 'white', 'font-weight': '700', 'font-size': '25px'}} >All Entries</button></Link>
                     </div>
                 </div>
             </div>

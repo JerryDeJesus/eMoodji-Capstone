@@ -27,7 +27,7 @@ export default function UserEntries (){
         let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy HH:mm");
         let linkToEntry = `/entries/${entry.id}`;
         return(
-            <div className='usEntri' key = {index} >
+            <div className='usEntry' key = {index} >
                 <Link to={linkToEntry}>
                 <h3>Date Created: {formattedDate}</h3>
                 <h3>Mood: {entry.mood}</h3>
