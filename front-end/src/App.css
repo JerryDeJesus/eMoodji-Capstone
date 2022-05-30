@@ -355,3 +355,8 @@
 #gh{
   padding-top: 14px;
 }
+
+.sUE{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

@@ -24,15 +24,17 @@ export default function UserEntries (){
 
     
     let displayUserEntries = userEntries.map((entry, index)=>{
-        let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy HH:mm");
+        let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy hh:mm aaaaa'm'");
         let linkToEntry = `/entries/${entry.id}`;
+
         return(
             <div className='usEntry' key = {index} >
                 <Link to={linkToEntry}>
-                <h3>Date Created: {formattedDate}</h3>
-                <h3>Mood: {entry.mood}</h3>
-                <h3>Interest: {entry.interest}</h3>
-                <h3>Activity: {entry.activity}</h3></Link>
+                    <h3>Created At: {formattedDate}</h3>
+                    <h3>Mood: {entry.mood}</h3>
+                    <h3>Interest: {entry.interest}</h3>
+                    <h3>Activity: {entry.activity}</h3>
+                </Link>
                 <br />
             </div>
         )
@@ -40,7 +42,7 @@ export default function UserEntries (){
     
 
     return(
-        <div>
+        <div className="sUE">
             {userEntries.length ? displayUserEntries : "No Entries"}
         </div>
     )

@@ -1,16 +1,25 @@
-import hugIcon from "../../assets/icon-interests/hug.png"
-import massageIcon from "../../assets/icon-interests/massage.png"
-import musicIcon from "../../assets/icon-interests/music.png"
-import paintIcon from "../../assets/icon-interests/paint.png"
-import petsIcon from "../../assets/icon-interests/pets.png"
-import yogaIcon from "../../assets/icon-interests/yoga.png"
+import { useState } from "react";
+import interestIcons from "../../data/interestIcons";
 
 export default function Step2(props) {
     const {progressBarComponent, entry, setEntry, next, back} = props;
+    const [isActiveClick, setIsActiveClick] = useState(false);
     
     const handleSelectInterest = (e) => {
-        setEntry({...entry, interest: e})
-    }
+        if(!isActiveClick) {
+            e.target.style.transform = "scale(1.8)";
+            setEntry({...entry, interest: e.target.alt});
+            setIsActiveClick(!isActiveClick);
+        } else {
+            e.target.style.transform = "none"
+            setEntry({...entry, interest: ""});
+            setIsActiveClick(!isActiveClick);
+        }
+    };
+
+    const displayInterestIcons = interestIcons.map(({id, imgSrc, alt}) => {
+        return <img className="interest-img" key = {id} src = {imgSrc} alt = {alt} onClick={(e)=> handleSelectInterest(e)} />
+    });
 
     return(
         <form className="parent-container">
@@ -19,20 +28,19 @@ export default function Step2(props) {
             </div>
 
             <div className="float-left">
-                <h2>Tell me what's your interest</h2>
+                <p className="wizard-question">Tell me, what's your interest?</p>
 
-                <div>
-                    <img src={hugIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="hug"/>
-                    <img src={massageIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="acupuncture"/>
-                    <img src={musicIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="music"/>
-                    <img src={paintIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="art"/>
-                    <img src={petsIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="pet"/>
-                    <img src={yogaIcon} style={{width:"100px"}} onClick={(e)=> handleSelectInterest(e.target.alt)} alt="yoga"/>
+                <div className="interest-container">
+                    {displayInterestIcons}
+                </div>
+
+                <div className="warning-msg2-container">
+                    <p className="warning-msg2">* To deselect, click your selected interest again *</p>
                 </div>
                 
-                <div>
-                    <button type = "button" onClick={back}>Back</button> 
-                    <button type = "button" onClick={next}>Next</button>
+                <div className="button-container step">
+                    <button className="wizard-button" type = "button" onClick={back}>Back</button> 
+                    <button className="wizard-button" type = "button" onClick={next}>Next</button>
                 </div>
             </div>
         </form>
