@@ -3,6 +3,8 @@ CREATE DATABASE capstone_dev;
 
 \c capstone_dev; 
 
+DROP TABLE IF EXISTS users;
+
 CREATE TABLE users (
     id SERIAL PRIMARY KEY,
     fname TEXT NOT NULL, 
@@ -10,6 +12,8 @@ CREATE TABLE users (
     email TEXT NOT NULL,
     password TEXT NOT NULL
 );
+
+DROP TABLE IF EXISTS entries;
 
 CREATE TABLE entries (
     id SERIAL PRIMARY KEY,
