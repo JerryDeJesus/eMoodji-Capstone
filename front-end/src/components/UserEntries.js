@@ -26,8 +26,8 @@ export default function UserEntries (){
     }, [id, navigate]);
 
     const cardStyle = {
-        width: "350px", 
-        height: "150px",
+        width: "450px", 
+        height: "350px",
         margin: "20px",
         textAlign: "center",
     }
@@ -54,10 +54,12 @@ export default function UserEntries (){
         let linkToEntry = `/entries/${entry.id}`;
 
         let resourceLink = "";
+        let resourceDescription = "";
         let resourceArray = entry.interest && entry.activity ? activitiesData[entry.interest] : null;
         for(let each of resourceArray){
             if(each.name === entry.activity){
                 resourceLink = each.website;
+                resourceDescription = each.description;
             }
         }
 
@@ -70,14 +72,19 @@ export default function UserEntries (){
                 style={cardStyle}
                 >
                     <FrontSide style = {frontStyle}>
+                        
+                        <h1>{entry.mood}</h1>
+                        
                         <h3>{formattedDate}</h3>
-                        <h3>{entry.mood}</h3>
                     </FrontSide>
                     
                     <BackSide style={backStyle}>
-                        <div>
-                            <h3>Interest: {entry.interest}</h3>
-                            <h3>Activity: <a href={resourceLink} target="_blank" rel="noreferrer noopener">{entry.activity}</a></h3>
+                        <div className="entry-card-back">
+                            <h3>{entry.interest.toUpperCase()}</h3>
+                           
+                            <h3><a href={resourceLink} target="_blank" rel="noreferrer noopener">{entry.activity}</a></h3>
+                           
+                            <h4>{resourceDescription}</h4>
                         </div>
                     </BackSide>
                 </Flippy>

@@ -84,12 +84,12 @@
   display : grid; 
 }
 
-#usEntri{
-  background-color: rgb(153, 186, 221);
+.usEntri{
+  text-align: -webkit-center;
 }
 
 .footer{
-  position: fixed;
+  
   background-color: rgb(153, 186, 221);
   bottom: 0;
   width: 100%;
@@ -134,7 +134,9 @@
 
 .sUE{
   display: grid;
-  width: 350px;
+  width: 80%;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 10%;
 }
 
 #userEntriesPage{
@@ -142,4 +144,28 @@
   display: grid;
   grid-template-rows: 1fr 10fr;
   grid-template-columns: auto;
+}
+
+a:hover{
+  color:rgb(153, 186, 221);
+  cursor: alias;
+  text-decoration: underline;
+}
+
+a{
+  text-decoration: none;
+}
+
+.entry-card-back{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.entry-card-back h3{
+  padding: 14px 0px;
+}
+
+.entry-card-back h4{
+  padding: 14px 0px;
 }
