@@ -24,8 +24,8 @@ export default function App() {
   return(
     <div>
       <Router>
-        <NavBar />
       <main>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
 
@@ -43,8 +43,8 @@ export default function App() {
           <Route path="/loginpage" element={<Login />} />
           <Route path="*" element={<FourOFour />} />
         </Routes>
-      </main>
       <Footer />
+      </main>
       </Router>
     </div>
   )

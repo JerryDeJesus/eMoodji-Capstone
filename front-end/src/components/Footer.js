@@ -7,7 +7,6 @@ import ghLogo from "../assets/logo/github_white_icon.png";
 
 export default function Footer () {
     return (
-        <div>
         <nav className='footer'>
             
             <a id='fb' href='https://facebook.com' target='_blank' rel='noreferrer noopener'><img src={fbLogo} alt='fb' style={{'width': '27.5px'}}/></a>
@@ -17,8 +16,5 @@ export default function Footer () {
         
             <div id='cr'>Copyright 2022</div>
         </nav>    
-         </div>
-    
-        
     )
 };
