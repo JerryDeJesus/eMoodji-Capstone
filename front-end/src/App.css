@@ -1,4 +1,6 @@
 
+/* - NavBar.js ---------------------------------------------------- */
+
 #NavBar{
   align-items: center;
   justify-items: center;
@@ -11,7 +13,6 @@
 }
 
 #logo{
-  padding-left: 10px;
   display : grid;
   grid-column-start: 1;
   grid-column-end: 1;
@@ -26,17 +27,159 @@
 }
 
 #logout{
+  padding: 5px;
   text-decoration: none;
   display : grid; 
   grid-column-start: 4;
   grid-column-end: 4;
+  outline: none;
+  /* transition: .66s; */
 }
+
+/* #logout:hover{
+  align-items: center;
+  text-decoration: none;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  transition: .66s;
+} */
+ 
+ a{
+   text-decoration: none;
+ }
+
+/* - Home.js ---------------------------------------------------- */
+
+.home{
+  display : grid;
+  border: 5px solid rgb(153, 186, 221);
+  margin: 30px; 
+  padding: 1px;
+  box-sizing: border-box;
+  width: auto;
+  min-height: 68vh; 
+  padding-bottom: 40px;
+  border-radius: 10px;
+}
+
+#descript{
+  align-items: center;
+  place-items: center;
+  text-align: center;
+  margin: 40px;
+  padding: 10px;
+  border: 5px solid rgb(153, 186, 221);
+  border-radius: 10px;
+}
+
+.inHomeBox{
+  margin-top: 20px;
+  text-align: center;
+
+}
+
+#hbNewEntry{
+   background-color: rgb(153, 186, 221);
+   color: white;
+}
+
+/* #hbNewEntry:hover{
+  background-color: #008CBA;
+  color: white;
+} */
+
+/* #hbLogIn{
+  padding-top: 20px;
+} */
+
+/* #hbLogIn:hover {
+  background-color: #008CBA;
+  color: white;
+} */
+
+/* #hbCrAcc{
+  padding-top: 20px;
+} */
+
+/* #hbCrAcc:hover {
+  background-color: #008CBA;
+  color: white;
+} */
+
+/* - Login.js ---------------------------------------------------- */
+
+.login{
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+  display : grid;
+  grid-template-columns: repeat(3 1fr);
+  border-radius: 10px;
+}
+
+#email{
+  margin-top: 50px;
+  outline: none;
+  text-align: center;
+  color: white;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 100px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+#password{
+  margin-top: 50px;
+  outline: none;
+  text-align: center;
+  color: white;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 25px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+#logIn{
+  margin-top: 75px;
+  outline: none;
+  text-align: center;
+  grid-column-start: 2;
+  grid-column-end: 3; 
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  margin-top: 25px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  outline: none; 
+}
+
+/* - SignInHomePage ---------------------------------------------------- */
+
 .sIHomePage{
-  /* background-color: rgb(153, 186, 221); */
   padding-top: 10px;
   display : grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(1, 1fr);
   bottom: 0px;
 }
 
@@ -49,44 +192,138 @@
   padding-top: 10px;
   text-align: center;
   color: white;
-  font-family:Arial, Helvetica, sans-serif;
   font-style: italic;
 }
 
 .eBGrid{
   display : grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding-top: 20px;
+  grid-template-columns: repeat(5, 1fr);
 }
 
 .entryBox{
   border: 5px solid rgb(153, 186, 221);
-  /* background-color: rgb(153, 186, 221); */
   display : grid;
-  grid-column-start: 2;
-  grid-column-end: 2;
-  width: 230px;
-  height: 80px;
-  padding: 35px; 
+  grid-column-start: 3;
+  grid-column-end: 3;
+  width: 315px;
+  text-align: center;
+  gap: 40px;
+  padding: 40px;
+  border-radius: 10px;
 }
 
 #nEntry{
  text-decoration: none;
- /* align-items: center;
- justify-items: center; */
+ align-items: center;
+ justify-items: center;
  display : grid;
+ outline: none;
 }
 
 #aEntry{
   text-decoration: none;
-  /* align-items: center;
-  justify-items: center; */
+  align-items: center;
+  justify-items: center;
   display : grid; 
+  padding: 10px;
+  outline: none;
 }
+
+/* #usEntry{
+  background-color: rgb(153, 186, 221);
+} */
+
+/* - NewUserForm ---------------------------------------------------- */
+
+.uNew{
+  align-items: center;
+  justify-items: center;
+  padding-top: 0px;
+}
+
+.newForm{
+  padding: 20px;
+  align-items: center;
+  justify-items: center;
+  display : grid;
+  grid-template-columns: repeat(3 1fr);
+  border-radius: 10px;
+}
+
+#fname{
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
 
 .usEntri{
   text-align: -webkit-center;
 }
+
+#lname{
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+#nEmail{
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+#passWord{
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+#nSubmit{
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 25px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
+  outline: none;
+}
+
+
+/* - Footer ---------------------------------------------------- */
+
 
 .footer{
   
