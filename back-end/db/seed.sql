@@ -6,8 +6,13 @@ INSERT INTO users (fname, lname, email, password) VALUES
 ('Joey', 'Dean', 'jdbikes@aol.com', 'h0gwarts');
 
 INSERT INTO entries (userid, date_created, mood, interest, activity) VALUES
-(1, '05/11/2022 12:08:00', 'happy', 'animals, food, retail', 'cow therapy'),
-(2, '02/14/2022 14:14:00', 'sad', 'social, animals', 'hug therapy'),
-(3, '06/10/2022 18:00:00', 'excited', 'social, exercise','zumba'),
-(2, '03/21/2022 00:00:00', 'happy', 'social, food, dance', 'karaoke');
+(1, '2022-05-11T12:08:04.111Z', '😄', 'hug', 'Cow Hug Therapy'),
+(2, '2022-02-14T14:14:45.364Z', '😢', 'hug', 'Nora Hug Therapy'),
+(3, '2022-06-10T18:30:45.436Z', '💃', 'music', 'zumba'),
+(2, '2022-03-21T11:11:45.421Z', '😄', 'music', 'karaoke'),
+(1, '2022-05-30T15:40:48.683Z', '😄', 'pet', 'Bideawees Pet Therapy Program'),
+(1, '2022-05-30T15:41:00.151Z', '😄', 'pet', 'NAMI-NYC'),
+(1, '2022-05-30T16:22:33.472Z', '😄', 'music', 'Manhattan Music Therapy'),
+(1, '2022-05-30T16:28:36.176Z', '🤫', 'yoga', 'Dharma Yoga'),
+(1, '2022-05-30T16:29:50.888Z', '😰', 'art', 'The Art Therapy Project: Veterans');
 
