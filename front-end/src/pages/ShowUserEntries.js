@@ -4,7 +4,7 @@ export default function ShowUserEntries (){
   
     return(
         <div id="userEntriesPage">
-            <h1>Your Entries</h1>
+            <h1></h1>
             <UserEntries />
         </div>
     )
