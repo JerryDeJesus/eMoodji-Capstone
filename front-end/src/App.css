@@ -74,19 +74,19 @@
 }
 
 #descript{
-  align-items: center;
+  /* align-items: center;
   place-items: center;
+  border: 5px solid rgb(153, 186, 221); */
+  width: 50%;
   text-align: center;
   margin: 40px;
   padding: 10px;
-  border: 5px solid rgb(153, 186, 221);
   border-radius: 10px;
 }
 
 .inHomeBox{
   margin-top: 20px;
   text-align: center;
-
 }
 
 #hbNewEntry{
@@ -103,7 +103,6 @@
 /* - Login.js ---------------------------------------------------- */
 
 .login{
-  padding: 20px;
   align-items: center;
   justify-items: center;
   display : grid;
@@ -296,7 +295,6 @@
 }
 
 .newForm{
-  padding: 20px;
   align-items: center;
   justify-items: center;
   display : grid;
@@ -485,7 +483,7 @@ a{
   display: grid;
   width: 80%;
   grid-template-columns: 1fr 1fr;
-  margin-left: 10%;
+  padding-left: 5%;
 }
 
 #userEntriesPage{
@@ -524,7 +522,7 @@ a{
   width:500px;
   margin: 0 auto;
   position: sticky;
-  top: 200px;
+  top: 100px;
   margin-right: 30%;
 }
 
@@ -544,5 +542,4 @@ a{
 }
 .banner-container h1 {
   font-size: 24px;
-
 }
