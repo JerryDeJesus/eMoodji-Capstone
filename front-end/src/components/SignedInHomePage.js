@@ -33,8 +33,8 @@ export default function SignedInHomePage(){
                 <h1 id='quote'>"{quote.text}" <br /> - {quote.author ? quote.author : "Unknown"}</h1><br /><br />
                 <div className='eBGrid'>
                     <div className='entryBox'>
-                    <Link id='nEntry' to="/wizard"><button style={{'width': '200px', 'height': '50px', 'border-radius': '10px', 'background-color': 'rgb(153, 186, 221)', 'color': 'white', 'font-weight': '700', 'font-size': '25px', 'outline': 'none'}}> New Entry </button></Link>
-                    <Link id='aEntry'  to={userEntriesLink}><button style={{'width': '200px', 'height': '50px', 'border-radius': '10px', 'background-color': 'rgb(153, 186, 221)', 'color': 'white', 'font-weight': '700', 'font-size': '25px', 'outline': 'none'}} >All Entries</button></Link>
+                    <Link id='nEntry' to="/wizard"><button style={{'width': '200px', 'height': '50px', 'border-radius': '10px', 'background-color': 'rgb(153, 186, 221)', 'color': 'white', 'font-weight': '700', 'font-size': '25px', 'border': 'none'}}> New Entry </button></Link>
+                    <Link id='aEntry'  to={userEntriesLink}><button style={{'width': '200px', 'height': '50px', 'border-radius': '10px', 'background-color': 'rgb(153, 186, 221)', 'color': 'white', 'font-weight': '700', 'font-size': '25px', 'border': 'none'}} >All Entries</button></Link>
                     </div>
                 </div>
             </div>
