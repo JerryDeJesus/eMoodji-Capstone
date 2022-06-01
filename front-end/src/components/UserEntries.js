@@ -68,7 +68,7 @@ export default function UserEntries (){
             }
         }
         return(
-            <div className='usEntri' key = {index} >
+            <div className='usEntry' key = {index} >
                 <Flippy 
                 key={index}
                 flipOnClick = {true}

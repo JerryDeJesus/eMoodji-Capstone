@@ -1,20 +1,8 @@
 import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import NewUser from "../../src/pages/user-pages/NewUser.js";
 
 const API = process.env.REACT_APP_API_URL;
-
-// export default function NuUFormQuote(){
-//     const [quote, setQuote] = useState([]);
-//     useEffect(() => {
-//         axios("https://type.fit/api/quotes")
-//         .then(res => {
-//           setQuote(res.data[Math.floor(Math.random() * 10)]);
-//           console.log(res.data[Math.floor(Math.random() * 10)]);
-//         })  
-        
-//     }, []);
 
 export default function NewUserForm(){
     const [user, setUser] = useState({

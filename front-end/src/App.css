@@ -1,7 +1,7 @@
 
 /* - NavBar.js ---------------------------------------------------- */
 
-#NavBar{
+.NavBar{
   align-items: center;
   justify-items: center;
   background-color: rgb(153, 186, 221);
@@ -16,6 +16,17 @@
   display : grid;
   grid-column-start: 1;
   grid-column-end: 1;
+}
+
+.weatherArea{
+  color: white;
+  text-align: center;
+  font-size: 23px;
+}
+
+#weather{
+  text-decoration: white;
+  width: 100px;
 }
 
 #welcome{
@@ -33,16 +44,16 @@
   grid-column-start: 4;
   grid-column-end: 4;
   outline: none;
+  border: none;
   /* transition: .66s; */
 }
 
-/* #logout:hover{
-  align-items: center;
-  text-decoration: none;
+#logout:hover{
+  cursor: pointer;
   background-color: white;
   color: rgb(153, 186, 221);
-  transition: .66s;
-} */
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+}
  
  a{
    text-decoration: none;
@@ -81,31 +92,14 @@
 #hbNewEntry{
    background-color: rgb(153, 186, 221);
    color: white;
+   width: 400px;
 }
 
-/* #hbNewEntry:hover{
-  background-color: #008CBA;
-  color: white;
-} */
-
-/* #hbLogIn{
-  padding-top: 20px;
-} */
-
-/* #hbLogIn:hover {
-  background-color: #008CBA;
-  color: white;
-} */
-
-/* #hbCrAcc{
-  padding-top: 20px;
-} */
-
-/* #hbCrAcc:hover {
-  background-color: #008CBA;
-  color: white;
-} */
-
+.newEntryB:hover{
+  cursor: pointer;
+  color: rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+}
 /* - Login.js ---------------------------------------------------- */
 
 .login{
@@ -133,7 +127,7 @@
   font-weight: 700;
   font-size: 25px;
   border: none;
-  outline: none;
+
 }
 
 
@@ -171,7 +165,7 @@
   font-weight: 700;
   font-size: 25px;
   border: none;
-  outline: none;
+  
 }
 /* - SignInHomePage ---------------------------------------------------- */
 
@@ -185,6 +179,15 @@
   font-weight: 700;
   font-size: 25px;
   border: none;
+}
+
+::placeholder{color: white;}
+
+#logIn:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221); 
   outline: none;
 }
 
@@ -198,6 +201,8 @@
 #quote{
   background-color: rgb(153, 186, 221);
   padding: 10px;
+  border: 5px solid white;
+  margin-top: 60px;
   margin: 40px;
   margin-right: 680px;
   margin-top: 70px;
@@ -222,24 +227,52 @@
   text-align: center;
   gap: 40px;
   padding: 40px;
+  margin-bottom: 60px;
   border-radius: 10px;
 }
 
 #nEntry{
- text-decoration: none;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 15px;
+ /* text-decoration: none;
  align-items: center;
  justify-items: center;
  display : grid;
- outline: none;
+ border: none;
+ outline: none; */
+}
+
+#nEntry:hover{
+  cursor: pointer;
+  box-shadow: 4px 4px 24px 4px;
+  width: 200px;
+  /* cursor: pointer;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  box-shadow: 2px 2px 10px 2px rgb(153, 186, 221); */
 }
 
 #aEntry{
-  text-decoration: none;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 15px;
+  /* text-decoration: none;
   align-items: center;
   justify-items: center;
   display : grid; 
   padding: 10px;
-  outline: none;
+  border: none; */
+}
+
+#aEntry:hover{
+  cursor: pointer;
+  box-shadow: 4px 4px 24px 4px;
+  width: 200px;
+  /* cursor: pointer;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221); */
 }
 
 #aEntry button,#nEntry button{
@@ -284,7 +317,6 @@
   outline: none;
 }
 
-
 .usEntri{
   text-align: -webkit-center;
 }
@@ -315,8 +347,6 @@
   outline: none;
 }
 
-
-
 #nSubmit{
   text-align: center;
   width: 200px;
@@ -331,9 +361,54 @@
   outline: none;
 }
 
+#nSubmit:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+}
+
+/* - UserEntries ---------------------------------------------------- */
+
+.sUE{
+  display: grid;
+  width: 80%;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 10%;
+}
+
+#userEntriesPage{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 10fr;
+  grid-template-columns: auto;
+}
+
+a:hover{
+  color:rgb(153, 186, 221);
+  cursor: alias;
+  text-decoration: underline;
+}
+
+a{
+  text-decoration: none;
+}
+
+.entry-card-back{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.entry-card-back h3{
+  padding: 14px 0px;
+}
+
+.entry-card-back h4{
+  padding: 14px 0px;
+}
 
 /* - Footer ---------------------------------------------------- */
-
 
 .footer{
   background-color: rgb(153, 186, 221);
@@ -366,17 +441,45 @@
   padding-left: 5px;
 }
 
+/* #fb:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+} */
+
 #twt{
-  padding-top: 9px;
+  padding-top: 12px;
 }
+
+/* #twt:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+} */
 
 #ig{
   padding-top: 14px;
 }
 
+/* #ig:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+} */
+
 #gh{
   padding-top: 14px;
 }
+
+/* #gh:hover{
+  cursor: pointer;
+  background-color: white;
+  color: rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+} */
 
 .sUE{
   display: grid;
