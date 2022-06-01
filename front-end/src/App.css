@@ -18,9 +18,15 @@
   grid-column-end: 1;
 }
 
-#weather{
+.weatherArea{
   color: white;
+  text-align: center;
+  font-size: 23px;
+}
+
+#weather{
   text-decoration: white;
+  width: 100px;
 }
 
 #welcome{
@@ -86,37 +92,14 @@
 #hbNewEntry{
    background-color: rgb(153, 186, 221);
    color: white;
+   width: 400px;
 }
 
-#hbNewEntry:hover{
+.newEntryB:hover{
   cursor: pointer;
-  background-color: white;
   color: rgb(153, 186, 221);
   box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
 }
-
-/* #hbLogIn{
-  padding-top: 20px;
-} */
-
-#hbLogIn:hover {
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-}
-
-/* #hbCrAcc{
-  padding-top: 20px;
-} */
-
-#hbCrAcc:hover {
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-}
-
 /* - Login.js ---------------------------------------------------- */
 
 .login{
@@ -184,6 +167,8 @@
 
 }
 
+::placeholder{color: white;}
+
 #logIn:hover{
   cursor: pointer;
   background-color: white;
@@ -232,35 +217,47 @@
 }
 
 #nEntry{
- text-decoration: none;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 15px;
+ /* text-decoration: none;
  align-items: center;
  justify-items: center;
  display : grid;
  border: none;
- outline: none;
+ outline: none; */
 }
 
 #nEntry:hover{
   cursor: pointer;
+  box-shadow: 4px 4px 24px 4px;
+  width: 200px;
+  /* cursor: pointer;
   background-color: white;
   color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+  box-shadow: 2px 2px 10px 2px rgb(153, 186, 221); */
 }
 
 #aEntry{
-  text-decoration: none;
+  width: 200px;
+  border-radius: 10px;
+  margin-left: 15px;
+  /* text-decoration: none;
   align-items: center;
   justify-items: center;
   display : grid; 
-  /* padding: 10px; */
-  border: none;
+  padding: 10px;
+  border: none; */
 }
 
 #aEntry:hover{
   cursor: pointer;
+  box-shadow: 4px 4px 24px 4px;
+  width: 200px;
+  /* cursor: pointer;
   background-color: white;
   color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221); */
 }
 
 /* - NewUserForm ---------------------------------------------------- */
