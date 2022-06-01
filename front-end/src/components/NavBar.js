@@ -28,11 +28,13 @@ export default function NavBar () {
 
 console.log(weather?.current.condition.icon)
     return (
+
         <nav className="NavBar">
             <Link to="/" style={{'text-decoration': 'none'}} ><img id="logo" src={logo} alt="Logo" style={{'width': "225px"}}/></Link>
             <div ><img id='weather' src={`https:${weather?.current.condition.icon}`} /><p className='weatherArea'>{weather?.current.temp_f} °F</p></div>
+
             {localStorage.getItem("userid") ? <h1 id="welcome" >Welcome, {localStorage.getItem('firstName')}!</h1> : null}
-            {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut} style={{'text-decoration' : 'none', 'width': '200px', 'height': '50px', 'border-radius': '10px', 'background-color': 'white', 'color': 'rgb(153, 186, 221)', 'font-weight': '700', 'font-size': '25px', 'outline': 'none'}} > Log Out </button></Link> : null}
+            {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut} style={{'textDecoration' : 'none', 'width': '200px', 'height': '50px', 'borderRadius': '10px', 'backgroundColor': 'white', 'color': 'rgb(153, 186, 221)', 'fontWeight': '700', 'fontSize': '25px', 'outline': 'none'}} > Log Out </button></Link> : null}
         </nav>
     
         

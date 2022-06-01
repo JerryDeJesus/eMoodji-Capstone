@@ -61,7 +61,7 @@ let { fname, lname, email, password } = user;
                 <br/>
 
                 <input style={{'margin':'25px'}}
-                    id = "nEmail"
+                    id = "email"
                     value = {email} 
                     type = "email" 
                     onChange = {handleTextChange} 
@@ -70,7 +70,7 @@ let { fname, lname, email, password } = user;
                 />
             
                 <input style={{'margin':'25px'}}
-                    id = "passWord"
+                    id = "password"
                     value = {password} 
                     type = "password" 
                     onChange = {handleTextChange} 
