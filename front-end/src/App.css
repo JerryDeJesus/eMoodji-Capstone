@@ -189,18 +189,18 @@
 }
 
 .sIHomePage{
-  padding-top: 10px;
   display : grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
-  bottom: 0px;
+  /* bottom: 0px; */
 }
 
 #quote{
   background-color: rgb(153, 186, 221);
   padding: 10px;
-  border: 5px solid white;
-  margin: 60px;
+  margin: 40px;
+  margin-right: 680px;
+  margin-top: 70px;
   border-radius: 50px;
   padding-top: 10px;
   text-align: center;
@@ -428,4 +428,18 @@ a{
 #entriesPageContainer{
   display: grid;
   grid-template-columns: 3fr 2fr;
+
+}
+
+/* - banner ---------------------------------------------------- */
+
+.banner-container {
+  background-image: url("../src/assets/banner/emoji_banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-container h1 {
+  font-size: 24px;
+
 }
