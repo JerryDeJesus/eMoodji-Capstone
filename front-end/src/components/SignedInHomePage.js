@@ -30,7 +30,9 @@ export default function SignedInHomePage(){
     return(
        
             <div className="sIHomePage">
-                <h1 id='quote'>"{quote.text}" <br /> - {quote.author ? quote.author : "Unknown"}</h1><br /><br />
+                <div className="banner-container">
+                    <h1 id='quote'>"{quote.text}" <br /> - {quote.author ? quote.author : "Unknown"}</h1><br /><br />
+                </div>
                 <div className='eBGrid'>
                     <div className='entryBox'>
                     <Link id='nEntry' to="/wizard"><button style={{'width': '200px', 'height': '50px', 'borderRadius': '10px', 'backgroundColor': 'rgb(153, 186, 221)', 'color': 'white', 'fontWeight': '700', 'fontSize': '25px', 'outline': 'none'}}> New Entry </button></Link>
