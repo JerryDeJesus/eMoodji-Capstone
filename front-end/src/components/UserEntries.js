@@ -28,8 +28,8 @@ export default function UserEntries (){
     }, [id, navigate]);
 
     const cardStyle = {
-        width: "450px", 
-        height: "350px",
+        width: "375px", 
+        height: "375px",
         margin: "20px",
         textAlign: "center",
     }
@@ -146,14 +146,17 @@ export default function UserEntries (){
             ],   
         }}
         options={{
-            
-            legend: {
-                display: true,
-                labels: {
-                    fontSize: 50,
+            plugins:{
+                legend:{
+                    labels: {
+                        font:{
+                            size: 35,
+                        }
+                    }
                 }
             }
         }}
+
         /></div>;
 
     return(
