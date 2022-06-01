@@ -38,7 +38,6 @@ export default function UserDetails(){
                     <h3>Last name: {lname}</h3>
                     <h3>Email: {email}</h3>
                     <h3>Password: {password}</h3>
-                    {/* <h3>User ID: {id}</h3> */}
                 </div>
             
             <button onClick={handleDelete}>Delete Account</button>

@@ -51,6 +51,9 @@ export default function UserEntries (){
         display: "flex",
     }
     
+    const emojiStyle = {
+        fontSize: "180px"
+    };
 
     let displayUserEntries = userEntries.map((entry, index)=>{
         let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy hh:mm aaaaa'm'");
@@ -65,7 +68,7 @@ export default function UserEntries (){
             }
         }
         return(
-            <div className='usEntri' key = {index} >
+            <div className='usEntry' key = {index} >
                 <Flippy 
                 key={index}
                 flipOnClick = {true}
@@ -73,10 +76,9 @@ export default function UserEntries (){
                 style={cardStyle}
                 >
                     <FrontSide style = {frontStyle}>
-                        
-                        <h1>{entry.mood}</h1>
-                        
-                        <h3>{formattedDate}</h3>
+                        <br/>
+                        <h2>{formattedDate}</h2>
+                        <h1 style={emojiStyle}>{entry.mood}</h1>
                     </FrontSide>
                     
                     <BackSide style={backStyle}>
@@ -116,7 +118,8 @@ export default function UserEntries (){
     console.log(emojiCount);
 
     let doughnutChart = 
-        <div id="doughnut-chart"><Doughnut data={{
+        <div id="doughnut-chart"><Doughnut 
+        data={{
             labels:[...Object.keys(emojiCount)],
             datasets:[
                 {
@@ -141,12 +144,24 @@ export default function UserEntries (){
                     borderWidth: 1,
                 }
             ],   
-        }}/></div>;
+        }}
+        options={{
+            
+            legend: {
+                display: true,
+                labels: {
+                    fontSize: 50,
+                }
+            }
+        }}
+        /></div>;
 
     return(
+    <div id="entriesPageContainer">
         <div className="sUE">
             {userEntries.length ? displayUserEntries : "No Entries"}
-            {doughnutChart}
         </div>
+            {doughnutChart}
+    </div>
     )
 }

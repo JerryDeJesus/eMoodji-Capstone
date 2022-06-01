@@ -35,7 +35,6 @@ export default function Login(){
     
     return(
         <div className='login'>
-            {/* <h1>Login Page</h1> */}
             <h1 id='descript' style={{'padding-top': '50px'}}> 🥰🤪😂🥳😬🙃😎🤩 <p> Practice mindfulness with eMoodji! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you ! </p></h1>
             <form onSubmit={handleSubmit} style={{'color':'white'}} >
 
