@@ -35,8 +35,10 @@ export default function Login(){
     
     return(
         <div className='login'>
-            <h1 id='descript' style={{'padding-top': '50px'}}> 🥰🤪😂🥳😬🙃😎🤩 <p> Practice mindfulness with eMoodji! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you ! </p></h1>
-            <form onSubmit={handleSubmit} style={{'color':'white'}} >
+            <div className="banner-container">
+                <h1 id='descript'><p>Practice mindfulness with eMoodjí! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you!</p>🥰🤪😂🥳😬🙃😎🤩</h1>
+            </div>
+            <form onSubmit={handleSubmit}>
 
                 <input    
                     id = "email"
@@ -45,7 +47,7 @@ export default function Login(){
                     onChange = {handleTextChange} 
                     placeholder="example@email.com"
                     required
-                    />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    />
               
                     <input
                     id = "password"
@@ -54,8 +56,8 @@ export default function Login(){
                     onChange = {handleTextChange} 
                     placeholder="Password"
                     required
-                    /><br />
-                <button id='logIn' type="submit" >Log In</button>
+                    />
+                <button id='logIn' type="submit">Log In</button>
             </form>
         </div>
     )

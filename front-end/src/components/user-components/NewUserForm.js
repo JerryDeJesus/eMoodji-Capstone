@@ -39,7 +39,9 @@ let { fname, lname, email, password } = user;
 
     return(
         <div className="newForm">
-            <h1 id='descript' style={{'padding': '50px'}}> 🥰🤪😂🥳😬🙃😎🤩<p> Practice mindfulness with eMoodji! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you ! </p></h1>
+            <div className="banner-container">
+                <h1 id='descript'> 🥰🤪😂🥳😬🙃😎🤩<p> Practice mindfulness with eMoodji! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you ! </p></h1>
+            </div>
             <div>
                 <form onSubmit={handleSubmit} style={{'color':'white'}} >
                 <input style={{'margin':'25px'}}
