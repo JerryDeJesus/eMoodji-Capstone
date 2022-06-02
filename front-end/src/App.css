@@ -168,7 +168,7 @@
 }
 /* - SignInHomePage ---------------------------------------------------- */
 
-#password{
+/* #password{
   text-align: center;
   width: 200px;
   height: 50px;
@@ -178,7 +178,7 @@
   font-weight: 700;
   font-size: 25px;
   border: none;
-}
+} */
 
 ::placeholder{color: white;}
 
@@ -332,7 +332,7 @@
   outline: none;
 }
 
-#email{
+/* #email{
   text-align: center;
   width: 200px;
   height: 50px;
@@ -343,7 +343,7 @@
   font-size: 25px;
   border: none;
   outline: none;
-}
+} */
 
 #nSubmit{
   text-align: center;
@@ -542,4 +542,8 @@ a{
 }
 .banner-container h1 {
   font-size: 24px;
+}
+
+form {
+  text-align: center;
 }
