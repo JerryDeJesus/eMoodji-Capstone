@@ -410,19 +410,32 @@ a{
 
 .footer{
   background-color: rgb(153, 186, 221);
+  position: fixed;
+  padding: 8px 15px;
   bottom: 0;
   width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
 }
 
-.footer{
+.footer-logo {
+  width: 30px;
+  margin: 0px 8px;
+}
+
+.copyright {
+  text-align: right;
+  color: white;
+}
+
+/* .footer{
   padding-left: 10px;
   padding-right: 10px;
   display : grid;
   gap: 5px;
   grid-template-columns: repeat(27, 1fr);
   grid-template-rows: repeat(2, 1fr);
-
-}
+} */
 
 #cr{
   text-align: center;
@@ -434,10 +447,10 @@ a{
   grid-row-end: 2; 
 }
 
-#fb{
+/* #fb{
   padding-top: 14px;
   padding-left: 5px;
-}
+} */
 
 /* #fb:hover{
   cursor: pointer;
@@ -446,9 +459,9 @@ a{
   box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
 } */
 
-#twt{
+/* #twt{
   padding-top: 12px;
-}
+} */
 
 /* #twt:hover{
   cursor: pointer;
@@ -457,9 +470,9 @@ a{
   box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
 } */
 
-#ig{
+/* #ig{
   padding-top: 14px;
-}
+} */
 
 /* #ig:hover{
   cursor: pointer;
@@ -468,9 +481,9 @@ a{
   box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
 } */
 
-#gh{
+/* #gh{
   padding-top: 14px;
-}
+} */
 
 /* #gh:hover{
   cursor: pointer;
