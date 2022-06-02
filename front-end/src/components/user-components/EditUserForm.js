@@ -32,7 +32,6 @@ export default function EditUserForm(){
       }, [id]);
 
 const handleTextChange = (e) => {
-    //email validation suggestion by Greg
      console.log(e.target.value);
     if(e.target.id === "email" ){
         let results = validateEmail(e.target.value);
