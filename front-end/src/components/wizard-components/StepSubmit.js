@@ -118,7 +118,7 @@ export default function StepSubmit(props) {
             <div className="display-entry-result-container">
                 {listItems}
             </div>
-
+            
             {checkUserAccount()}
         </div>
     )
