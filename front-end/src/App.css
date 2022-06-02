@@ -119,6 +119,7 @@
   display : grid;
   grid-template-columns: repeat(3 1fr);
   border-radius: 10px;
+  margin: 0px;
 }
 
 #email{
@@ -147,7 +148,7 @@
   width: 300px;
   height: 50px;
   border-radius: 10px;
-  margin: 25px;
+  /* margin: 25px; */
   background-color: rgb(153, 186, 221);
   color: white;
   font-weight: 700;
@@ -156,7 +157,6 @@
 }
 
 #logIn{
-  margin-top: 100px;
   outline: none;
   text-align: center;
   grid-column-start: 2;
@@ -164,13 +164,13 @@
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  margin-top: 25px;
+  margin-top: 50px;
   background-color: rgb(153, 186, 221);
   color: white;
   font-weight: 700;
   font-size: 25px;
   border: none;
-  margin-bottom: 65px;
+  /* margin-bottom: 65px; */
 }
 
 #logIn:hover{
