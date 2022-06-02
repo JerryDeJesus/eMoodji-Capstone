@@ -65,6 +65,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* border-radius: 10px; */
+  
 }
 .banner-container h1 {
   font-size: 24px;
@@ -80,14 +82,11 @@
   box-sizing: border-box;
   width: auto;
   min-height: 68vh; 
-  padding-bottom: 40px;
+  padding-bottom: 10px;
   border-radius: 10px;
 }
 
 #descript{
-  /* align-items: center;
-  place-items: center;
-  border: 5px solid rgb(153, 186, 221); */
   width: 50%;
   text-align: center;
   margin: 40px;
@@ -96,7 +95,7 @@
 }
 
 .inHomeBox{
-  margin-top: 20px;
+  margin-top: 43px;
   text-align: center;
 }
 
@@ -174,22 +173,6 @@
   margin-bottom: 65px;
 }
 
-/* - SignInHomePage ---------------------------------------------------- */
-
-/* #password{
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: rgb(153, 186, 221);
-  color: white;
-  font-weight: 700;
-  font-size: 25px;
-  border: none;
-} */
-
-::placeholder{color: white;}
-
 #logIn:hover{
   cursor: pointer;
   background-color: white;
@@ -197,6 +180,10 @@
   box-shadow: 4px 4px 24px 4px rgb(153, 186, 221); 
   outline: none;
 }
+
+/* - SignInHomePage ---------------------------------------------------- */
+
+::placeholder{color: white;}
 
 .sIHomePage{
   display : grid;
@@ -234,8 +221,8 @@
   text-align: center;
   gap: 40px;
   padding: 40px;
-  margin-top: 30px;
-  margin-bottom: 30px;
+  margin-top: 57px;
+  margin-bottom: 0px;
   border-radius: 10px;
 }
 
@@ -263,7 +250,7 @@
   width: 200px;
 }
 
-#aEntry button,#nEntry button{
+#aEntry button, #nEntry button{
   border: none;
 }
 
@@ -324,6 +311,18 @@
   font-size: 25px;
   border: none;
   outline: none;
+} */
+
+/* #password{
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  background-color: rgb(153, 186, 221);
+  color: white;
+  font-weight: 700;
+  font-size: 25px;
+  border: none;
 } */
 
 #nSubmit{
