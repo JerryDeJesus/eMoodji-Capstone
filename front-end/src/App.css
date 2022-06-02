@@ -423,19 +423,14 @@ a{
   margin: 0px 8px;
 }
 
+form {
+  text-align: center;
+}
+
 .copyright {
   text-align: right;
   color: white;
 }
-
-/* .footer{
-  padding-left: 10px;
-  padding-right: 10px;
-  display : grid;
-  gap: 5px;
-  grid-template-columns: repeat(27, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-} */
 
 #cr{
   text-align: center;
@@ -445,119 +440,4 @@ a{
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 2; 
-}
-
-/* #fb{
-  padding-top: 14px;
-  padding-left: 5px;
-} */
-
-/* #twt{ */
-/* #fb:hover{
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-} */
-
-/* #twt{
-  padding-top: 12px;
-} */
-
-/* #ig{ */
-/* #twt:hover{
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-} */
-
-/* #ig{
-  padding-top: 14px;
-} */
-
-/* #gh{ */
-/* #ig:hover{
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-} */
-
-/* #gh{
-  padding-top: 14px;
-} */
-
-/* #gh:hover{
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-} */
-
-.sUE{
-  display: grid;
-  width: 80%;
-  grid-template-columns: 1fr 1fr;
-  padding-left: 5%;
-}
-
-#userEntriesPage{
-  text-align: center;
-  display: grid;
-  grid-template-rows: 100px 10fr;
-  grid-template-columns: auto;
-}
-
-a:hover{
-  color:rgb(153, 186, 221);
-  cursor: alias;
-  text-decoration: underline;
-}
-
-a{
-  text-decoration: none;
-}
-
-.entry-card-back{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.entry-card-back h3{
-  padding: 14px 0px;
-}
-
-.entry-card-back h4{
-  padding: 14px 0px;
-}
-
-#doughnut-chart{
-  height:500px;
-  width:500px;
-  margin: 0 auto;
-  position: sticky;
-  top: 100px;
-  margin-right: 30%;
-}
-
-#entriesPageContainer{
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-}
-
-
-.banner-container {
-  background-image: url("../src/assets/banner/emoji_banner.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.banner-container h1 {
-  font-size: 24px;
-}
-
-form {
-  text-align: center;
 }
