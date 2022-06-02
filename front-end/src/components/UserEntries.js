@@ -28,8 +28,8 @@ export default function UserEntries (){
     }, [id, navigate]);
 
     const cardStyle = {
-        width: "450px", 
-        height: "350px",
+        width: "375px", 
+        height: "375px",
         margin: "20px",
         textAlign: "center",
     }
@@ -126,12 +126,22 @@ export default function UserEntries (){
                     label: '# of Entries',
                     data: [...emojiNums],
                     backgroundColor: [
-                        'rgba(255, 99, 132, 0.2)',
-                        'rgba(54, 162, 235, 0.2)',
-                        'rgba(255, 206, 86, 0.2)',
-                        'rgba(75, 192, 192, 0.2)',
-                        'rgba(153, 102, 255, 0.2)',
-                        'rgba(255, 159, 64, 0.2)',
+                        'rgba(255, 99, 132, 0.3)',
+                        'rgba(54, 162, 235, 0.3)',
+                        'rgba(255, 206, 86, 0.3)',
+                        'rgba(75, 192, 192, 0.3)',
+                        'rgba(153, 102, 255, 0.3)',
+                        'rgba(255, 159, 64, 0.3)',
+                        'rgba(42, 23, 247, 0.3)',
+                        'rgba(35, 230, 193, 0.3)',
+                        'rgba(113, 132, 167, 0.3)',
+                        'rgba(61, 3, 73, 0.3)',
+                        'rgba(214, 46, 133, 0.3)',
+                        'rgba(128, 73, 136, 0.3)',
+                        'rgba(150, 26, 152, 0.3)',
+                        'rgba(228, 138, 18, 0.3)',
+                        'rgba(185, 200, 254, 0.3)',
+                        'rgba(179, 253, 13, 0.3)',
                         ],
                     borderColor: [
                         'rgba(255, 99, 132, 1)',
@@ -140,20 +150,33 @@ export default function UserEntries (){
                         'rgba(75, 192, 192, 1)',
                         'rgba(153, 102, 255, 1)',
                         'rgba(255, 159, 64, 1)',
+                        'rgba(42, 23, 247, 1)',
+                        'rgba(35, 230, 193, 1)',
+                        'rgba(113, 132, 167, 1)',
+                        'rgba(61, 3, 73, 1)',
+                        'rgba(214, 46, 133, 1)',
+                        'rgba(128, 73, 136, 1)',
+                        'rgba(150, 26, 152, 1)',
+                        'rgba(228, 138, 18, 1)',
+                        'rgba(185, 200, 254, 1)',
+                        'rgba(179, 253, 13, 1)',
                         ],
                     borderWidth: 1,
                 }
             ],   
         }}
         options={{
-            
-            legend: {
-                display: true,
-                labels: {
-                    fontSize: 50,
+            plugins:{
+                legend:{
+                    labels: {
+                        font:{
+                            size: 35,
+                        }
+                    }
                 }
             }
         }}
+
         /></div>;
 
     return(
