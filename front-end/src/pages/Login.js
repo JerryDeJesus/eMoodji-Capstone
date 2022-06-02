@@ -43,7 +43,7 @@ export default function Login(){
                     value = {user.email} 
                     type = "email" 
                     onChange = {handleTextChange} 
-                    placeholder="example@email.com"
+                    placeholder="Email"
                     required
                     />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
               
