@@ -16,7 +16,6 @@ export default function StepForm() {
     const [activitiesData] = useState(activitiesFileData);
     
     const [entry, setEntry] = useState({
-        userid: localStorage.getItem("userid"),
         mood: "",
         interest: "",
         activity: "",
