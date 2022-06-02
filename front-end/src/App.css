@@ -368,13 +368,6 @@
 
 /* - UserEntries ---------------------------------------------------- */
 
-.sUE{
-  display: grid;
-  width: 80%;
-  grid-template-columns: 1fr 1fr;
-  margin-left: 10%;
-}
-
 #userEntriesPage{
   text-align: center;
   display: grid;
