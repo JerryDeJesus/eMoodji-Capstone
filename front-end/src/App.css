@@ -85,9 +85,6 @@
 }
 
 #descript{
-  /* align-items: center;
-  place-items: center;
-  border: 5px solid rgb(153, 186, 221); */
   width: 50%;
   text-align: center;
   margin: 40px;
@@ -175,18 +172,6 @@
 }
 
 /* - SignInHomePage ---------------------------------------------------- */
-
-/* #password{
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: rgb(153, 186, 221);
-  color: white;
-  font-weight: 700;
-  font-size: 25px;
-  border: none;
-} */
 
 ::placeholder{color: white;}
 
@@ -313,19 +298,6 @@
   outline: none;
 }
 
-/* #email{
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: rgb(153, 186, 221);
-  color: white;
-  font-weight: 700;
-  font-size: 25px;
-  border: none;
-  outline: none;
-} */
-
 #nSubmit{
   text-align: center;
   width: 200px;
@@ -421,15 +393,6 @@ a{
   color: white;
 }
 
-/* .footer{
-  padding-left: 10px;
-  padding-right: 10px;
-  display : grid;
-  gap: 5px;
-  grid-template-columns: repeat(27, 1fr);
-  grid-template-rows: repeat(2, 1fr);
-} */
-
 #cr{
   text-align: center;
   color: white;
@@ -439,54 +402,6 @@ a{
   grid-row-start: 2;
   grid-row-end: 2; 
 }
-
-/* #fb{
-  padding-top: 14px;
-  padding-left: 5px;
-} */
-
-/* #twt{
- #fb:hover{
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-} */
-
-/* #twt{
-  padding-top: 12px;
-} */
-
-/* #ig{
- #twt:hover{
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-} */
-
-/* #ig{
-  padding-top: 14px;
-} */
-
-/* #gh{ 
- #ig:hover{
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-} */
-
-/* #gh{
-  padding-top: 14px;
-} */
-
-/* #gh:hover{
-  cursor: pointer;
-  background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
-} */
 
 .sUE{
   display: grid;
