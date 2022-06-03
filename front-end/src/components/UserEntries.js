@@ -114,9 +114,7 @@ export default function UserEntries (){
         }
     })
     let emojiNums = Object.values(emojiCount);
-
     console.log(emojiCount);
-
     let doughnutChart = 
         <div id="doughnut-chart"><Doughnut 
         data={{
@@ -178,7 +176,6 @@ export default function UserEntries (){
         }}
 
         /></div>;
-
     return(
     <div id="entriesPageContainer">
         <div className="sUE">
