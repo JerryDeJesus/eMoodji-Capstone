@@ -2,7 +2,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
-import Flippy, {FrontSide, BackSide} from "react-flippy";
+// import Flippy, {FrontSide, BackSide} from "react-flippy";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import {Doughnut} from "react-chartjs-2";
 
@@ -27,29 +27,29 @@ export default function UserEntries (){
         })
     }, [id, navigate]);
 
-    const cardStyle = {
-        width: "375px", 
-        height: "375px",
-        margin: "20px",
-        textAlign: "center",
-    }
+    // const cardStyle = {
+    //     width: "375px", 
+    //     height: "375px",
+    //     margin: "20px",
+    //     textAlign: "center",
+    // }
 
-    const frontStyle = {
-        borderRadius: "20px",
-        backgroundColor: "rgb(153, 186, 221)",
-        color: "white",
-        fontSize: "25px",
-        fontFamily: "sans-serif"
-    }
+    // const frontStyle = {
+    //     borderRadius: "20px",
+    //     backgroundColor: "rgb(153, 186, 221)",
+    //     color: "white",
+    //     fontSize: "25px",
+    //     fontFamily: "sans-serif"
+    // }
 
-    const backStyle = {
-        boxShadow: "4px 0.7px 20px 3px rgb(153, 186, 221)",
-        borderRadius: "20px",
-        color: "rgb(153, 186, 221)",
-        fontSize: "20px",
-        fontFamily: "sans-serif",
-        display: "flex",
-    }
+    // const backStyle = {
+    //     boxShadow: "4px 0.7px 20px 3px rgb(153, 186, 221)",
+    //     borderRadius: "20px",
+    //     color: "rgb(153, 186, 221)",
+    //     fontSize: "20px",
+    //     fontFamily: "sans-serif",
+    //     display: "flex",
+    // }
     
     const emojiStyle = {
         fontSize: "180px"
@@ -69,7 +69,7 @@ export default function UserEntries (){
         }
         return(
             <div className='usEntry' key = {index} >
-                <Flippy 
+                {/* <Flippy 
                 key={index}
                 flipOnClick = {true}
                 flipDirection = "horizontal"
@@ -79,9 +79,9 @@ export default function UserEntries (){
                         <br/>
                         <h2>{formattedDate}</h2>
                         <h1 style={emojiStyle}>{entry.mood}</h1>
-                    </FrontSide>
+                    </FrontSide> */}
                     
-                    <BackSide style={backStyle}>
+                    {/* <BackSide style={backStyle}>
                         <div className="entry-card-back">
                             <h3>{entry.interest.toUpperCase()}</h3>
                            
@@ -90,7 +90,7 @@ export default function UserEntries (){
                             <h4>{resourceDescription}</h4>
                         </div>
                     </BackSide>
-                </Flippy>
+                </Flippy> */}
                 
                 <br />
             </div>
