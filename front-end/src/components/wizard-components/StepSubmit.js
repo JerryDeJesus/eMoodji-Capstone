@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import WizardModal from "./WizardModal.js";
-import Flippy, {FrontSide, BackSide} from "react-flippy";
+// import Flippy, {FrontSide, BackSide} from "react-flippy";
 import React from "react";
 
 const API = process.env.REACT_APP_API_URL;
@@ -45,7 +45,7 @@ export default function StepSubmit(props) {
     const listItems = Object.entries(entry).map(([key, value]) => {
         return (
             <div key = {key}>
-                {value === entry.mood && key === "mood" ? 
+                {/* {value === entry.mood && key === "mood" ? 
                     <Flippy key = {key}
                     flipOnClick = {true}
                     flipDirection = "horizontal"
@@ -73,7 +73,7 @@ export default function StepSubmit(props) {
                             <div className="vertical-align-text">{value}</div>
                         </BackSide>
                     </Flippy>
-                }    
+                }     */}
             </div>
         )
     });
