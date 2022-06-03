@@ -173,6 +173,10 @@
   /* margin-bottom: 65px; */
 }
 
+/* - SignInHomePage ---------------------------------------------------- */
+
+::placeholder{color: white;}
+
 #logIn:hover{
   cursor: pointer;
   background-color: white;
@@ -300,31 +304,6 @@
   outline: none;
 }
 
-/* #email{
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: rgb(153, 186, 221);
-  color: white;
-  font-weight: 700;
-  font-size: 25px;
-  border: none;
-  outline: none;
-} */
-
-/* #password{
-  text-align: center;
-  width: 200px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: rgb(153, 186, 221);
-  color: white;
-  font-weight: 700;
-  font-size: 25px;
-  border: none;
-} */
-
 #nSubmit{
   text-align: center;
   width: 200px;
@@ -356,7 +335,7 @@
   display: grid;
   width: 80%;
   grid-template-columns: 1fr 1fr;
-  margin-left: 10%;
+  padding-left: 5%;
 }
 
 #userEntriesPage{
@@ -403,6 +382,66 @@ a{
   display: grid;
   grid-template-columns: 3fr 2fr;
 
+}
+
+#userEntriesPage{
+  text-align: center;
+  display: grid;
+  grid-template-rows: 100px 10fr;
+  grid-template-columns: auto;
+}
+
+a:hover{
+  color:rgb(153, 186, 221);
+  cursor: alias;
+  text-decoration: underline;
+}
+
+a{
+  text-decoration: none;
+}
+
+.entry-card-back{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.entry-card-back h3{
+  padding: 14px 0px;
+}
+
+.entry-card-back h4{
+  padding: 14px 0px;
+}
+
+#doughnut-chart{
+  height:500px;
+  width:500px;
+  margin: 0 auto;
+  position: sticky;
+  top: 100px;
+  margin-right: 30%;
+}
+
+#entriesPageContainer{
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+
+.banner-container {
+  background-image: url("../src/assets/banner/emoji_banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.banner-container h1 {
+  font-size: 24px;
+}
+
+form {
+  text-align: center;
 }
 
 /* - Footer ---------------------------------------------------- */
