@@ -43,7 +43,7 @@ let { fname, lname, email, password } = user;
                 <h1 id='descript'> 🥰🤪😂🥳😬🙃😎🤩<p> Practice mindfulness with eMoodji! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you ! </p></h1>
             </div>
             <div>
-                <form onSubmit={handleSubmit} style={{'color':'white'}} >
+                <form onSubmit={handleSubmit} style={{'color':'white', 'padding-top': '35px'}} >
                 <input style={{'margin':'25px'}}
                     id = "fname" 
                     value = {fname} 
