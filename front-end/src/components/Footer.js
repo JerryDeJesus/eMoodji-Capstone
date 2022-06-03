@@ -8,7 +8,7 @@ export default function Footer () {
         <nav className='footer'>
             <div className="footer-logo-container">
                 <a href='https://instagram.com' target='_blank' rel='noreferrer noopener'><img className="footer-logo" src={igLogo} alt='ig'/></a>
-                <a href='https://facebook.com' target='_blank' rel='noreferrer noopener'><img style={{'width': '60px', 'padding-left': '8px'}} className="footer-logo" src={fbLogo} alt='fb'/></a>
+                <a href='https://facebook.com' target='_blank' rel='noreferrer noopener'><img style={{'width': '60px', 'paddingLeft': '8px'}} className="footer-logo" src={fbLogo} alt='fb'/></a>
                 <a href='https://twitter.com' target='_blank' rel='noreferrer noopener'><img style={{'width': '55px'}} className="footer-logo" src={twtLogo} alt='twt'/></a>
                 <a href='https://github.com' target='_blank' rel='noreferrer noopener'><img className="footer-logo"  src={ghLogo} alt='gh'/></a>
             </div>

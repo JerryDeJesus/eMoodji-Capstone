@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { Link, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import Flippy, {FrontSide, BackSide} from "react-flippy";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
