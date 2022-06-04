@@ -212,13 +212,6 @@
     font-family: sans-serif;
 }
 
-.display-entry-result-container {
-    display: flex;
-    margin: 0 auto;
-    width: 75%;
-    justify-content: center;
-}
-
 div.vertical-align-text {
     width: 275px;
     height: 150px;
@@ -297,3 +290,108 @@ div.vertical-align-emoji {
     margin-top: 8px;
     font-size: 17px;
 }
+
+/* FLIP CARD STYLE START */
+.card-container{
+    width: 75%;
+    gap: 40px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.card-outer {
+    width: 275px;
+    height: 150px;
+}
+
+.card, .card-all-entries {
+    transform: perspective(1000px) rotateY(var(--rotate-y, 0)) translateY(var(--translate-y, 0));
+    position: relative;
+    transform-style: preserve-3d;
+    transition: 150ms;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    border-radius: 20px;
+}
+
+.card.flip, .card-all-entries.flip {
+    --rotate-y: 180deg;
+}
+
+.card .front, .card-all-entries .front-all-entries {
+    background-color: rgb(153, 186, 221);
+    color: white;
+    font-size: 25px;
+}
+
+.card .front, .card .back, 
+.enlarge-emoji, 
+.card-all-entries .front-all-entries,
+.card-all-entries .back-all-entries 
+{
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.card .back,
+.card-all-entries .back-all-entries 
+{
+    transform: rotateY(180deg);
+    box-shadow: 4px 0.7px 20px 3px rgb(153, 186, 221);
+    color: rgb(153, 186, 221);
+    font-size: 20px;
+}
+
+.card .enlarge-emoji {
+    transform: rotateY(180deg);
+    box-shadow: 4px 0.7px 20px 3px rgb(153, 186, 221);
+    color: rgb(153, 186, 221);
+    font-size: 50px;
+}
+/* FLIP CARD STYLE END */
+
+/* FLIP CARD ALL ENTRIES START */
+.card-outer-all-entries {
+    width: 375px;
+    height: 375px;
+    margin: 20px;
+}
+
+.front-all-entries {
+    border-radius: 20px;
+    background-color: rgb(153, 186, 221);
+    color: white;
+    font-size: 25px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.back-all-entries {
+    box-shadow: 4px 0.7px 20px 3px rgb(153, 186, 221);
+    border-radius: 20px;
+    color: rgb(153, 186, 221);
+    font-size: 20px;
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+.largest-emoji-size {
+    font-size: 180px;
+}
+/* FLIP CARD ALL ENTRIES END */
