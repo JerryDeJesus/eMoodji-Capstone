@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import WizardModal from "./WizardModal.js";
-import Flippy, {FrontSide, BackSide} from "react-flippy";
-import React from "react";
+import React, { useState } from "react";
+import FlipCard from "../FlipCard.js";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -11,70 +11,9 @@ export default function StepSubmit(props) {
     const navigate = useNavigate();
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
 
-    const cardStyle = {
-        width: "275px", 
-        height: "150px",
-        margin: "20px",
-        textAlign: "center",
-    }
-
-    const frontStyle = {
-        borderRadius: "20px",
-        backgroundColor: "rgb(153, 186, 221)",
-        color: "white",
-        fontSize: "25px",
-        fontFamily: "sans-serif"
-    }
-
-    const backStyle = {
-        boxShadow: "4px 0.7px 20px 3px rgb(153, 186, 221)",
-        borderRadius: "20px",
-        color: "rgb(153, 186, 221)",
-        fontSize: "20px",
-        fontFamily: "sans-serif",
-        display: "flex",
-    }
-
-    const enlargeEmojiStyle = {
-        fontSize: "50px",
-        boxShadow: "4px 0.7px 20px 3px rgb(153, 186, 221)",
-        borderRadius: "20px",
-        color: "rgb(153, 186, 221)",
-    }
-
-    const listItems = Object.entries(entry).map(([key, value]) => {
+    const listItems = Object.entries(entry).map(([key, value], i) => {
         return (
-            <div key = {key}>
-                {value === entry.mood && key === "mood" ? 
-                    <Flippy key = {key}
-                    flipOnClick = {true}
-                    flipDirection = "horizontal"
-                    style = {cardStyle}
-                    > 
-                        <FrontSide style = {frontStyle}>   
-                            <h3>{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
-                        </FrontSide>    
-    
-                        <BackSide style = {enlargeEmojiStyle}>
-                            <div className="vertical-align-emoji">{value}</div>
-                        </BackSide>
-                    </Flippy>
-                : 
-                    <Flippy key = {key}
-                    flipOnClick = {true}
-                    flipDirection = "horizontal"
-                    style = {cardStyle}
-                    > 
-                        <FrontSide style = {frontStyle}>   
-                            <h3>{key.charAt(0).toUpperCase() + key.slice(1)}</h3>
-                        </FrontSide>    
-
-                        <BackSide style = {backStyle}>
-                            <div className="vertical-align-text">{value}</div>
-                        </BackSide>
-                    </Flippy>
-                }    
-            </div>
+            <FlipCard key = {i} value = {value} k = {key} />
         )
     });
 
@@ -115,7 +54,7 @@ export default function StepSubmit(props) {
         <div> 
             <p className="wizard-question">Entry</p>
 
-            <div className="display-entry-result-container">
+            <div className="card-container">
                 {listItems}
             </div>
             
