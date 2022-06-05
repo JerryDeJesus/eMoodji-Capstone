@@ -3,8 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { format, parseISO } from "date-fns";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
-import {Doughnut} from "react-chartjs-2";
-import FlipCard from "./FlipCard";
+import { Doughnut } from "react-chartjs-2";
 import FlipCardAllEntries from "./FlipCardAllEntries";
 
 const API = process.env.REACT_APP_API_URL;
@@ -30,7 +29,7 @@ export default function UserEntries (){
 
     let displayUserEntries = userEntries.map((entry, index)=>{
         let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy hh:mm aaaaa'm'");
-        let linkToEntry = `/entries/${entry.id}`;
+        // let linkToEntry = `/entries/${entry.id}`;
         let resourceLink = "";
         let resourceDescription = "";
         let resourceArray = entry.interest && entry.activity ? activitiesData[entry.interest] : null;
@@ -43,16 +42,16 @@ export default function UserEntries (){
         return(
             <FlipCardAllEntries key = {index} entry = {entry} formattedDate = {formattedDate} resourceLink = {resourceLink} resourceDescription = {resourceDescription} />
         )
-    })
+    }).reverse();
 
     let emojis = [];
     let emojiCount = {};
     
-    let emojiGrabber = userEntries.map((entry) => {
+    userEntries.map((entry) => {
         emojis.push(entry.mood);    
-    })
+    });
 
-    let emojiCounter = emojis.map((emojis) => {
+    emojis.map((emojis) => {
         for(let each of emojis){
             if(emojiCount[each]){
                 emojiCount[each]++;
@@ -60,7 +59,8 @@ export default function UserEntries (){
                 emojiCount[each] = 1;
             }
         }
-    })
+    });
+
     let emojiNums = Object.values(emojiCount);
     console.log(emojiCount);
     let doughnutChart = 
