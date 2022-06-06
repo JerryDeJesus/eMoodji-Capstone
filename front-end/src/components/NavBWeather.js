@@ -9,7 +9,6 @@ export default function NavBWeather(){
         axios("http://api.weatherapi.com/v1/current.json?key=6a073340fe75460b9b3182849222505&q=auto:ip&condition:icon&temp_f")
         .then(res => {
           setWeather(res.data.current);
-          // console.log(res.data);
         })  
         
     }, []);
