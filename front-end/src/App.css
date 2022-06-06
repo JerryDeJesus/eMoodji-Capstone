@@ -20,6 +20,8 @@
   color: white;
   text-align: center;
   font-size: 23px;
+  margin-top:-10px;
+  margin-bottom:5px;
 }
 
 #weather{
@@ -58,6 +60,7 @@
    text-decoration: none;
  }
 
+ 
  /* - Banner ---------------------------------------------------- */
 
 .banner-container {
@@ -448,8 +451,8 @@ form {
 
 .footer{
   background-color: rgb(153, 186, 221);
-  position: fixed;
-  padding: 8px 15px;
+  position: sticky;
+  padding: 0px 15px;
   bottom: 0;
   width: 100%;
   display: grid;
@@ -468,6 +471,7 @@ form {
 .copyright {
   text-align: right;
   color: white;
+  margin-top: 15px;
 }
 
 #cr{

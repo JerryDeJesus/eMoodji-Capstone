@@ -389,6 +389,7 @@ div.vertical-align-emoji {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
+    padding: 20px;
 }
 
 .largest-emoji-size {
