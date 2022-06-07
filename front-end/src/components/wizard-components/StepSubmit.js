@@ -38,7 +38,7 @@ export default function StepSubmit(props) {
         if(localStorage.getItem('userid')){
             return (
                 <form onSubmit={handleSubmitForSignIn} >
-                    <div className="button-container">
+                    <div>
                         <button className="wizard-button">Submit</button>
                     </div>
                 </form>)
