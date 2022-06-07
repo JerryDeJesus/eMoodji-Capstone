@@ -19,5 +19,5 @@ INSERT INTO entries (userid, date_created, mood, interest, activity) VALUES
 (1, '2022-06-03T18:30:45.438Z', '😬', 'music', 'zumba'),
 (1, '2022-06-04T16:22:33.479Z', '😄', 'music', 'Manhattan Music Therapy'),
 (1, '2022-06-04T18:30:45.436Z', '😬', 'music', 'zumba'),
-(1, '2022-06-05T18:30:45.439Z', '😬', 'music', 'zumba'),
+(1, '2022-06-05T18:30:45.439Z', '😬', 'music', 'zumba');
 

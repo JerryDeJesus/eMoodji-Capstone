@@ -11,7 +11,8 @@
 
  "hug":[
                 {"name" : "Nora Hug Therapy", "address" : "Online", "description" : "Therapy for those looking to heal from relationship trauma", "phone" : "(585) 348-7178", "website" : "https://www.therapywebsite.com"},
-                {"name" : "Cow Hug Therapy", "address" : "Only in California, Missouri & Tennessee at Gentle Barn Animals",  "description" : "Need a hug? Feeling sad, lonely, stressed out and scared? Going through a hard time? Come heal with the cows! ", "phone" : "(661) 252-2440", "website" : "https://www.gentlebarn.org"}
+                {"name" : "Cow Hug Therapy", "address" : "Only in California, Missouri & Tennessee at Gentle Barn Animals",  "description" : "Need a hug? Feeling sad, lonely, stressed out and scared? Going through a hard time? Come heal with the cows! ", "phone" : "(661) 252-2440", "website" : "https://www.gentlebarn.org"},
+                {"name" : "Cuddle Sanctuary", "address" : "Online", "description" : "To shift the culture to a more compassionate world that’s safe for affection and connection for everyone.", "phone" : "", "website" : "https://www.cuddlesanctuary.com/"}
 ],
 
  "yoga":[
@@ -27,8 +28,9 @@
                    {"name" : "NY MUSIC THERAPY", "address" : "Online", "description" : "Music psychotherapy is a combination of talk therapy and music/music-making to foster self-awareness, healing and growth for adults and adolescents.", "phone" : "online", "website" : "https://www.nymusictherapy.com"},
                    {"name" : "The Louis Armstrong Department of Music Therapy, Mount Sinai Beth Israel", "address" : "281 1st Avenue (First Avenue at 16th Street) New York, NY 10003", "description" : "Our clinical services, research projects and on-going programs are guided by experts in the fields of medicine, music, and music therapy.", "phone" : "(212) 420-2704", "website" : "https://www.musicandmedicine.org"},
                    {"name" : "Nordoff-Robbins Center for Music Therapy, NYU Steinhardt", "address" : "35 W 4th Street, 11th Floor New York, NY 10012", "description" : "The Nordoff-Robbins approach to music therapy is based on the belief that everyone possesses a sensitivity to music that can be utilized for personal growth and development.", "phone" : "(212) 998-5162", "website" : "https://www.steinhardt.nyu.edu/nordoff"},
-                   {"name" : "Manhattan Music Therapy", "address" : "Online", "description" : "Therapy can be healing. It can be communicative. It can be an avenue to self-awareness, and discovery.", "phone" : "(833) NYC-Therapy", "website" : "https://www.manhattanmusictherapy.com"}
-
+                   {"name" : "Manhattan Music Therapy", "address" : "Online", "description" : "Therapy can be healing. It can be communicative. It can be an avenue to self-awareness, and discovery.", "phone" : "(833) NYC-Therapy", "website" : "https://www.manhattanmusictherapy.com"},
+                   {"name" : "Hug Music NY", "address": "112-01 75th Ave, Forest Hills, NY 11375", "description" : "They believe in a mission to provide a place where individuals can connect to their hearts, inspire creativity, and express themselves through creative art form.", "phone" :  "(718) 487-4309", "website" : "https://hugmusicny.com/"},
+                   {"name" : "Berko Music Therapy", "address" : "231 E 96th St #5fw, New York, NY 10128", "description" : "Home-based music therapy for people of all ages in NYC. Community outreach programs, Drum Circles, and Drum Therapy", "phone" : "(347) 774-1712", "website" : "https://www.musictherapynyc.com/"}
   ],
   
   "pet":[
