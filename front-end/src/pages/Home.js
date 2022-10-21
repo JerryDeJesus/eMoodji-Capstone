@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import SignedInHomePage from "../components/SignedInHomePage";
 
 export default function Home() {
-    // console.log("user id: ",localStorage.getItem("userid"));
     if(localStorage.getItem("userid")){
         return(
             <SignedInHomePage />

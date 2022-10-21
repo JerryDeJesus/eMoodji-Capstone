@@ -23,8 +23,8 @@ export default function App() {
   return(
     <div>
       <Router>
-      <main>
         <NavBar />
+      <main>
         <Routes>
           <Route path="/" element={<Home />} />
 

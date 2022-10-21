@@ -1,5 +1,4 @@
-
-/* - NavBar.js ---------------------------------------------------- */
+/* - NavBar ---------------------------------------------------- */
 
 .NavBar{
   align-items: center;
@@ -7,7 +6,8 @@
   background-color: rgb(153, 186, 221);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-
+  height: 80px;
+  font-size:18px;
 }
 
 #logo{
@@ -16,18 +16,14 @@
   grid-column-end: 1;
 }
 
-.weatherArea{
-  color: white;
-  text-align: center;
-  font-size: 23px;
-  margin-top:-10px;
-  margin-bottom:5px;
+#weather-icon{
+  height:65px;
 }
 
-#weather{
-  padding-top: 10px;
-  text-decoration: white;
-  width: 50px;
+.weatherDisplay{
+  display: flex;
+  color: white;
+  text-align: center;
 }
 
 #welcome{
@@ -75,7 +71,7 @@
   font-size: 24px;
 }
 
-/* - Home.js ---------------------------------------------------- */
+/* - Home ---------------------------------------------------- */
 
 .home{
   display : grid;
@@ -114,7 +110,7 @@
   box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
 }
 
-/* - Login.js ---------------------------------------------------- */
+/* - Login ---------------------------------------------------- */
 
 .login{
   align-items: center;
@@ -151,7 +147,6 @@
   width: 300px;
   height: 50px;
   border-radius: 10px;
-  /* margin: 25px; */
   background-color: rgb(153, 186, 221);
   color: white;
   font-weight: 700;
@@ -173,7 +168,6 @@
   font-weight: 700;
   font-size: 25px;
   border: none;
-  /* margin-bottom: 65px; */
 }
 
 /* - SignInHomePage ---------------------------------------------------- */
@@ -188,7 +182,7 @@
   outline: none;
 }
 
-/* - SignInHomePage ---------------------------------------------------- */
+/* - SignInHomePage ?---------------------------------------------------- */
 
 ::placeholder{color: white;}
 
@@ -229,7 +223,6 @@
   gap: 40px;
   padding: 40px;
   margin-top: 64px;
-  /* margin-bottom: 10px; */
   border-radius: 10px;
 }
 

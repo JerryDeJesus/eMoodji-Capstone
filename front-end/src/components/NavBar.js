@@ -8,29 +8,29 @@ export default function NavBar () {
 
     const handleLogOut = () => {
         localStorage.clear();
-        console.log(localStorage.getItem("userid"));
         navigate('/');
         window.location.reload();
     };
 
     const [weather, setWeather] = useState(null);
-    // console.log(weather);
     useEffect(() => {
         axios("https://api.weatherapi.com/v1/current.json?key=6a073340fe75460b9b3182849222505&q=auto:ip&condition:icon&temp_f")
         .then(res => {
           setWeather(res.data);
-       
+          console.log(res.data);
         })  
         
     }, []);
 
-// console.log(weather?.current.condition.icon)
     return (
-
         <nav className="NavBar">
+        
             <Link to="/" style={{'textDecoration': 'none'}} ><img id="logo" src={logo} alt="Logo" style={{'width': "175px"}}/></Link>
-            <div ><img alt='weatherIcon' id='weather' src={`https:${weather?.current.condition.icon}`} /><p className='weatherArea'>{weather?.current.temp_f} °F </p></div>
-            {localStorage.getItem("userid") ? <h3 id="welcome" >Welcome, {localStorage.getItem('firstName')}!</h3> : null}
+            <div className='weatherDisplay'>
+                <div><img id='weather-icon' alt='weatherIcon' src={`https:${weather?.current.condition.icon}`} /></div>
+                <div>{weather?.location.name}<br/>{weather?.current.temp_f + '°F'}</div>
+            </div>
+            {localStorage.getItem("userid") ? <div id="welcome" >Welcome, {localStorage.getItem('firstName')}!</div> : null}
             {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut} style={{'textDecoration' : 'none', 'width': '200px', 'height': '50px', 'borderRadius': '10px', 'backgroundColor': 'white', 'color': 'rgb(153, 186, 221)', 'fontWeight': '700', 'fontSize': '25px', 'outline': 'none'}} > Log Out </button></Link> : null}
         </nav>
     
