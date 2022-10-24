@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Footer from './components/Footer';
 import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
@@ -23,8 +23,8 @@ export default function App() {
   return(
     <div>
       <Router>
-        <NavBar />
       <main>
+        <NavBar />
         <Routes>
           <Route path="/" element={<Home />} />
 

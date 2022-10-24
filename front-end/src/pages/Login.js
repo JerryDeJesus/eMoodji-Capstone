@@ -40,7 +40,7 @@ export default function Login(){
             </div>
             <form onSubmit={handleSubmit}>
 
-                <input style={{'marginTop': '100px', 'marginRight': '30px'}}   
+                <input
                     id = "email"
                     value = {user.email} 
                     type = "email" 
@@ -49,7 +49,7 @@ export default function Login(){
                     required
                     />
               
-                    <input style={{'marginLeft': '30px'}}
+                    <input 
                     id = "password"
                     value = {user.password}
                     type = "password"
