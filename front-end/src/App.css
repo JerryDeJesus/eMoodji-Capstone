@@ -5,8 +5,8 @@ main{
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #8BC6EC;
-  /* background-image: linear-gradient(135deg,white 0%, #99BADD 100%); */
+  /* background-color: #8BC6EC; */
+  /* background-image: linear-gradient(135deg,white 0%, white 100%); */
 }
 
 form {
@@ -14,7 +14,7 @@ form {
 }
 
 a:hover{
-  color:rgb(153, 186, 221);
+  color:#99BADD;
   cursor: alias;
   text-decoration: underline;
 }
@@ -30,7 +30,7 @@ a{
 .NavBar{
   align-items: center;
   justify-items: center;
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 80px;
@@ -74,8 +74,8 @@ a{
 #logout:hover{
   cursor: pointer;
   background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+  color: #99BADD;
+  box-shadow: 4px 4px 24px 4px #99BADD;
 }
  
  /* - Banner ---------------------------------------------------- */
@@ -92,7 +92,7 @@ a{
 
 .home{
   display : grid;
-  border: 5px solid rgb(153, 186, 221);
+  border: 5px solid #99BADD;
   margin: 30px; 
   padding: 1px;
   box-sizing: border-box;
@@ -118,7 +118,7 @@ a{
 }
 
 #hbNewEntry{
-   background-color: rgb(153, 186, 221);
+   background-color: #99BADD;
    color: white;
    width: 400px;
 }
@@ -127,7 +127,7 @@ a{
   width : 200px;
   height: 50px;
   border-radius : 10px;
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -137,8 +137,8 @@ a{
 .newEntryB:hover{
   cursor: pointer;
   background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+  color: #99BADD;
+  box-shadow: 4px 4px 24px 4px #99BADD;
 }
 
 /* - Login ---------------------------------------------------- */
@@ -162,7 +162,7 @@ a{
   height: 50px;
   border-radius: 10px;
   margin-top: 100px;
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -179,7 +179,7 @@ a{
   width: 300px;
   height: 50px;
   border-radius: 10px;
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -195,24 +195,22 @@ a{
   height: 50px;
   border-radius: 10px;
   margin-top: 50px;
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   color: white;
   font-weight: 700;
   font-size: 25px;
   border: none;
 }
 
-/* - SignInHomePage ---------------------------------------------------- */
-
 #logIn:hover{
   cursor: pointer;
   background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221); 
+  color: #99BADD;
+  box-shadow: 4px 4px 24px 4px #99BADD; 
   outline: none;
 }
 
-/* - SignInHomePage ?---------------------------------------------------- */
+/* - Signed In HomePage ---------------------------------------------------- */
 
 .sIHomePage{
   display : grid;
@@ -221,7 +219,7 @@ a{
 }
 
 #quote{
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   color: white;
   border: 5px solid white;
   border-radius: 50px;
@@ -239,7 +237,7 @@ a{
 }
 
 .entryBox{
-  border: 5px solid rgb(153, 186, 221);
+  border: 5px solid #99BADD;
   display : grid;
   grid-column-start: 3;
   grid-column-end: 3;
@@ -251,39 +249,30 @@ a{
   border-radius: 10px;
 }
 
-#nEntry{
-  width: 200px;
-  border-radius: 10px;
-  margin-left: 15px;
-}
-
-#nEntry:hover{
-  cursor: pointer;
-  box-shadow: 4px 4px 24px 4px;
-  width: 200px;
-}
-
-#aEntry{
-  width: 200px;
-  border-radius: 10px;
-  margin-left: 15px;
-}
-
-#aEntry:hover{
-  cursor: pointer;
-  box-shadow: 4px 4px 24px 4px;
-  width: 200px;
-}
-
-#aEntry button, #nEntry button{
+.signed-in-homepage-buttons{
   border: none;
+  width: 200px;
+  height:50px;
+  border-radius: 10px;
+  background-color: #99BADD;
+  color:white;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.signed-in-homepage-buttons:hover{
+  cursor: pointer;
+  box-shadow: 4px 4px 24px 4px;
+  background-color: white;
+  color: #99BADD;
+  /* width: 200px; */
 }
 
 #logout{
   border: none;
 }
 
-/* - NewUserForm ---------------------------------------------------- */
+/* - NewUserForm sign up---------------------------------------------------- */
 
 .uNew{
   align-items: center;
@@ -304,7 +293,7 @@ a{
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -317,7 +306,7 @@ a{
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -331,7 +320,7 @@ a{
   height: 50px;
   border-radius: 10px;
   margin: 25px;
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -342,15 +331,15 @@ a{
 #nSubmit:hover{
   cursor: pointer;
   background-color: white;
-  color: rgb(153, 186, 221);
-  box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+  color: #99BADD;
+  box-shadow: 4px 4px 24px 4px #99BADD;
 }
 
 .usEntri{
   text-align: -webkit-center;
 }
 
-/* - UserEntries ---------------------------------------------------- */
+/* -All UserEntries ---------------------------------------------------- */
 
 .sUE{
   display: grid;
@@ -430,7 +419,6 @@ a{
   grid-template-columns: 3fr 2fr;
 }
 
-
 .banner-container {
   background-image: url("../src/assets/banner/emoji_banner.png");
   background-position: center;
@@ -444,7 +432,7 @@ a{
 /* - Footer ---------------------------------------------------- */
 
 .footer{
-  background-color: rgb(153, 186, 221);
+  background-color: #99BADD;
   position: sticky;
   padding: 0px 15px;
   display: grid;

@@ -35,8 +35,8 @@ export default function SignedInHomePage(){
                 </div>
                 <div className='eBGrid'>
                     <div className='entryBox'>
-                    <Link id='nEntry' to="/wizard"><button style={{'width': '200px', 'height': '50px', 'borderRadius': '10px', 'backgroundColor': 'rgb(153, 186, 221)', 'color': 'white', 'fontWeight': '700', 'fontSize': '25px', 'border': 'none'}}> New Entry </button></Link>
-                    <Link id='aEntry'  to={userEntriesLink}><button style={{'width': '200px', 'height': '50px', 'borderRadius': '10px', 'backgroundColor': 'rgb(153, 186, 221)', 'color': 'white', 'fontWeight': '700', 'fontSize': '25px', 'border': 'none'}} >All Entries</button></Link>
+                    <Link to="/wizard"><button className='signed-in-homepage-buttons'> New Entry </button></Link>
+                    <Link to={userEntriesLink}><button className='signed-in-homepage-buttons'>All Entries</button></Link>
                     </div>
                 </div>
             </div>

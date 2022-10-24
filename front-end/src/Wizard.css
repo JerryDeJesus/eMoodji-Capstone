@@ -36,14 +36,14 @@
     width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color: rgb(153, 186, 221);
+    background-color: #99BADD;
     border-radius: 20px;
 }
 
 .wizard-question {
     text-align: center;
     font-size: 35px;
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     font-weight: 800;
     font-family: sans-serif;
 }
@@ -51,18 +51,18 @@
 
 .mood-search {
     font-size: 20px;
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     border: 0px solid white;
     outline: none;
     text-align: center;
     width: 75%;
     margin: 10px;
     padding: 5px;
-    border-bottom: 2px solid rgb(153, 186, 221);
+    border-bottom: 2px solid #99BADD;
 }
 
 .mood-search::placeholder, #user_address::placeholder {
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     font-size: 20px;
 }
 
@@ -76,7 +76,7 @@
     height: 50px;
     border-radius: 10px;
     margin: 15px 0px;
-    background-color: rgb(153, 186, 221);
+    background-color: #99BADD;
     color: white;
     font-weight: 700;
     font-size: 25px;
@@ -88,7 +88,7 @@
     height: 40px;
     border-radius: 10px;
     margin: 10px 25px;
-    background-color: rgb(153, 186, 221);
+    background-color: #99BADD;
     color: white;
     font-weight: 500;
     font-size: 25px;
@@ -98,8 +98,8 @@
 .wizard-button:hover {
     cursor: pointer;
     background-color: white;
-    color: rgb(153, 186, 221);
-    box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
+    color: #99BADD;
+    box-shadow: 4px 4px 24px 4px #99BADD;
 }
 
 .button-container {
@@ -114,7 +114,7 @@
     width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: rgb(153, 186, 221);
+    background-color: #99BADD;
     border-radius: 20px;
     padding: 40px 5px;
     gap: 25px 25px;
@@ -134,7 +134,7 @@
     width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: rgb(153, 186, 221);
+    background-color: #99BADD;
     border-radius: 20px;
     padding: 25px;
     grid-gap: 10px;
@@ -168,14 +168,14 @@
 
 #user_address {    
     font-size: 18px;
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     border: 0px solid white;
     outline: none;
     text-align: center;
     width: 75%;
     margin: 10px 45px;
     padding: 5px;
-    border-bottom: 2px solid rgb(153, 186, 221);
+    border-bottom: 2px solid #99BADD;
 }
 
 .map-display {
@@ -196,7 +196,7 @@
     color: black;
 }
 .result-container p a:hover{
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     cursor: alias;
 }
 
@@ -231,7 +231,7 @@ div.vertical-align-emoji {
 
 .modal-div {
     width: 450px;
-    color:rgb(153, 186, 221);
+    color:#99BADD;
     text-align: center;
 }
 
@@ -240,7 +240,7 @@ div.vertical-align-emoji {
     height: 50px;
     border-radius: 10px;
     margin: 15px;
-    background-color: rgb(153, 186, 221);
+    background-color: #99BADD;
     color: white;
     font-weight: 700;
     font-size: 25px;
@@ -258,7 +258,7 @@ div.vertical-align-emoji {
 }
 
 .warning-msg1 {
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     text-align: center;
     width: 75%;
     margin-top: 8px;
@@ -273,7 +273,7 @@ div.vertical-align-emoji {
 }
 
 .warning-msg2 {
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     margin-top: 8px;
     font-size: 17px;
 }
@@ -286,7 +286,7 @@ div.vertical-align-emoji {
 }
 
 .warning-msg3 {
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     margin-top: 8px;
     font-size: 17px;
 }
@@ -326,7 +326,7 @@ div.vertical-align-emoji {
 }
 
 .card .front, .card-all-entries .front-all-entries {
-    background-color: rgb(153, 186, 221);
+    background-color: #99BADD;
     color: white;
     font-size: 25px;
 }
@@ -351,15 +351,15 @@ div.vertical-align-emoji {
 .card-all-entries .back-all-entries 
 {
     transform: rotateY(180deg);
-    box-shadow: 4px 0.7px 20px 3px rgb(153, 186, 221);
-    color: rgb(153, 186, 221);
+    box-shadow: 4px 0.7px 20px 3px #99BADD;
+    color: #99BADD;
     font-size: 20px;
 }
 
 .card .enlarge-emoji {
     transform: rotateY(180deg);
-    box-shadow: 4px 0.7px 20px 3px rgb(153, 186, 221);
-    color: rgb(153, 186, 221);
+    box-shadow: 4px 0.7px 20px 3px #99BADD;
+    color: #99BADD;
     font-size: 50px;
 }
 /* FLIP CARD STYLE END */
@@ -373,7 +373,7 @@ div.vertical-align-emoji {
 
 .front-all-entries {
     border-radius: 20px;
-    background-color: rgb(153, 186, 221);
+    background-color: #99BADD;
     color: white;
     font-size: 25px;
     font-family: sans-serif;
@@ -382,9 +382,9 @@ div.vertical-align-emoji {
 }
 
 .back-all-entries {
-    box-shadow: 4px 0.7px 20px 3px rgb(153, 186, 221);
+    box-shadow: 4px 0.7px 20px 3px #99BADD;
     border-radius: 20px;
-    color: rgb(153, 186, 221);
+    color: #99BADD;
     font-size: 20px;
     font-family: sans-serif;
     display: flex;

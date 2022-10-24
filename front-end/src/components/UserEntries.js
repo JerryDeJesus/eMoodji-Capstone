@@ -53,11 +53,7 @@ export default function UserEntries (){
 
     emojis.map((emojis) => {
         for(let each of emojis){
-            if(emojiCount[each]){
-                emojiCount[each]++;
-            }else{
-                emojiCount[each] = 1;
-            }
+            emojiCount[each] ? emojiCount[each]++ : emojiCount[each] = 1; 
         }
     });
 

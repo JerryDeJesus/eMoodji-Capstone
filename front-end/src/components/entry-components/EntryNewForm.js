@@ -14,6 +14,7 @@ export default function EntryNewForm (){
         interest: "",
         activity: "",
     });
+    
     let {date_created, mood, interest, activity} = entry;
     
     const handleText = (e) => {
