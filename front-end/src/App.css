@@ -1,3 +1,30 @@
+/* general styling ---------------------------------------- */
+
+main{
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #8BC6EC;
+  /* background-image: linear-gradient(135deg,white 0%, #99BADD 100%); */
+}
+
+form {
+  text-align: center;
+}
+
+a:hover{
+  color:rgb(153, 186, 221);
+  cursor: alias;
+  text-decoration: underline;
+}
+
+a{
+  text-decoration: none;
+}
+
+::placeholder{color: white;}
+
 /* - NavBar ---------------------------------------------------- */
 
 .NavBar{
@@ -42,7 +69,6 @@
   grid-column-end: 4;
   outline: none;
   border: none;
- 
 }
 
 #logout:hover{
@@ -52,11 +78,6 @@
   box-shadow: 4px 4px 24px 4px rgb(153, 186, 221);
 }
  
- a{
-   text-decoration: none;
- }
-
- 
  /* - Banner ---------------------------------------------------- */
 
 .banner-container {
@@ -65,7 +86,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 0px 3px;
-  
 }
 
 /* - Home ---------------------------------------------------- */
@@ -184,8 +204,6 @@
 
 /* - SignInHomePage ---------------------------------------------------- */
 
-::placeholder{color: white;}
-
 #logIn:hover{
   cursor: pointer;
   background-color: white;
@@ -196,13 +214,10 @@
 
 /* - SignInHomePage ?---------------------------------------------------- */
 
-::placeholder{color: white;}
-
 .sIHomePage{
   display : grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: repeat(1, 1fr);
-
 }
 
 #quote{
@@ -351,16 +366,6 @@
   grid-template-columns: auto;
 }
 
-a:hover{
-  color:rgb(153, 186, 221);
-  cursor: alias;
-  text-decoration: underline;
-}
-
-a{
-  text-decoration: none;
-}
-
 .entry-card-back{
   display: flex;
   flex-direction: column;
@@ -395,16 +400,6 @@ a{
   display: grid;
   grid-template-rows: 100px 10fr;
   grid-template-columns: auto;
-}
-
-a:hover{
-  color:rgb(153, 186, 221);
-  cursor: alias;
-  text-decoration: underline;
-}
-
-a{
-  text-decoration: none;
 }
 
 .entry-card-back{
@@ -446,10 +441,6 @@ a{
   font-size: 24px;
 }
 
-form {
-  text-align: center;
-}
-
 /* - Footer ---------------------------------------------------- */
 
 .footer{
@@ -466,10 +457,6 @@ form {
   margin: 0px 8px;
 }
 
-form {
-  text-align: center;
-}
-
 .copyright {
   text-align: right;
   color: white;
@@ -484,11 +471,4 @@ form {
   grid-column-end: 4;
   grid-row-start: 2;
   grid-row-end: 2; 
-}
-
-main{
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
 }
