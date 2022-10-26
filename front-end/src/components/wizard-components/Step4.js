@@ -21,8 +21,6 @@ export default function Step4(props) {
                         src={`https://www.google.com/maps/embed/v1/directions?key=${MAP_KEY}&origin=${addressInput(userAddress)}&destination=${activityAddress}`}
                         allowFullScreen>
                     </iframe>;
-
-    const displayMessage = <div className="display-msg">Starting location is needed to navigate!</div>;   
     
     const selectedActivityData = activitiesData[entry.interest].findIndex((el) => el.name === entry.activity);
 
