@@ -10,8 +10,8 @@ import NewUser from "./pages/user-pages/NewUser";
 import FourOFour from "./pages/FourOFour";
 
 import ShowEntries from "./pages/entry-pages/ShowEntries.js";
-import ShowEntry from "./pages/entry-pages/ShowEntry.js";
-import EditEntry from "./pages/entry-pages/EditEntry.js";
+// import ShowEntry from "./pages/entry-pages/ShowEntry.js";
+// import EditEntry from "./pages/entry-pages/EditEntry.js";
 import ShowUserEntries from "./pages/ShowUserEntries.js"
 
 import ShowWizard from './pages/ShowWizard';
@@ -29,8 +29,8 @@ export default function App() {
           <Route path="/" element={<Home />} />
 
           <Route path="/entries" element={<ShowEntries />} />
-          <Route path="/entries/:id" element={<ShowEntry />} />
-          <Route path="/entries/:id/edit" element={<EditEntry />} />
+          {/* <Route path="/entries/:id" element={<ShowEntry />} /> */}
+          {/* <Route path="/entries/:id/edit" element={<EditEntry />} /> */}
 
           <Route path="/users" element = {<ShowUsers />} />
           <Route path="/users/:id" element = {<ShowUserDetails />} />

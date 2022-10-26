@@ -35,7 +35,7 @@ export default function SignedInHomePage(){
                 </div>
                 <div className='eBGrid'>
                     <div className='entryBox'>
-                    <Link to="/wizard"><button className='signed-in-homepage-buttons'> New Entry </button></Link>
+                    <Link to="/wizard"><button className='signed-in-homepage-buttons'> Get Started </button></Link>
                     <Link to={userEntriesLink}><button className='signed-in-homepage-buttons'>All Entries</button></Link>
                     </div>
                 </div>

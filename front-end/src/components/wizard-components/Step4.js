@@ -22,7 +22,7 @@ export default function Step4(props) {
                         allowFullScreen>
                     </iframe>;
 
-    const displayMessage = <div className="display-msg">Direction is needed to navigate!</div>;   
+    const displayMessage = <div className="display-msg">Starting location is needed to navigate!</div>;   
     
     const selectedActivityData = activitiesData[entry.interest].findIndex((el) => el.name === entry.activity);
 
@@ -41,7 +41,7 @@ export default function Step4(props) {
                     <div className="map-container">
                         <input type="text" id="user_address" onChange={handleUserAddressInput} placeholder="Enter starting address.."/>
                         <div className="map-display">
-                            {userAddress ? showMap : displayMessage}
+                            {showMap}
                         </div>
                     </div>
 

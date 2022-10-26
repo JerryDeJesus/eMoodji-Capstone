@@ -7,7 +7,6 @@ export default function Step1(props) {
     const {progressBarComponent, entry, setEntry, next} = props;
     const [emojis, setEmojis] = useState([]);
     const [moodInput, setMoodInput] = useState("");
-    const [isActiveClick, setIsActiveClick] = useState(false);
    
     useEffect (() => {
         axios(`https://emoji-api.com/emojis?access_key=${ACCESS_KEY}`)
@@ -19,16 +18,8 @@ export default function Step1(props) {
     }, []);
 
     const handleSelectEmoji = (e, emoji) => {
-        if(!isActiveClick) {
-            e.target.style.transform = "scale(1.8)"
-            setEntry({...entry, mood : emoji.character});
-            setIsActiveClick(!isActiveClick);
-        } 
-        else {
-            e.target.style.transform = "none"
-            setEntry({...entry, mood : ""});
-            setIsActiveClick(!isActiveClick);
-        }    
+        setEntry({...entry, mood : emoji.character});
+        //make the user unable to proceed until selecting
     }
 
     const handleMoodInput = (e) => {
@@ -42,16 +33,17 @@ export default function Step1(props) {
             return el.unicodeName.includes(moodInput);
         }
     })
-
+        
     const renderedFilteredEmojis = filteredEmojis.map((el, i) => {
         return(
-            <div className = "child-emoji" 
+            <div 
+                 className = {el.character === entry.mood ? "child-emoji active" : "child-emoji"}
                  key = {i} 
                  onClick = {e => handleSelectEmoji(e, el)}>{el.character}
             </div>
         )
     });
-    
+
     return(
         <form className="parent-container">
                 <div className="float-right">
@@ -66,10 +58,6 @@ export default function Step1(props) {
                     
                     <div className="parent-emoji">
                         {renderedFilteredEmojis}
-                    </div>
-
-                    <div>
-                        <p className="warning-msg1">* To deselect, click your selected emoodjí again *</p>
                     </div>
 
                     <div className="button-container">

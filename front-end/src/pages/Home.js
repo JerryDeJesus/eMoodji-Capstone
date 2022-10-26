@@ -18,7 +18,7 @@ export default function Home() {
 
                        <div className="inHomeBox">
                         <Link id="hbNewEntry" to="/wizard">
-                            <button className="newEntryB"> New Entry </button>
+                            <button className="newEntryB"> Get Started </button>
                         </Link>
 
                         <br /><br />

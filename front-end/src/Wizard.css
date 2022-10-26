@@ -28,7 +28,11 @@
 
 .child-emoji:hover {
     cursor: pointer;
-    transform: scale(1.5);
+    transform: scale(1.4);
+}
+
+.active{
+    transform: scale(1.6);
 }
 
 .parent-emoji {
@@ -152,7 +156,7 @@
 
 .activity-box:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.2);
 }
 
 .map-info{
@@ -254,7 +258,7 @@ div.vertical-align-emoji {
 
 .interest-img:hover {
     cursor: pointer;
-    transform: scale(1.5) rotate(15deg);
+    transform: scale(1.4) rotate(15deg);
 }
 
 .warning-msg1 {

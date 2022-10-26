@@ -11,7 +11,7 @@ export default function StepSubmit(props) {
     const navigate = useNavigate();
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
 
-    const listItems = Object.entries(entry).map(([key, value], i) => {
+    const listItems = Object.entries(entry).slice(1).map(([key, value], i) => {
         return (
             <FlipCard key = {i} value = {value} k = {key} />
         )
