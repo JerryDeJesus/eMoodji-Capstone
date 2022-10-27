@@ -438,17 +438,17 @@ a{
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-top: auto;
+  height:60px;
 }
 
 .footer-logo {
-  width: 30px;
-  margin: 0px 8px;
+  margin: 5px 8px 0px 8px;
 }
 
 .copyright {
   text-align: right;
   color: white;
-  margin-top: 15px;
+  margin-top: 20px;
 }
 
 #cr{
