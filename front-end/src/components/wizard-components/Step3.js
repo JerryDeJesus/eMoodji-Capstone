@@ -1,10 +1,16 @@
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Step3(props) {
     const {progressBarComponent, entry, setEntry, next, back, activitiesData} = props;
+    const [disabled, setDisabled] = useState(true);
+
+    useEffect (() => {
+        if(entry.activity) setDisabled(false)
+    });
 
     const handleSelectActivity = (e) => {
             setEntry({...entry, activity: e.target.outerText})
+            setDisabled(false);
     };
 
     const getInterestActivities = activitiesData?.[entry.interest].map((el, i) => {
@@ -12,7 +18,6 @@ export default function Step3(props) {
             <li className={entry.activity === el.name ? "activity-box active" : "activity-box"} key = {i} onClick = {(e) => handleSelectActivity(e)}>{el.name}</li>
         )
     })
-
 
     return(
         <form className="parent-container">
@@ -29,7 +34,7 @@ export default function Step3(props) {
 
                 <div className="button-container step">
                     <button className="wizard-button" type = "button" onClick={back}>Back</button> 
-                    <button className="wizard-button" type = "button" onClick={next}>Next</button>
+                    <button className="wizard-button" type = "button" onClick={next} disabled={disabled}>Next</button>
                 </div>
             </div>
         </form>

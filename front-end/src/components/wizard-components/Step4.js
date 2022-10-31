@@ -11,7 +11,7 @@ export default function Step4(props) {
     const [userAddress, setUserAddress] = useState("New York");
     const navigate = useNavigate();
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
-
+        
 
     let activityAddress = entry.activity.split(" ").join("+");
     

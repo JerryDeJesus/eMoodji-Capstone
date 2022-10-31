@@ -7,19 +7,20 @@ export default function Step1(props) {
     const {progressBarComponent, entry, setEntry, next} = props;
     const [emojis, setEmojis] = useState([]);
     const [moodInput, setMoodInput] = useState("");
+    const [disabled, setDisabled] = useState(true);
    
     useEffect (() => {
         axios(`https://emoji-api.com/emojis?access_key=${ACCESS_KEY}`)
-            .then(res => {
-                setEmojis(res.data);
-            })
-            .catch(error => console.log(error))
-        
-    }, []);
+        .then(res => {
+            setEmojis(res.data);
+        })
+        .catch(error => console.log(error))
+        if(entry.mood) setDisabled(false)
+    });
 
     const handleSelectEmoji = (e, emoji) => {
         setEntry({...entry, mood : emoji.character});
-        //make the user unable to proceed until selecting
+        setDisabled(false);
     }
 
     const handleMoodInput = (e) => {
@@ -44,6 +45,11 @@ export default function Step1(props) {
         )
     });
 
+    //handle users heading backwards to edit decisions
+    // if(!moodInput && entry.mood){
+    //     setDisabled(false)
+    // }
+
     return(
         <form className="parent-container">
                 <div className="progress-bar">
@@ -53,7 +59,7 @@ export default function Step1(props) {
                 <div className="wizard-container">
                     <div className="wizard-question-search">
                         <label className="wizard-question" htmlFor="mood">Hi! Choose an emoji to describe how you're feeling.</label>
-                        <input className="mood-search" type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} placeholder="eMoodji search..."/>
+                        <input className="mood-search" type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} placeholder="Search a particular emoji here..."/>
                     </div>
                     
                     <div className="parent-emoji">
@@ -61,7 +67,7 @@ export default function Step1(props) {
                     </div>
 
                     <div className="button-container">
-                        <button className="wizard-button" type = "button" onClick={next}>Next</button>
+                        <button className="wizard-button" onClick={next} disabled={disabled}>Next</button>
                     </div>
                 </div>
         </form>

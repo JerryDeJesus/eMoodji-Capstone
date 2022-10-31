@@ -13,7 +13,7 @@ const activitiesFileData = require('../../data/activities.json');
 export default function StepForm() {
     const [currentStep, setCurrentStep] = useState(1);
     const [activitiesData] = useState(activitiesFileData);
-    
+
     const [entry, setEntry] = useState({
         userid: localStorage.getItem("userid"),
         mood: "",
@@ -21,9 +21,13 @@ export default function StepForm() {
         activity: "",
     });
 
-    const next = () => setCurrentStep(currentStep + 1);
+    const next = () => {
+        setCurrentStep(currentStep + 1);
+    };
 
-    const back = () => setCurrentStep(currentStep - 1);
+    const back = () => {
+        setCurrentStep(currentStep - 1);
+    };
 
     switch (currentStep) {
         case 1: return <Step1 progressBarComponent = {<Progress type="circle" strokeWidth={26} width={200} percent={25} status="active" style={{fontSize: '100px'}} theme={{active: {symbol:'‍🤔', color: '#FC2F22', trailColor: '#EFEFEF'}}}/>} entry = {entry} setEntry = {setEntry} next = {next} />;

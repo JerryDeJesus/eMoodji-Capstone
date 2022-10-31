@@ -1,11 +1,17 @@
-// import { useState } from "react";
+import { useEffect, useState } from "react";
 import interestIcons from "../../data/interestIcons";
 
 export default function Step2(props) {
     const {progressBarComponent, entry, setEntry, next, back} = props;
+    const [disabled, setDisabled] = useState(true);
     
+    useEffect (() => {
+        if(entry.interest) setDisabled(false)
+    });
+
     const handleSelectInterest = (e) => {
             setEntry({...entry, interest: e.target.alt});
+            setDisabled(false);
     };
 
     const displayInterestIcons = interestIcons.map(({id, imgSrc, alt}) => {
@@ -27,7 +33,7 @@ export default function Step2(props) {
 
                 <div className="button-container step">
                     <button className="wizard-button" type = "button" onClick={back}>Back</button> 
-                    <button className="wizard-button" type = "button" onClick={next}>Next</button>
+                    <button className="wizard-button" type = "button" onClick={next} disabled={disabled}>Next</button>
                 </div>
             </div>
         </form>

@@ -72,6 +72,18 @@
     border: none;
 }
 
+.wizard-button:disabled{
+    width: 200px;
+    height: 50px;
+    border-radius: 10px;
+    margin: 15px;
+    background-color: #A2A2A2;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
+}
+
 .wizard-button:hover {
     cursor: pointer;
     background-color: white;
