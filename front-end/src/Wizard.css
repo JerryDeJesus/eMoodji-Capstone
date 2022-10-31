@@ -1,21 +1,15 @@
 .parent-container {
     width: 90%;
+    height:100%;
     margin: auto;
     display: grid;
     grid-template-areas:
-    "left left left right";
+    "left right";
 }
 
-.float-left {
+.wizard-container {
     grid-area: left;
-    padding: 5%;
-}
-
-.float-right {
-    grid-area: right;
-    position: fixed;
-    right: 100px;
-    top: 225px;
+    padding: 50px 25px 20px 25px;
 }
 
 .child-emoji {
@@ -44,15 +38,6 @@
     border-radius: 20px;
 }
 
-.wizard-question {
-    text-align: center;
-    font-size: 35px;
-    color: #99BADD;
-    font-weight: 800;
-    font-family: sans-serif;
-}
-
-
 .mood-search {
     font-size: 20px;
     color: #99BADD;
@@ -79,22 +64,10 @@
     width: 200px;
     height: 50px;
     border-radius: 10px;
-    margin: 15px 0px;
+    margin: 15px;
     background-color: #99BADD;
     color: white;
     font-weight: 700;
-    font-size: 25px;
-    border: none;
-}
-
-.wizard-button-small {
-    width: 150px;
-    height: 40px;
-    border-radius: 10px;
-    margin: 10px 25px;
-    background-color: #99BADD;
-    color: white;
-    font-weight: 500;
     font-size: 25px;
     border: none;
 }
@@ -104,6 +77,18 @@
     background-color: white;
     color: #99BADD;
     box-shadow: 4px 4px 24px 4px #99BADD;
+}
+
+.wizard-button-small {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #99BADD;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
 }
 
 .button-container {
@@ -159,33 +144,51 @@
     transform: scale(1.2);
 }
 
+.info-box{
+    min-width: 500px;
+}
+/* Map design start */
+.map-container{
+    /* padding-left: 140px; */
+    /* width: 100%; */
+    height: 375px;
+    text-align: center;
+    /* position:right; */
+}
+
 .map-info{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    width: 70%;
 }
 
-.format-name {
-    width: 70%;
-    font-size: 24px;
+.progress-bar {
+    position: fixed;
+    right: 100px;
+    top: 225px;
+    background: none;
 }
 
 #user_address {    
     font-size: 18px;
     color: #99BADD;
     border: 0px solid white;
+    border-bottom: 2px solid #99BADD;
     outline: none;
     text-align: center;
     width: 75%;
-    margin: 10px 45px;
+    margin: 10px 45px 10px 45px;
     padding: 5px;
-    border-bottom: 2px solid #99BADD;
+}
+/* map design end */
+
+.wizard-question {
+    text-align: center;
+    font-size: 35px;
+    color: #99BADD;
+    font-weight: 800;
+    font-family: sans-serif;
 }
 
-.map-display {
-    width: 300px;
-    text-align: center;
-}
 
 .result-container {
     margin: 60px 25px 0px 25px;
@@ -209,6 +212,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
+
 .display-msg {
     text-align: center;
     width: 400px;
@@ -227,10 +231,6 @@ div.vertical-align-text {
 
 div.vertical-align-emoji {
     margin: -15px;
-}
-
-.center-button {
-    text-align: center;
 }
 
 .modal-div {
@@ -259,40 +259,6 @@ div.vertical-align-emoji {
 .interest-img:hover {
     cursor: pointer;
     transform: scale(1.4) rotate(15deg);
-}
-
-.warning-msg1 {
-    color: #99BADD;
-    text-align: center;
-    width: 75%;
-    margin-top: 8px;
-    font-size: 17px;
-}
-
-.warning-msg2-container {
-    width: 70%;
-    margin: 0 auto;
-    display: grid;
-    justify-content: center;
-}
-
-.warning-msg2 {
-    color: #99BADD;
-    margin-top: 8px;
-    font-size: 17px;
-}
-
-.warning-msg3-container {
-    width: 75%;
-    display: grid;
-    justify-content: center;
-    margin: 0 auto;
-}
-
-.warning-msg3 {
-    color: #99BADD;
-    margin-top: 8px;
-    font-size: 17px;
 }
 
 /* FLIP CARD STYLE START */

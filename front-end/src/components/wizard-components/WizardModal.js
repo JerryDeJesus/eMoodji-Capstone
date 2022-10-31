@@ -9,9 +9,9 @@ export default function WizardModal() {
 
   return (
     <>
-    <div className="center-button">
-      <button className="wizard-button" onClick={handleShow}>Submit</button>
-    </div>
+  
+      <button className="wizard-button-small" onClick={handleShow}>Submit</button>
+    
       <Modal show={show} onHide={handleHide} backdrop = "true">
         <Modal.Header closeButton>
           <Modal.Title><div className="modal-div">Hi! What would you like to do?</div></Modal.Title>

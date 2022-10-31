@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 import interestIcons from "../../data/interestIcons";
 
 export default function Step2(props) {
@@ -14,11 +14,11 @@ export default function Step2(props) {
 
     return(
         <form className="parent-container">
-            <div className="float-right">
+            <div className="progress-bar">
                 {progressBarComponent}
             </div>
 
-            <div className="float-left">
+            <div className="wizard-container">
                 <p className="wizard-question">Which interest looks best right about now?</p>
 
                 <div className="interest-container">

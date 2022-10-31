@@ -1,4 +1,4 @@
-import { useState } from "react";
+// import { useState } from "react";
 
 export default function Step3(props) {
     const {progressBarComponent, entry, setEntry, next, back, activitiesData} = props;
@@ -16,11 +16,11 @@ export default function Step3(props) {
 
     return(
         <form className="parent-container">
-            <div className="float-right">
+            <div className="progress-bar">
                 {progressBarComponent}
             </div>
 
-            <div className="float-left">
+            <div className="wizard-container">
                 <p className="wizard-question">Choose an activity from below.</p>
 
                 <div className="activity-container">

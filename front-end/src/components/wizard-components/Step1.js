@@ -46,11 +46,11 @@ export default function Step1(props) {
 
     return(
         <form className="parent-container">
-                <div className="float-right">
+                <div className="progress-bar">
                     {progressBarComponent}
                 </div>
 
-                <div className="float-left">
+                <div className="wizard-container">
                     <div className="wizard-question-search">
                         <label className="wizard-question" htmlFor="mood">Hi! Choose an emoji to describe how you're feeling.</label>
                         <input className="mood-search" type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} placeholder="eMoodji search..."/>
