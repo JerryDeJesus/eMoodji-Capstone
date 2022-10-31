@@ -163,8 +163,8 @@
 
 .progress-bar {
     position: fixed;
-    right: 100px;
-    top: 225px;
+    right: 200px;
+    top: 100px;
     background: none;
 }
 
@@ -188,7 +188,6 @@
     font-weight: 800;
     font-family: sans-serif;
 }
-
 
 .result-container {
     margin: 60px 25px 0px 25px;
