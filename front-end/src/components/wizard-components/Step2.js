@@ -19,7 +19,7 @@ export default function Step2(props) {
             </div>
 
             <div className="float-left">
-                <p className="wizard-question">Tell me, what's your interest?</p>
+                <p className="wizard-question">Which interest looks best right about now?</p>
 
                 <div className="interest-container">
                     {displayInterestIcons}

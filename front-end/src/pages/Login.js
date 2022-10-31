@@ -23,7 +23,7 @@ export default function Login(){
         e.preventDefault();
         axios.post(`${API}/users/loginpage`, user)
          .then(res => {
-            console.log(res.data);
+            // console.log(res.data);
             userFirstName = res.data.fname;
             setUser({...user, id: res.data.id});
             localStorage.setItem("userid", res.data.id);

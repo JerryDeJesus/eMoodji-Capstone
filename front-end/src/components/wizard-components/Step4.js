@@ -37,7 +37,7 @@ export default function Step4(props) {
 
                 <div className="map-info">
                     <div className="map-container">
-                        <input type="text" id="user_address" onChange={handleUserAddressInput} placeholder="Enter starting address.."/>
+                        <input type="text" id="user_address" onChange={handleUserAddressInput} placeholder="Enter starting address..."/>
                         <div className="map-display">
                             {showMap}
                         </div>

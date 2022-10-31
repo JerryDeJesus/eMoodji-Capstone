@@ -52,7 +52,7 @@ export default function Step1(props) {
 
                 <div className="float-left">
                     <div className="wizard-question-search">
-                        <label className="wizard-question" htmlFor="mood">Hi there! What's your emoodji for this moment?</label>
+                        <label className="wizard-question" htmlFor="mood">Hi! Choose an emoji to describe how you're feeling.</label>
                         <input className="mood-search" type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} placeholder="eMoodji search..."/>
                     </div>
                     

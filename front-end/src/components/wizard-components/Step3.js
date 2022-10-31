@@ -21,7 +21,7 @@ export default function Step3(props) {
             </div>
 
             <div className="float-left">
-                <p className="wizard-question">Which Activity Floats Your Boat?</p>
+                <p className="wizard-question">Choose an activity from below.</p>
 
                 <div className="activity-container">
                     {getInterestActivities}

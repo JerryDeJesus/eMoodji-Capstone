@@ -1,5 +1,6 @@
 const db = require("../db/dbConfig.js");
 
+//get every entry for every user
 const getAllEntries = async () => {
     try {
         const allEntries = await db.any("SELECT * FROM entries");
@@ -9,6 +10,7 @@ const getAllEntries = async () => {
     }
 };
 
+//get a single entry 
 const getEntry = async (id) => {
     try {
         const oneEntry = await db.one("SELECT * FROM entries WHERE id = $1", id);
@@ -51,6 +53,7 @@ const updateEntry = async (id, entry) => {
     }
 };
 
+//get all of a single user's entries
 const getUserEntries = async (userid) => {
     try {
         const allEntries = await db.any("SELECT * FROM entries WHERE userid=$1", userid);

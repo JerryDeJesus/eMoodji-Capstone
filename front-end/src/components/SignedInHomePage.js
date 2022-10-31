@@ -5,12 +5,13 @@ import axios from "axios";
 export default function SignedInHomePage(){
     const [quote, setQuote] = useState([]);
     const API = process.env.REACT_APP_API_URL;
+
     useEffect(() => {
         axios("https://type.fit/api/quotes")
         .then(res => {
           setQuote(res.data[Math.floor(Math.random() * 50)]);
         });
-
+        //temp entry storage from the end of wizard route
         if(typeof localStorage.getItem("tempEntryMood") === "string"){
             let entry = {
                 userid: localStorage.getItem("userid"),

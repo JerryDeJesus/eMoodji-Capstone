@@ -23,6 +23,7 @@ users.get("/:id", async (req,res) => {
     }
 });
 
+//get all of a single user's entries
 users.get("/:id/entries", async (req,res) => {
     const  { id } = req.params;
     try{
