@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Loading from "../Loading";
 
 const ACCESS_KEY = process.env.REACT_APP_API_KEY;
 
@@ -8,15 +9,17 @@ export default function Step1(props) {
     const [emojis, setEmojis] = useState([]);
     const [moodInput, setMoodInput] = useState("");
     const [disabled, setDisabled] = useState(true);
+    const [loadingStatus, setLoadingStatus] = useState(true);
    
     useEffect (() => {
         axios(`https://emoji-api.com/emojis?access_key=${ACCESS_KEY}`)
         .then(res => {
             setEmojis(res.data);
+            setLoadingStatus(false)
         })
         .catch(error => console.log(error))
         if(entry.mood) setDisabled(false)
-    });
+    },[]);
 
     const handleSelectEmoji = (e, emoji) => {
         setEntry({...entry, mood : emoji.character});
@@ -45,11 +48,6 @@ export default function Step1(props) {
         )
     });
 
-    //handle users heading backwards to edit decisions
-    // if(!moodInput && entry.mood){
-    //     setDisabled(false)
-    // }
-
     return(
         <form className="parent-container">
                 <div className="progress-bar">
@@ -63,7 +61,7 @@ export default function Step1(props) {
                     </div>
                     
                     <div className="parent-emoji">
-                        {renderedFilteredEmojis}
+                        {loadingStatus ? <Loading/> :renderedFilteredEmojis}
                     </div>
 
                     <div className="button-container">

@@ -5,6 +5,7 @@ import { format, parseISO } from "date-fns";
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from "react-chartjs-2";
 import FlipCardAllEntries from "./FlipCardAllEntries";
+import Loading from "./Loading";
 
 const API = process.env.REACT_APP_API_URL;
 const activitiesData = require('../data/activities.json');
@@ -12,6 +13,7 @@ ChartJS.register(ArcElement, Tooltip, Legend);
 
 export default function UserEntries (){
     const [userEntries, setUserEntries] = useState([]);
+    const [loadingStatus, setLoadingStatus] = useState(true);
 
     let {id} = useParams();
     let navigate = useNavigate();
@@ -21,6 +23,7 @@ export default function UserEntries (){
         .then((res)=> {
             if(res.data){
                 setUserEntries(res.data)
+                setLoadingStatus(false)
             } else {
                 navigate("/not-found")
             }
@@ -123,7 +126,7 @@ export default function UserEntries (){
     return(
     <div id="entriesPageContainer">
         <div className="sUE">
-            {userEntries.length ? displayUserEntries : "No Entries"}
+            {loadingStatus ? <Loading/> : userEntries.length ? displayUserEntries : "No entries...yet!"}
         </div>
             {doughnutChart}
     </div>

@@ -34,24 +34,24 @@
     width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    background-color: #99BADD;
+    background-color: #73A0D0;
     border-radius: 20px;
 }
 
 .mood-search {
     font-size: 20px;
-    color: #99BADD;
+    color: #73A0D0;
     border: 0px solid white;
     outline: none;
     text-align: center;
     width: 75%;
     margin: 10px;
     padding: 5px;
-    border-bottom: 2px solid #99BADD;
+    border-bottom: 2px solid #73A0D0;
 }
 
 .mood-search::placeholder, #user_address::placeholder {
-    color: #99BADD;
+    color: #73A0D0;
     font-size: 20px;
 }
 
@@ -60,16 +60,36 @@
     width: 75%;
 }
 
+.wizard-button-small {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: #73A0D0;
+    color: white;
+    font-weight: 700;
+    font-size: 25px;
+    border: none;
+}
+
 .wizard-button {
     width: 200px;
     height: 50px;
     border-radius: 10px;
     margin: 15px;
-    background-color: #99BADD;
+    background-color: #73A0D0;
     color: white;
     font-weight: 700;
     font-size: 25px;
     border: none;
+}
+
+
+.wizard-button:hover, .wizard-button-small:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #73A0D0;
+    box-shadow: 4px 4px 24px 4px #73A0D0;
 }
 
 .wizard-button:disabled{
@@ -82,25 +102,8 @@
     font-weight: 700;
     font-size: 25px;
     border: none;
-}
-
-.wizard-button:hover {
-    cursor: pointer;
-    background-color: white;
-    color: #99BADD;
-    box-shadow: 4px 4px 24px 4px #99BADD;
-}
-
-.wizard-button-small {
-    width: 150px;
-    height: 40px;
-    border-radius: 10px;
-    margin: 10px;
-    background-color: #99BADD;
-    color: white;
-    font-weight: 700;
-    font-size: 25px;
-    border: none;
+    box-shadow:none;
+    cursor: auto
 }
 
 .button-container {
@@ -115,7 +118,7 @@
     width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #99BADD;
+    background-color: #73A0D0;
     border-radius: 20px;
     padding: 40px 5px;
     gap: 25px 25px;
@@ -135,7 +138,7 @@
     width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #99BADD;
+    background-color: #73A0D0;
     border-radius: 20px;
     padding: 25px;
     grid-gap: 10px;
@@ -182,9 +185,9 @@
 
 #user_address {    
     font-size: 18px;
-    color: #99BADD;
+    color: #73A0D0;
     border: 0px solid white;
-    border-bottom: 2px solid #99BADD;
+    border-bottom: 2px solid #73A0D0;
     outline: none;
     text-align: center;
     width: 75%;
@@ -196,7 +199,7 @@
 .wizard-question {
     text-align: center;
     font-size: 35px;
-    color: #99BADD;
+    color: #73A0D0;
     font-weight: 800;
     font-family: sans-serif;
 }
@@ -214,7 +217,7 @@
     color: black;
 }
 .result-container p a:hover{
-    color: #99BADD;
+    color: #73A0D0;
     cursor: alias;
 }
 
@@ -246,7 +249,7 @@ div.vertical-align-emoji {
 
 .modal-div {
     width: 450px;
-    color:#99BADD;
+    color:#73A0D0;
     text-align: center;
 }
 
@@ -255,7 +258,7 @@ div.vertical-align-emoji {
     height: 50px;
     border-radius: 10px;
     margin: 15px;
-    background-color: #99BADD;
+    background-color: #73A0D0;
     color: white;
     font-weight: 700;
     font-size: 25px;
@@ -307,7 +310,7 @@ div.vertical-align-emoji {
 }
 
 .card .front, .card-all-entries .front-all-entries {
-    background-color: #99BADD;
+    background-color: #73A0D0;
     color: white;
     font-size: 25px;
 }
@@ -332,15 +335,15 @@ div.vertical-align-emoji {
 .card-all-entries .back-all-entries 
 {
     transform: rotateY(180deg);
-    box-shadow: 4px 0.7px 20px 3px #99BADD;
-    color: #99BADD;
+    box-shadow: 4px 0.7px 20px 3px #73A0D0;
+    color: #73A0D0;
     font-size: 20px;
 }
 
 .card .enlarge-emoji {
     transform: rotateY(180deg);
-    box-shadow: 4px 0.7px 20px 3px #99BADD;
-    color: #99BADD;
+    box-shadow: 4px 0.7px 20px 3px #73A0D0;
+    color: #73A0D0;
     font-size: 50px;
 }
 /* FLIP CARD STYLE END */
@@ -354,7 +357,7 @@ div.vertical-align-emoji {
 
 .front-all-entries {
     border-radius: 20px;
-    background-color: #99BADD;
+    background-color: #73A0D0;
     color: white;
     font-size: 25px;
     font-family: sans-serif;
@@ -363,9 +366,9 @@ div.vertical-align-emoji {
 }
 
 .back-all-entries {
-    box-shadow: 4px 0.7px 20px 3px #99BADD;
+    box-shadow: 4px 0.7px 20px 3px #73A0D0;
     border-radius: 20px;
-    color: #99BADD;
+    color: #73A0D0;
     font-size: 20px;
     font-family: sans-serif;
     display: flex;

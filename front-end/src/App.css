@@ -14,7 +14,7 @@ form {
 }
 
 a:hover{
-  color:#99BADD;
+  color:#73A0D0;
   cursor: alias;
   text-decoration: underline;
 }
@@ -30,7 +30,7 @@ a{
 .NavBar{
   align-items: center;
   justify-items: center;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 80px;
@@ -74,8 +74,8 @@ a{
 #logout:hover{
   cursor: pointer;
   background-color: white;
-  color: #99BADD;
-  box-shadow: 4px 4px 24px 4px #99BADD;
+  color: #73A0D0;
+  box-shadow: 4px 4px 24px 4px #73A0D0;
 }
  
  /* - Banner ---------------------------------------------------- */
@@ -92,7 +92,7 @@ a{
 
 .home{
   display : grid;
-  border: 5px solid #99BADD;
+  border: 5px solid #73A0D0;
   margin: 30px; 
   padding: 1px;
   box-sizing: border-box;
@@ -118,7 +118,7 @@ a{
 }
 
 #hbNewEntry{
-   background-color: #99BADD;
+   background-color: #73A0D0;
    color: white;
    width: 400px;
 }
@@ -127,7 +127,7 @@ a{
   width : 200px;
   height: 50px;
   border-radius : 10px;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -137,8 +137,8 @@ a{
 .newEntryB:hover{
   cursor: pointer;
   background-color: white;
-  color: #99BADD;
-  box-shadow: 4px 4px 24px 4px #99BADD;
+  color: #73A0D0;
+  box-shadow: 4px 4px 24px 4px #73A0D0;
 }
 
 /* - Login ---------------------------------------------------- */
@@ -162,7 +162,7 @@ a{
   height: 50px;
   border-radius: 10px;
   margin-top: 100px;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -179,7 +179,7 @@ a{
   width: 300px;
   height: 50px;
   border-radius: 10px;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -195,7 +195,7 @@ a{
   height: 50px;
   border-radius: 10px;
   margin-top: 50px;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -205,8 +205,8 @@ a{
 #logIn:hover{
   cursor: pointer;
   background-color: white;
-  color: #99BADD;
-  box-shadow: 4px 4px 24px 4px #99BADD; 
+  color: #73A0D0;
+  box-shadow: 4px 4px 24px 4px #73A0D0; 
   outline: none;
 }
 
@@ -219,7 +219,7 @@ a{
 }
 
 #quote{
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color: white;
   border: 5px solid white;
   border-radius: 50px;
@@ -237,7 +237,7 @@ a{
 }
 
 .entryBox{
-  border: 5px solid #99BADD;
+  border: 5px solid #73A0D0;
   display : grid;
   grid-column-start: 3;
   grid-column-end: 3;
@@ -254,7 +254,7 @@ a{
   width: 200px;
   height:50px;
   border-radius: 10px;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color:white;
   font-weight: 700;
   font-size: 25px;
@@ -264,7 +264,7 @@ a{
   cursor: pointer;
   box-shadow: 4px 4px 24px 4px;
   background-color: white;
-  color: #99BADD;
+  color: #73A0D0;
   /* width: 200px; */
 }
 
@@ -293,7 +293,7 @@ a{
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -306,7 +306,7 @@ a{
   width: 200px;
   height: 50px;
   border-radius: 10px;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -320,7 +320,7 @@ a{
   height: 50px;
   border-radius: 10px;
   margin: 25px;
-  background-color: #99BADD;
+  background-color: #73A0D0;
   color: white;
   font-weight: 700;
   font-size: 25px;
@@ -331,8 +331,8 @@ a{
 #nSubmit:hover{
   cursor: pointer;
   background-color: white;
-  color: #99BADD;
-  box-shadow: 4px 4px 24px 4px #99BADD;
+  color: #73A0D0;
+  box-shadow: 4px 4px 24px 4px #73A0D0;
 }
 
 .usEntri{
@@ -432,9 +432,9 @@ a{
 /* - Footer ---------------------------------------------------- */
 
 .footer{
-  background-color: #99BADD;
+  background-color: #73A0D0;
   position: sticky;
-  padding: 0px 15px;
+  padding: 0px 15px 0px 15px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-top: auto;
@@ -442,21 +442,11 @@ a{
 }
 
 .footer-logo {
-  margin: 5px 8px 0px 8px;
+  margin: 0px 10px 0px 10px;
 }
 
 .copyright {
   text-align: right;
   color: white;
   margin-top: 20px;
-}
-
-#cr{
-  text-align: center;
-  color: white;
-  font-size: 12px;
-  grid-column-start: 1;
-  grid-column-end: 4;
-  grid-row-start: 2;
-  grid-row-end: 2; 
 }

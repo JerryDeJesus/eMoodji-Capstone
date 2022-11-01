@@ -1,17 +1,21 @@
 import { useEffect, useState } from "react";
 import interestIcons from "../../data/interestIcons";
+import Loading from "../Loading";
 
 export default function Step2(props) {
     const {progressBarComponent, entry, setEntry, next, back} = props;
     const [disabled, setDisabled] = useState(true);
+    const [loadingStatus, setLoadingStatus] = useState(true);
     
     useEffect (() => {
         if(entry.interest) setDisabled(false)
+        setLoadingStatus(false);
     });
 
     const handleSelectInterest = (e) => {
             setEntry({...entry, interest: e.target.alt});
-            setDisabled(false);
+            //doesnt need to be here for some reason?
+            // setDisabled(false);
     };
 
     const displayInterestIcons = interestIcons.map(({id, imgSrc, alt}) => {
@@ -28,7 +32,7 @@ export default function Step2(props) {
                 <p className="wizard-question">Which interest looks best right about now?</p>
 
                 <div className="interest-container">
-                    {displayInterestIcons}
+                    {loadingStatus ? <Loading/> : displayInterestIcons}
                 </div>
 
                 <div className="button-container step">

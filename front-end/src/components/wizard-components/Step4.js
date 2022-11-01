@@ -41,7 +41,7 @@ export default function Step4(props) {
             return (
                 <form onSubmit={handleSubmitForSignIn} >
                     <button className="wizard-button-small" onClick={back}>Back</button>
-                        <button className="wizard-button">Submit</button>
+                        <button className="wizard-button-small">Submit</button>
                 </form>)
         } else {
             return (
