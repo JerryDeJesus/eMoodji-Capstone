@@ -67,7 +67,7 @@
     margin: 10px;
     background-color: #73A0D0;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 25px;
     border: none;
 }
@@ -79,7 +79,7 @@
     margin: 15px;
     background-color: #73A0D0;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 25px;
     border: none;
 }
@@ -99,7 +99,7 @@
     margin: 15px;
     background-color: #A2A2A2;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 25px;
     border: none;
     box-shadow:none;
@@ -260,7 +260,7 @@ div.vertical-align-emoji {
     margin: 15px;
     background-color: #73A0D0;
     color: white;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 25px;
     border: none;
 }

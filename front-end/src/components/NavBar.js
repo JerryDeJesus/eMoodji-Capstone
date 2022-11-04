@@ -37,7 +37,7 @@ export default function NavBar () {
                 }
             </div>
             {localStorage.getItem("userid") ? <div id="welcome" >Welcome, {localStorage.getItem('firstName')}!</div> : null}
-            {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut} style={{'textDecoration' : 'none', 'width': '200px', 'height': '50px', 'borderRadius': '10px', 'backgroundColor': 'white', 'color': '#73A0D0', 'fontWeight': '700', 'fontSize': '25px', 'outline': 'none'}} > Log Out </button></Link> : null}
+            {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut}> Log Out </button></Link> : null}
         </nav>
     
         

@@ -31,13 +31,11 @@ export default function SignedInHomePage(){
     return(
        
             <div className="sIHomePage">
-                <div className="banner-container">
-                    <h1 id='quote'>"{quote.text}" <br /> - {quote.author ? quote.author : "Unknown"}</h1><br /><br />
-                </div>
-                <div className='eBGrid'>
+                    <div className="homepage-bubble">"{quote.text}" <br /> - {quote.author ? quote.author : "Unknown"}</div>
+                <div className='entry-box-container'>
                     <div className='entryBox'>
-                    <Link to="/wizard"><button className='signed-in-homepage-buttons'> Get Started </button></Link>
-                    <Link to={userEntriesLink}><button className='signed-in-homepage-buttons'>All Entries</button></Link>
+                        <Link to="/wizard"><button className='homepage-button'> Get Started </button></Link>
+                        <Link to={userEntriesLink}><button className='homepage-button'>All Entries</button></Link>
                     </div>
                 </div>
             </div>

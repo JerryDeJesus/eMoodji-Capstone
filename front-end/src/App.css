@@ -4,9 +4,6 @@ main{
   margin: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  /* background-color: #8BC6EC; */
-  /* background-image: linear-gradient(135deg,white 0%, white 100%); */
 }
 
 form {
@@ -15,8 +12,6 @@ form {
 
 a:hover{
   color:#73A0D0;
-  cursor: alias;
-  text-decoration: underline;
 }
 
 a{
@@ -30,7 +25,7 @@ a{
 .NavBar{
   align-items: center;
   justify-items: center;
-  background-color: #73A0D0;
+  background-color: #73a0d0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   height: 80px;
@@ -62,13 +57,17 @@ a{
 }
 
 #logout{
-  padding: 5px;
-  text-decoration: none;
-  display : grid; 
-  grid-column-start: 4;
-  grid-column-end: 4;
-  outline: none;
+  width: 200px;
+  height: 45px;
+  border-radius: 25px;
+  background-color: white;
+  color: #73a0d0;
+  font-weight: 600;
+  font-size: 25px;
   border: none;
+
+  text-decoration: none;
+  outline: none;
 }
 
 #logout:hover{
@@ -77,68 +76,40 @@ a{
   color: #73A0D0;
   box-shadow: 4px 4px 24px 4px #73A0D0;
 }
- 
- /* - Banner ---------------------------------------------------- */
-
-.banner-container {
-  background-image: url("../src/assets/banner/central-park.jpeg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 0px 3px;
-}
 
 /* - Home ---------------------------------------------------- */
 
-.home{
-  display : grid;
-  border: 5px solid #73A0D0;
-  margin: 30px; 
-  padding: 1px;
-  box-sizing: border-box;
-  width: auto;
-  min-height: 68vh; 
-  padding-bottom: 10px;
-  border-radius: 10px;
-}
-
-#descript{
-  width: 50%;
-  text-align: center;
-  margin: 40px;
-  padding: 10px;
-  border-radius: 10px;
-  font-size:24px;
-  font-weight:400;
+.home, .sIHomePage{
+  background-image: url("../src/assets/banner/central-park.jpeg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 90vh; 
+  /* text-align: center; */
 }
 
 .inHomeBox{
-  margin-top: 43px;
   text-align: center;
+  margin: 60px;
 }
 
-#hbNewEntry{
-   background-color: #73A0D0;
-   color: white;
-   width: 400px;
-}
-
-.newEntryB{
+.homepage-button{
   width : 200px;
-  height: 50px;
-  border-radius : 10px;
+  height: 45px;
+  border-radius : 25px;
   background-color: #73A0D0;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 25px;
-  border: none
+  border: none;
+  margin: 10px;
 }
 
-.newEntryB:hover{
+.homepage-button:hover{
   cursor: pointer;
   background-color: white;
   color: #73A0D0;
-  box-shadow: 4px 4px 24px 4px #73A0D0;
+  box-shadow: 0px 0px 20px 10px #73A0D0;
 }
 
 /* - Login ---------------------------------------------------- */
@@ -153,37 +124,35 @@ a{
 }
 
 #email{
-  outline: none;
-  text-align: center;
+  background-color: #73A0D0;
+  border: none;
+  border-radius: 10px;
   color: white;
+  font-size: 25px;
+  font-weight: 600;
   grid-column-start: 2;
   grid-column-end: 2;
-  width: 300px;
-  height: 50px;
-  border-radius: 10px;
+  height: 45px;
   margin-top: 100px;
-  background-color: #73A0D0;
-  color: white;
-  font-weight: 700;
-  font-size: 25px;
-  border: none;
+  outline: none;
+  text-align: center;
+  width: 300px;
 }
 
 #password{
-  outline: none;
-  margin-left: 30px;
-  text-align: center;
+  background-color: #73A0D0;
+  border: none; 
+  border-radius: 10px;
   color: white;
+  font-size: 25px;
+  font-weight: 600;
   grid-column-start: 3;
   grid-column-end: 3;
+  height: 45px;
+  margin-left: 30px;
+  outline: none;
+  text-align: center;
   width: 300px;
-  height: 50px;
-  border-radius: 10px;
-  background-color: #73A0D0;
-  color: white;
-  font-weight: 700;
-  font-size: 25px;
-  border: none; 
 }
 
 #logIn{
@@ -192,12 +161,12 @@ a{
   grid-column-start: 2;
   grid-column-end: 3; 
   width: 200px;
-  height: 50px;
+  height: 45px;
   border-radius: 10px;
   margin-top: 50px;
   background-color: #73A0D0;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 25px;
   border: none;
 }
@@ -213,63 +182,39 @@ a{
 /* - Signed In HomePage ---------------------------------------------------- */
 
 .sIHomePage{
-  display : grid;
-  grid-template-columns: repeat(1, 1fr);
-  grid-template-rows: repeat(1, 1fr);
+  grid-template-rows: 1fr;
 }
 
-#quote{
-  background-color: #73A0D0;
+.homepage-bubble{
   color: white;
+  background-color: #73a0d0c7;
   border: 5px solid white;
   border-radius: 50px;
-  margin: 40px;
-  margin-right: 680px;
-  margin-top: 70px;
   padding: 10px;
+  margin: 70px 40px 40px 40px;
   text-align: center;
   font-style: italic;
+  font-size: 24px;
+  max-width: 1250px;
+  height: fit-content;
+  margin: 75px auto 60px auto;
+  padding: 15px;
 }
 
-.eBGrid{
-  display : grid;
+.entry-box-container{
+  display: grid;
   grid-template-columns: repeat(5, 1fr);
+  text-align: center;
 }
 
 .entryBox{
-  border: 5px solid #73A0D0;
-  display : grid;
+  display: grid;
   grid-column-start: 3;
   grid-column-end: 3;
   width: 315px;
   text-align: center;
   gap: 40px;
   padding: 40px;
-  margin-top: 64px;
-  border-radius: 10px;
-}
-
-.signed-in-homepage-buttons{
-  border: none;
-  width: 200px;
-  height:50px;
-  border-radius: 10px;
-  background-color: #73A0D0;
-  color:white;
-  font-weight: 700;
-  font-size: 25px;
-}
-
-.signed-in-homepage-buttons:hover{
-  cursor: pointer;
-  box-shadow: 4px 4px 24px 4px;
-  background-color: white;
-  color: #73A0D0;
-  /* width: 200px; */
-}
-
-#logout{
-  border: none;
 }
 
 /* - NewUserForm sign up---------------------------------------------------- */
@@ -291,11 +236,11 @@ a{
 #fname{
   text-align: center;
   width: 200px;
-  height: 50px;
+  height: 45px;
   border-radius: 10px;
   background-color: #73A0D0;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 25px;
   border: none;
   outline: none;
@@ -304,11 +249,11 @@ a{
 #lname{
   text-align: center;
   width: 200px;
-  height: 50px;
+  height: 45px;
   border-radius: 10px;
   background-color: #73A0D0;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 25px;
   border: none;
   outline: none;
@@ -317,12 +262,12 @@ a{
 #nSubmit{
   text-align: center;
   width: 200px;
-  height: 50px;
+  height: 45px;
   border-radius: 10px;
   margin: 25px;
   background-color: #73A0D0;
   color: white;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 25px;
   border: none;
   outline: none;
@@ -417,16 +362,6 @@ a{
 #entriesPageContainer{
   display: grid;
   grid-template-columns: 3fr 2fr;
-}
-
-.banner-container {
-  background-image: url("../src/assets/banner/emoji_banner.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.banner-container h1 {
-  font-size: 24px;
 }
 
 /* - Footer ---------------------------------------------------- */
