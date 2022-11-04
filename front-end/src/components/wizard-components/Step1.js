@@ -19,7 +19,7 @@ export default function Step1(props) {
         })
         .catch(error => console.log(error))
         if(entry.mood) setDisabled(false)
-    },[]);
+    },[entry.mood]);
 
     const handleSelectEmoji = (e, emoji) => {
         setEntry({...entry, mood : emoji.character});

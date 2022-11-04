@@ -10,7 +10,7 @@ export default function Step2(props) {
     useEffect (() => {
         if(entry.interest) setDisabled(false)
         setLoadingStatus(false);
-    });
+    },[entry.interest]);
 
     const handleSelectInterest = (e) => {
             setEntry({...entry, interest: e.target.alt});

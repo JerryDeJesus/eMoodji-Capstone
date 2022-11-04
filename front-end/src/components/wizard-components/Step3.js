@@ -6,7 +6,7 @@ export default function Step3(props) {
 
     useEffect (() => {
         if(entry.activity) setDisabled(false)
-    });
+    },[entry.activity]);
 
     const handleSelectActivity = (e) => {
             setEntry({...entry, activity: e.target.outerText})

@@ -51,13 +51,15 @@ export default function UserEntries (){
     let emojiCount = {};
     
     userEntries.map((entry) => {
-        emojis.push(entry.mood);    
+        emojis.push(entry.mood); 
+        return ''  
     });
 
     emojis.map((emojis) => {
         for(let each of emojis){
             emojiCount[each] ? emojiCount[each]++ : emojiCount[each] = 1; 
         }
+        return ''
     });
 
     let emojiNums = Object.values(emojiCount);
