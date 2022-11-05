@@ -31,7 +31,7 @@ export default function Step1(props) {
     }
 
     const filteredEmojis = emojis.filter((el, i) => {
-        if(i > 14 && moodInput.length === 0) {
+        if(i > 19 && moodInput.length === 0) {
             return false;
         } else {
             return el.unicodeName.includes(moodInput);
@@ -50,11 +50,13 @@ export default function Step1(props) {
 
     return(
         <form className="parent-container">
-                <div className="progress-bar">
-                    {progressBarComponent}
-                </div>
 
                 <div className="wizard-container">
+
+                    <div className="progress-bar">
+                        {progressBarComponent}
+                    </div>
+
                     <div className="wizard-question-search">
                         <label className="wizard-question" htmlFor="mood">Hi! Choose an emoji to describe how you're feeling.</label>
                         <input className="mood-search" type="text" id = "mood" value = {moodInput} onChange = {handleMoodInput} placeholder="Search a particular emoji here..."/>
@@ -65,8 +67,9 @@ export default function Step1(props) {
                     </div>
 
                     <div className="button-container">
-                        <button className="wizard-button" onClick={next} disabled={disabled}>Next</button>
+                        <button className="wizard-button" id="step1-button" onClick={next} disabled={disabled}>Next</button>
                     </div>
+
                 </div>
         </form>
     )

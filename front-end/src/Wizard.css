@@ -1,15 +1,11 @@
 .parent-container {
-    width: 90%;
-    height:100%;
     margin: auto;
     display: grid;
-    grid-template-areas:
-    "left right";
+    width:75%;
 }
 
 .wizard-container {
-    grid-area: left;
-    padding: 50px 25px 20px 25px;
+    margin:60px 20px 20px 20px;
 }
 
 .child-emoji {
@@ -31,11 +27,11 @@
 
 .parent-emoji {
     justify-items: center;
-    width: 75%;
+    /* width: 75%; */
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(5, 1fr);
     background-color: #73A0D0;
-    border-radius: 20px;
+    border-radius: 30px;
 }
 
 .mood-search {
@@ -57,13 +53,13 @@
 
 .wizard-question-search {
     text-align: center;
-    width: 75%;
+    /* width: 75%; */
 }
 
 .wizard-button-small {
     width: 150px;
     height: 40px;
-    border-radius: 10px;
+    border-radius: 25px;
     margin: 10px;
     background-color: #73A0D0;
     color: white;
@@ -74,9 +70,9 @@
 
 .wizard-button {
     width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    margin: 15px;
+    height: 45px;
+    border-radius: 25px;
+    margin: 10px;
     background-color: #73A0D0;
     color: white;
     font-weight: 600;
@@ -84,6 +80,9 @@
     border: none;
 }
 
+#step1-button{
+ margin-right:0px;
+}
 
 .wizard-button:hover, .wizard-button-small:hover {
     cursor: pointer;
@@ -94,9 +93,9 @@
 
 .wizard-button:disabled{
     width: 200px;
-    height: 50px;
-    border-radius: 10px;
-    margin: 15px;
+    height: 45px;
+    border-radius: 25px;
+    margin: 10px;
     background-color: #A2A2A2;
     color: white;
     font-weight: 600;
@@ -107,7 +106,7 @@
 }
 
 .button-container {
-    width: 75%;
+    /* width: 75%; */
     display: flex;
     justify-content: flex-end;
 }
@@ -177,10 +176,12 @@
 }
 
 .progress-bar {
-    position: fixed;
-    right: 200px;
-    top: 100px;
+    width:150px;
+    height:150px;
+    left: 30px;
+    top: 90px;
     background: none;
+    position:absolute;
 }
 
 #user_address {    
@@ -255,8 +256,8 @@ div.vertical-align-emoji {
 
 .modal-button {
     width: 200px;
-    height: 50px;
-    border-radius: 10px;
+    height: 45px;
+    border-radius: 25px;
     margin: 15px;
     background-color: #73A0D0;
     color: white;
@@ -273,6 +274,17 @@ div.vertical-align-emoji {
 .interest-img:hover {
     cursor: pointer;
     transform: scale(1.4) rotate(15deg);
+}
+
+#loading-container{
+    height:380px;
+    grid-column-start: 3;
+    display:grid;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
+.loading{
+    grid-row-start:2;
 }
 
 /* FLIP CARD STYLE START */

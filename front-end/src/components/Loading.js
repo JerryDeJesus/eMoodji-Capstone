@@ -3,7 +3,7 @@ import ReactLoading from 'react-loading';
 
 export default function Loading () {
     return(
-        <div>
+        <div id="loading-container">
             <ReactLoading
                 type='spin'
                 color="#99badd"

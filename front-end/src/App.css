@@ -2,8 +2,9 @@
 
 main{
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  position:relative;
+  padding-bottom: 60px;
+  min-height: 100vh;
 }
 
 form {
@@ -23,20 +24,25 @@ a{
 /* - NavBar ---------------------------------------------------- */
 
 .NavBar{
+  display: flex;
   align-items: center;
   justify-items: center;
   background-color: #73a0d0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  height: 80px;
+  height: 65px;
   font-size:18px;
+  justify-content: space-between;
+  padding: 0 20px;
 }
 
-#logo{
-  display : grid;
-  grid-column-start: 1;
-  grid-column-end: 1;
+.sub-navbar{
+  display: flex;
+  align-content: center;
+  align-items: center;
 }
+
+/* #logo{
+ 
+} */
 
 #weather-icon{
   height:65px;
@@ -46,26 +52,24 @@ a{
   display: flex;
   color: white;
   text-align: center;
+  align-items: center;
 }
 
 #welcome{
-  padding-left: 95px;
   color: white;
-  display : grid; 
-  grid-column-start: 3;
-  grid-column-end: 3;
+  margin-left: 25px;
 }
 
 #logout{
-  width: 200px;
+  width: 100px;
   height: 45px;
   border-radius: 25px;
   background-color: white;
   color: #73a0d0;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 17px;
   border: none;
-
+  margin-left:25px;
   text-decoration: none;
   outline: none;
 }
@@ -79,13 +83,13 @@ a{
 
 /* - Home ---------------------------------------------------- */
 
-.home, .sIHomePage{
+#wallpaper{
   background-image: url("../src/assets/banner/central-park.jpeg");
   background-position: bottom;
   background-repeat: no-repeat;
   background-size: cover;
   min-height: 90vh; 
-  /* text-align: center; */
+  text-align: -webkit-center;
 }
 
 .inHomeBox{
@@ -191,13 +195,12 @@ a{
   border: 5px solid white;
   border-radius: 50px;
   padding: 10px;
-  margin: 70px 40px 40px 40px;
+  margin: 70px 40px 60px 40px;
   text-align: center;
   font-style: italic;
   font-size: 24px;
   max-width: 1250px;
   height: fit-content;
-  margin: 75px auto 60px auto;
   padding: 15px;
 }
 
@@ -368,12 +371,14 @@ a{
 
 .footer{
   background-color: #73A0D0;
-  position: sticky;
+  position: absolute;
+  bottom: 0;
   padding: 0px 15px 0px 15px;
   display: grid;
   grid-template-columns: repeat(2,1fr);
   margin-top: auto;
   height:60px;
+  width:100vw;
 }
 
 .footer-logo {
@@ -384,4 +389,37 @@ a{
   text-align: right;
   color: white;
   margin-top: 20px;
+}
+/* footer end */
+.home-info{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 126px;
+  padding: 3rem 10rem;
+}
+
+.home-info h2{
+  padding: 4rem 0 0 5rem;
+  font-size: 3rem;
+  line-height: 3.5rem;
+  letter-spacing: -0.02em;
+  font-weight: 300;
+}
+
+.home-info h2 p{
+  color:#73A0D0;
+}
+
+.home-info h3{
+  color: #73A0D0;
+  font-size: 32px;
+}
+
+.right-info-box p{
+  font-size:20px;
+  border-bottom: 2px solid rgba(137, 137, 137, 0.46);
+}
+
+.right-info-box :last-child{
+  border:none
 }

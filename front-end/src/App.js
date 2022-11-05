@@ -21,31 +21,33 @@ import "../src/App.css";
 export default function App() {
   
   return(
-    <div>
-      <Router>
+    <Router>
       <main>
-        <NavBar />
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <div>
+          <NavBar />
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-          <Route path="/entries" element={<ShowEntries />} />
-          {/* <Route path="/entries/:id" element={<ShowEntry />} /> */}
-          {/* <Route path="/entries/:id/edit" element={<EditEntry />} /> */}
+            <Route path="/entries" element={<ShowEntries />} />
+            {/* <Route path="/entries/:id" element={<ShowEntry />} /> */}
+            {/* <Route path="/entries/:id/edit" element={<EditEntry />} /> */}
 
-          <Route path="/users" element = {<ShowUsers />} />
-          <Route path="/users/:id" element = {<ShowUserDetails />} />
-          <Route path="/createaccount" element={<NewUser />} />
-          <Route path="/users/:id/entries" element={<ShowUserEntries />} />
-          <Route path="/users/:id/edit" element={<EditUser />} />
+            <Route path="/users" element = {<ShowUsers />} />
+            <Route path="/users/:id" element = {<ShowUserDetails />} />
+            <Route path="/createaccount" element={<NewUser />} />
+            <Route path="/users/:id/entries" element={<ShowUserEntries />} />
+            <Route path="/users/:id/edit" element={<EditUser />} />
 
-          <Route path ="/wizard" element={<ShowWizard />} />
-          <Route path="/loginpage" element={<Login />} />
-          <Route path="*" element={<FourOFour />} />
-        </Routes>
-      <Footer />
+            <Route path ="/wizard" element={<ShowWizard />} />
+            <Route path="/loginpage" element={<Login />} />
+            <Route path="*" element={<FourOFour />} />
+          </Routes>
+        </div>
+        <div>
+          <Footer />
+        </div>
       </main>
-      </Router>
-    </div>
+    </Router>
   )
 };
 

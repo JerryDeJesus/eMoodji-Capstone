@@ -9,7 +9,8 @@ export default function Home() {
     }else{
         return (
             <div className="home">
-
+                <div id="wallpaper">
+                    <div style={{'height':'30px'}}></div>
                     <div className="homepage-bubble">Practice mindfulness with eMoodjí! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities and events going on in the New York Metropolitan Area! </div>
 
                     <div className="inHomeBox">
@@ -26,6 +27,19 @@ export default function Home() {
                         </Link>
                     </div> 
 
+                </div>
+
+                    
+                <section className="home-info">
+                    <div>
+                        <h2>The world's largest therapy service. <br/><p>100% online.</p></h2>
+                    </div>
+                    <div className="right-info-box">
+                        <p><h3>268,526,178</h3> Messages, chat, phone, video sessions</p>
+                        <p><h3>268,526,178</h3> Messages, chat, phone, video sessions</p>
+                        <p><h3>268,526,178</h3> Messages, chat, phone, video sessions</p>
+                    </div>
+                </section>
             </div>
         )
     }

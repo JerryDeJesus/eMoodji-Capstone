@@ -29,17 +29,19 @@ export default function NavBar () {
         <nav className="NavBar">
         
             <Link to="/" style={{'textDecoration': 'none'}} ><img id="logo" src={logo} alt="Logo" style={{'width': "175px"}}/></Link>
-            <div className='weatherDisplay'>
-                {loadingStatus ? <Loading/> : <>
-                <div><img id='weather-icon' alt='weatherIcon' src={`https:${weather?.current.condition.icon}`} /></div>
-                <div>{weather?.location.name}<br/>{weather?.current.temp_f + '°F'}</div>
-                </>
-                }
+
+            <div className='sub-navbar'>
+                <div className='weatherDisplay'>
+                    {loadingStatus ? <Loading/> : <>
+                    <div><img id='weather-icon' alt='weatherIcon' src={`https:${weather?.current.condition.icon}`} /></div>
+                    <div>{weather?.location.name}<br/>{weather?.current.temp_f + '°F'}</div>
+                    </>
+                    }
+                </div>
+                {localStorage.getItem("userid") ? <div id="welcome" >Welcome, {localStorage.getItem('firstName')}!</div> : null}
+                {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut}> Log Out </button></Link> : null}
             </div>
-            {localStorage.getItem("userid") ? <div id="welcome" >Welcome, {localStorage.getItem('firstName')}!</div> : null}
-            {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut}> Log Out </button></Link> : null}
         </nav>
     
-        
     )
 }
