@@ -2,8 +2,6 @@ const express = require("express");
 const users = express.Router({ mergeParams: true });
 const { getAllUsers, getUser, createUser, deleteUser, updateUser, userByEmail } = require('../queries/users');
 const {getUserEntries} = require("../queries/entries.js");
-const bcrypt = require('bcrypt');
-const saltRounds = 10;
 
 users.get('/', async (req, res) => {
     try{
@@ -68,19 +66,16 @@ users.put("/:id", async (req, res) => {
     }
 });
 
+//login
 users.post("/loginpage", async (req, res) => {
     const { email, password } = req.body;
     const user = await userByEmail(email, password);
     
     if(user){
-        // if(password === user.password){
             res.status(200).json(user);
-        // }else res.status(404).json({error: "invalid password"})
     }else{
         res.status(404).json({error: "invalid email and/or password"})
     }
-
-
 });
 
 module.exports = users;

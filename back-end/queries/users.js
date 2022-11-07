@@ -4,17 +4,15 @@ const saltRounds = 10;
 
 const userByEmail = async (email, password) => {
     const user = await db.one("SELECT * FROM users WHERE email=$1", email);
-    // console.log(password, user.password);
     try {
         bcrypt.compare(password, user.password, (err, res) =>{
-            console.log(password,user.password)
             if(err) console.log(err)
             if(res) return user
-            // else user = false
         })
-        return user;
+        // console.log(user,password,user.password)
+        return user
     } catch (error) {
-        console.log( "User does not exist, ", email, password);
+        console.log(error);
     }
 };
 
@@ -65,7 +63,7 @@ const updateUser = async (id, user) => {
     bcrypt.hash(user.password, saltRounds, (err, hash) =>{
         try {
             if(err) console.log(err);
-            
+
             const updatedUser = db.one(
                 "UPDATE users SET fname=$1, lname=$2, email=$3, password=$4 WHERE id=$5 RETURNING *",
                 [user.fname, user.lname, user.email, hash, id]
