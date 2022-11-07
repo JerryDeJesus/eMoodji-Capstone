@@ -44,9 +44,9 @@ export default function App() {
           </Routes>
         </div>
         <div>
-          <Footer />
         </div>
       </main>
+          <Footer />
     </Router>
   )
 };

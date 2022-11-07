@@ -61,16 +61,17 @@ export default function Home() {
                 </h2>
             </div>
             <div className="right-info-box">
+                <h3>Describe</h3>
                 <p>
-                <h3>Describe</h3>Your current feelings with the use of a simple
-                emoji
+                Your current feelings with the use of a simple emoji
                 </p>
+                <h3>Choose</h3>
                 <p>
-                <h3>Choose</h3>An interest from a short list of supported topics
+                An interest from a short list of supported topics
                 </p>
+                <h3>Discover</h3>
                 <p>
-                <h3>Discover</h3>NYC locations and businesses that provide
-                therapeutic activities and events!
+                NYC locations and businesses that provide therapeutic activities and events!
                 </p>
             </div>
             </section>

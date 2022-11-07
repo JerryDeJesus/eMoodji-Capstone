@@ -6,7 +6,6 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function UserDetails(){
     const [user, setUser] = useState([]);
-    const [showPassword, setShowPassword] = useState(false);
     let { id } = useParams();
     let navigate = useNavigate();
 
@@ -29,10 +28,6 @@ export default function UserDetails(){
             .catch(error => console.log(error))
     };
 
-    const handleShowingPassword = () => {
-        setShowPassword(!showPassword)
-    }
-
     return(
         <article className="User">
            
@@ -40,9 +35,8 @@ export default function UserDetails(){
                     <h3>First name: {fname}</h3>
                     <h3>Last name: {lname}</h3>
                     <h3>Email: {email}</h3>
-                    <h3>Password: {showPassword ? password : '******'}</h3>
+                    {/* <h3>Password: {showPassword ? password : '******'}</h3> */}
                 </div>
-            <button onClick={handleShowingPassword}>Show/Hide Password</button>
             <button onClick={handleDelete}>Delete Account</button>
             <Link to={`/users/${id}/edit`}><button>Edit User Information</button></Link>
         </article>

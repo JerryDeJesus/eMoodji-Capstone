@@ -2,6 +2,7 @@ const cors = require("cors");
 const express = require("express");
 const userController = require("./controllers/userController.js");
 const entryController = require("./controllers/entryController.js");
+const jwt = require("jsonwebtoken");
 const app = express();
 app.use(cors());
 app.use(express.json()); 

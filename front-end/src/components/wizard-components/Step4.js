@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import WizardModal from "./WizardModal.js";
+import Loading from "../Loading";
 
 const MAP_KEY = process.env.REACT_APP_MAP_API_KEY;
 const API = process.env.REACT_APP_API_URL;
@@ -9,6 +10,8 @@ const API = process.env.REACT_APP_API_URL;
 export default function Step4(props) {
     const {progressBarComponent, entry, back, activitiesData} = props;
     const [userAddress, setUserAddress] = useState("New York");
+    const [loadingStatus, setLoadingStatus] = useState(true);
+
     const navigate = useNavigate();
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
         
@@ -52,16 +55,21 @@ export default function Step4(props) {
         }
     }
 
-    const showMap = <iframe
-                        title = "myMap"
-                        width = "500" 
-                        height = "500"
-                        frameBorder = "0" style={{border: "0"}}
-                        referrerPolicy="no-referrer-when-downgrade"
-                        src={`https://www.google.com/maps/embed/v1/directions?key=${MAP_KEY}&origin=${addressInput(userAddress || "Times Square, New York")}&destination=${activityAddress}`}
-                        allowFullScreen>
-                    </iframe>;
+    const showMap = 
+    <iframe
+        title = "myMap"
+        width = "500" 
+        height = "500"
+        frameBorder = "0" style={{border: "0"}}
+        referrerPolicy="no-referrer-when-downgrade"
+        src={`https://www.google.com/maps/embed/v1/directions?key=${MAP_KEY}&origin=${addressInput(userAddress || "Times Square, New York")}&destination=${activityAddress}`}
+        allowFullScreen>
+    </iframe>;
     
+    setTimeout(function () {
+        setLoadingStatus(false);
+      }, 1000);
+
     const selectedActivityData = activitiesData[entry.interest].findIndex((el) => el.name === entry.activity);
 
     const {name, address, description, phone, website} = activitiesData[entry.interest][selectedActivityData];
@@ -79,7 +87,7 @@ export default function Step4(props) {
                     <div className="map-container">
                         <input type="text" id="user_address" onChange={handleUserAddressInput} placeholder="Enter starting address..."/>
                         <div className="map-display">
-                            {showMap}
+                            {loadingStatus ? <Loading/> : showMap }
                         </div>
                     </div>
 

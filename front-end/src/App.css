@@ -2,8 +2,8 @@
 
 main{
   margin: 0;
-  position:relative;
-  padding-bottom: 60px;
+  /* position:relative; */
+  margin-bottom: -60px;
   min-height: 100vh;
 }
 
@@ -393,8 +393,8 @@ a{
   background-color: #fff;
   border-top: 2px solid #73A0D0c7;
   color: #73A0D0c7;
-  position: absolute;
-  bottom: 0;
+  /* position: absolute; */
+  /* bottom: 0; */
   padding: 0px 15px 0px 15px;
   display: grid;
   grid-template-columns: repeat(2,1fr);

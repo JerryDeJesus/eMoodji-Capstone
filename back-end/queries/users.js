@@ -1,12 +1,20 @@
 const db = require("../db/dbConfig.js");
+const bcrypt = require("bcrypt");
+const saltRounds = 10;
 
-//used for the sign in
-const userByEmail = async (email) => {
+const userByEmail = async (email, password) => {
+    const user = await db.one("SELECT * FROM users WHERE email=$1", email);
+    // console.log(password, user.password);
     try {
-        const user = await db.one("SELECT * FROM users WHERE email=$1", email);
+        bcrypt.compare(password, user.password, (err, res) =>{
+            console.log(password,user.password)
+            if(err) console.log(err)
+            if(res) return user
+            // else user = false
+        })
         return user;
     } catch (error) {
-        console.log( "Invalid signin attempt");
+        console.log( "User does not exist, ", email, password);
     }
 };
 
@@ -29,14 +37,19 @@ const getUser = async (id) => {
 };
 
 const createUser = async (user) =>{
-    try {
-        const newUser = await db.one("INSERT INTO users (fname, lname, email, password) VALUES ($1, $2, $3, $4) RETURNING *", 
-        [user.fname, user.lname, user.email, user.password]
-        );
-        return newUser;
-    } catch (error) {
-        return error;
-    }
+    bcrypt.hash(user.password, saltRounds, (err, hash) =>{
+        try {
+            if(err) console.log(err)
+
+            const newUser = db.one("INSERT INTO users (fname, lname, email, password) VALUES ($1, $2, $3, $4) RETURNING *", 
+            [user.fname, user.lname, user.email, hash]
+            );
+
+            return newUser;
+        } catch (error) {
+            return error;
+        }
+    });
 };
 
 const deleteUser = async (id) => {
@@ -49,15 +62,19 @@ const deleteUser = async (id) => {
 };
 
 const updateUser = async (id, user) => {
-    try {
-        const updatedUser = await db.one(
-            "UPDATE users SET fname=$1, lname=$2, email=$3, password=$4 WHERE id=$5 RETURNING *",
-            [user.fname, user.lname, user.email, user.password, id]
-        );
-        return updatedUser;
-    } catch (error) {
-        return error;
-    }
+    bcrypt.hash(user.password, saltRounds, (err, hash) =>{
+        try {
+            if(err) console.log(err);
+            
+            const updatedUser = db.one(
+                "UPDATE users SET fname=$1, lname=$2, email=$3, password=$4 WHERE id=$5 RETURNING *",
+                [user.fname, user.lname, user.email, hash, id]
+            );
+            return updatedUser;
+        } catch (error) {
+            return error;
+        }
+    });
 }
 
 

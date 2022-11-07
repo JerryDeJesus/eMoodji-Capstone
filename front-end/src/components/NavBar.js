@@ -23,24 +23,24 @@ export default function NavBar () {
           console.log(res.data);
         })  
         
-    }, []);
+    },[]);
 
     const loggedOutButtons = <>
     <Link to="/loginpage">
-        <button className="homepage-button nav-button"> Log In </button>
+        <button className="homepage-button nav-button">Log In</button>
     </Link>
 
     <Link to="/createaccount">
-        <button className="homepage-button nav-button" > Create Account </button>
+        <button className="homepage-button nav-button" > Create Account</button>
     </Link> </>;
 
     const loggedInButtons = <>
     <Link to={`/users/${localStorage.getItem("userid")}`} >
-        <button className="homepage-button nav-button"> View Account </button>
+        <button className="homepage-button nav-button">View Account</button>
     </Link>
 
     <Link to="/">
-         <button className='homepage-button nav-button' id='logout' onClick={handleLogOut}> Log Out </button>
+         <button className='homepage-button nav-button' id='logout' onClick={handleLogOut}>Log Out</button>
     </Link> 
     </>;
 

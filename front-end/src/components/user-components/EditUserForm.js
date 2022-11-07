@@ -49,7 +49,7 @@ const handleTextChange = (e) => {
 const handleEdit = (e) => {
     e.preventDefault();
     axios.put(`${API}/users/${id}`, user)
-        .then(res => navigate("/users"))
+        .then(res => navigate(`/users/${id}`))
         .catch(error => console.log(error))
 };
 
