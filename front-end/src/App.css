@@ -40,9 +40,6 @@ a{
   align-items: center;
 }
 
-/* #logo{
- 
-} */
 
 #weather-icon{
   height:65px;
@@ -53,32 +50,42 @@ a{
   color: white;
   text-align: center;
   align-items: center;
+  margin-right: 15px;
 }
 
 #welcome{
   color: white;
-  margin-left: 25px;
+  margin: 0 20px;
+}
+
+.nav-button{
+  width:auto;
+  height:40px;
+  font-weight: 500;
+  padding:8px 12px;
+  font-size:16px;
+  border: 1px solid white;
 }
 
 #logout{
-  width: 100px;
-  height: 45px;
+  width: auto;
+  height: 40px;
   border-radius: 25px;
-  background-color: white;
-  color: #73a0d0;
-  font-weight: 600;
-  font-size: 17px;
-  border: none;
+  color: white;
+  background-color: #73a0d0;
+  font-weight: 500;
+  font-size: 16px;
+  border: 1px solid white;
   margin-left:25px;
   text-decoration: none;
   outline: none;
+  padding:8px 12px;
 }
 
 #logout:hover{
   cursor: pointer;
   background-color: white;
   color: #73A0D0;
-  box-shadow: 4px 4px 24px 4px #73A0D0;
 }
 
 /* - Home ---------------------------------------------------- */
@@ -116,6 +123,18 @@ a{
   box-shadow: 0px 0px 20px 10px #73A0D0;
 }
 
+.nav-button{
+  width:auto;
+  height:40px;
+  font-weight: 500;
+  padding:8px 12px;
+  font-size:16px;
+  border: 1px solid white;
+}
+
+.nav-button:hover{
+  box-shadow: none;
+}
 /* - Login ---------------------------------------------------- */
 
 .login{
@@ -199,10 +218,11 @@ a{
   text-align: center;
   font-style: italic;
   font-size: 24px;
-  max-width: 1250px;
+  width: 30rem;
   height: fit-content;
   padding: 15px;
 }
+
 
 .entry-box-container{
   display: grid;
@@ -370,7 +390,9 @@ a{
 /* - Footer ---------------------------------------------------- */
 
 .footer{
-  background-color: #73A0D0;
+  background-color: #fff;
+  border-top: 2px solid #73A0D0c7;
+  color: #73A0D0c7;
   position: absolute;
   bottom: 0;
   padding: 0px 15px 0px 15px;
@@ -385,9 +407,13 @@ a{
   margin: 0px 10px 0px 10px;
 }
 
+.footer-logo-container a{
+  width:50px;
+}
+
 .copyright {
   text-align: right;
-  color: white;
+  color: #73A0D0;
   margin-top: 20px;
 }
 /* footer end */
@@ -399,7 +425,7 @@ a{
 }
 
 .home-info h2{
-  padding: 4rem 0 0 5rem;
+  padding: 1rem 0 0 1.5rem;
   font-size: 3rem;
   line-height: 3.5rem;
   letter-spacing: -0.02em;
@@ -415,11 +441,122 @@ a{
   font-size: 32px;
 }
 
+.right-info-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .right-info-box p{
   font-size:20px;
   border-bottom: 2px solid rgba(137, 137, 137, 0.46);
+  padding-bottom: 16px;
 }
 
 .right-info-box :last-child{
   border:none
+}
+
+/* email subscription */
+
+.email-subscription-form{
+  margin: 100px auto;
+  border: 1px solid #73a0d0;
+  padding: 40px 25px;
+  border-radius: 7px;
+  max-width: 520px;
+  background-color: rgba(125, 132, 178, 0.15);
+  text-align: center;
+}
+
+.email-subscription-title{
+  font-size: 24px;
+  font-weight: 600;
+  color: #73a0d0;
+  margin-bottom: 15px;
+}
+
+.email-subscription-description{
+  width: 60%;
+  font-size: 0.9em;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+.email-subscription-input{
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 8px;
+}
+
+.email-subscription-input input{
+  width: 100%;
+  padding: 15px;
+  border: #73a0d0 1px solid;
+  border-radius: 3px;
+}
+
+.email-subscription-button{
+  width: 100%;
+  padding: 15px;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  font-size: 1.1em;
+  text-decoration: uppercase;
+  background: #73a0d0;
+  background: linear-gradient(
+    rgba(143, 166, 203, 1) 0%,
+    rgba(125, 132, 178, 1) 100%
+  )
+}
+
+  .email-subscription-button:hover{
+    background: linear-gradient(
+      rgba(125, 132, 178, 1) 0%,
+      rgba(143, 166, 203, 1) 100%
+    )
+}
+
+  /* bit of media queries */
+
+@media (max-width: 440px) {
+  .home-info{
+    grid-template-columns: 1fr;
+    padding: 0px;
+  }
+
+  .homepage-bubble{
+    width:300px;
+  }
+
+  .NavBar{
+    max-width:440px;
+  }
+
+  .nav-button{
+    font-size:10px;
+    padding-bottom: 35px;
+    margin: 0 2px;
+  }
+
+  .weatherDisplay{
+    font-size:10px;
+    margin-right: 5px;
+  }
+
+  #weather-icon{
+    height:40px;
+  }
+
+  .left-info-box{
+    margin-bottom: 30px;
+  }
+
+  .footer-logo{
+    margin: auto;
+  }
+  .copyright{
+    margin: auto;
+  }
 }

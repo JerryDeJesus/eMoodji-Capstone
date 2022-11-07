@@ -18,8 +18,8 @@ export default function WizardModal() {
         </Modal.Header>
 
         <Modal.Body>
-          <Link to="/createaccount"><button className="modal-button" onClick={handleHide}>Create Account</button></Link>
-          <Link to="/loginpage"><button className="modal-button" onClick={handleHide}>Log In</button></Link>
+          <Link to="/createaccount"><button className="wizard-button" onClick={handleHide}>Create Account</button></Link>
+          <Link to="/loginpage"><button className="wizard-button" onClick={handleHide}>Log In</button></Link>
         </Modal.Body>
   
       </Modal>

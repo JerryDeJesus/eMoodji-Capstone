@@ -105,9 +105,9 @@ let { fname, lname, email, password } = user;
                 <br/>
 
                 <br/>
-                <Link to={`/users/${id}`}><button>Back</button></Link>
+                <Link to={`/users/${localStorage.getItem("userid")}`}><button>Back</button></Link>
                 
-                <button type="submit">Update User </button>
+                <button type="submit">Update User</button>
                 </form>
             </div>
     )

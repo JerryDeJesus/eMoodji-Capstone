@@ -49,16 +49,17 @@ export default function Login(){
                     required
                     />
               
-                    <input 
-                    id = "password"
-                    value = {user.password}
-                    type = "password"
-                    onChange = {handleTextChange} 
-                    placeholder="Password"
-                    required
-                    />
-                    <br />
+                <input 
+                id = "password"
+                value = {user.password}
+                type = "password"
+                onChange = {handleTextChange} 
+                placeholder="Password"
+                required
+                />
+                <br />
                 <button id='logIn' type="submit" >Log In</button>
+                
             </form>
         </div>
     )

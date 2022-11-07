@@ -31,7 +31,7 @@ export default function UserEntries (){
     }, [id, navigate]);
 
     let displayUserEntries = userEntries.map((entry, index)=>{
-        let formattedDate = format(parseISO(entry.date_created), "MM/dd/yyyy hh:mm aaaaa'm'");
+        let formattedDate = format(parseISO(entry.date_created), "MM/dd hh:mmaaaaa'm");
         // let linkToEntry = `/entries/${entry.id}`;
         let resourceLink = "";
         let resourceDescription = "";

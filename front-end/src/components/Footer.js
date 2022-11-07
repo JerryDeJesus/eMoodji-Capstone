@@ -1,7 +1,7 @@
-import fbLogo from "../assets/logo/facebook_icon_white.png";
-import twtLogo from "../assets/logo/white_twitter_icon.png";
-import igLogo from "../assets/logo/instagram_white_icon.png";
-import ghLogo from "../assets/logo/github_white_icon.png";
+import fbLogo from "../assets/logo/fb_blue_icon.png";
+import twtLogo from "../assets/logo/twitter_blue_icon.png";
+import igLogo from "../assets/logo/insta_blue_icon.png";
+import ghLogo from "../assets/logo/github_blue_icon.png";
 
 export default function Footer () {
     return (

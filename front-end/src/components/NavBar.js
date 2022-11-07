@@ -25,6 +25,25 @@ export default function NavBar () {
         
     }, []);
 
+    const loggedOutButtons = <>
+    <Link to="/loginpage">
+        <button className="homepage-button nav-button"> Log In </button>
+    </Link>
+
+    <Link to="/createaccount">
+        <button className="homepage-button nav-button" > Create Account </button>
+    </Link> </>;
+
+    const loggedInButtons = <>
+    <Link to={`/users/${localStorage.getItem("userid")}`} >
+        <button className="homepage-button nav-button"> View Account </button>
+    </Link>
+
+    <Link to="/">
+         <button className='homepage-button nav-button' id='logout' onClick={handleLogOut}> Log Out </button>
+    </Link> 
+    </>;
+
     return (
         <nav className="NavBar">
         
@@ -32,14 +51,15 @@ export default function NavBar () {
 
             <div className='sub-navbar'>
                 <div className='weatherDisplay'>
-                    {loadingStatus ? <Loading/> : <>
-                    <div><img id='weather-icon' alt='weatherIcon' src={`https:${weather?.current.condition.icon}`} /></div>
-                    <div>{weather?.location.name}<br/>{weather?.current.temp_f + '°F'}</div>
+                    {loadingStatus ? <Loading/> : 
+                    <>
+                        <div><img id='weather-icon' alt='weatherIcon' src={`https:${weather?.current.condition.icon}`} /></div>
+                        <div>{weather?.location.name}<br/>{weather?.current.temp_f + '°F'}</div>
                     </>
                     }
                 </div>
                 {localStorage.getItem("userid") ? <div id="welcome" >Welcome, {localStorage.getItem('firstName')}!</div> : null}
-                {localStorage.getItem("userid") ? <Link to="/"><button id='logout' onClick={handleLogOut}> Log Out </button></Link> : null}
+                {localStorage.getItem("userid") ? loggedInButtons : loggedOutButtons}
             </div>
         </nav>
     

@@ -34,7 +34,7 @@ export default function SignedInHomePage(){
                     <div className="homepage-bubble">"{quote.text}" <br /> - {quote.author ? quote.author : "Unknown"}</div>
                 <div className='entry-box-container'>
                     <div className='entryBox'>
-                        <Link to="/wizard"><button className='homepage-button'> Get Started </button></Link>
+                        <Link to="/wizard"><button className='homepage-button'>Get Started</button></Link>
                         <Link to={userEntriesLink}><button className='homepage-button'>All Entries</button></Link>
                     </div>
                 </div>
