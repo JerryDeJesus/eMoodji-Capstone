@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
+import icon from "../../assets/logo/user-details.icon.png";
 
 const API = process.env.REACT_APP_API_URL;
 
 export default function UserDetails(){
     const [user, setUser] = useState([]);
+    const [entriesCount, setEntriesCount] = useState(0);
+
     let { id } = useParams();
     let navigate = useNavigate();
 
@@ -18,9 +21,18 @@ export default function UserDetails(){
                 navigate(`/not-found`)
             }
         })
+        .catch(error => console.log(error))
+        
+        axios.get(`${API}/users/${id}/entries`)
+        .then((res)=> {
+            if(res.data){
+                setEntriesCount(res.data.length);
+            }
+        })
+        .catch(error => console.log(error))
     }, [id, navigate]);
 
-    let { fname, lname, email} = user;
+    let { fname, lname, email } = user;
 
     const handleDelete = () => {
         axios.delete(`${API}/users/${id}`)
@@ -29,15 +41,18 @@ export default function UserDetails(){
     };
 
     return(
-        <article className="User">
+        <article>
            
-                <div>
+                <div className="user-details">
+                <h1>Your Information</h1>
                     <h3>First name: {fname}</h3>
                     <h3>Last name: {lname}</h3>
                     <h3>Email: {email}</h3>
+                    <h3>Total Entries Made: {entriesCount}</h3>
+            <button onClick={handleDelete} className="homepage-button nav-button user-info-button">Delete Account</button>
+            <Link to={`/users/${id}/edit`}><button className="homepage-button nav-button user-info-button">Edit Information</button></Link>
                 </div>
-            <button onClick={handleDelete}>Delete Account</button>
-            <Link to={`/users/${id}/edit`}><button>Edit User Information</button></Link>
+                <div><img src={icon} alt="user details icon"/></div>
         </article>
     )
 }

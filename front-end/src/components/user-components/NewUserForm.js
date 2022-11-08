@@ -11,37 +11,38 @@ export default function NewUserForm(){
         email: "",
         password: ""
     });
-    
+        
     let navigate = useNavigate();
 
-const handleTextChange = (e) => {
-    setUser({...user, [e.target.id]: e.target.value})
-};
+    const handleTextChange = (e) => {
+        setUser({...user, [e.target.id]: e.target.value})
+    };
 
-let userSignUp = {};
-let userFirstName = {};
+    let userSignUp = {};
+    let userFirstName = {};
 
-const handleSubmit = (e) => {
-    e.preventDefault();
+    const handleSubmit = (e) => {
+        e.preventDefault();
     
-    axios.post(`${API}/users`, user)
-         .then(res => {
-            userSignUp = res.data.id;
-            userFirstName = res.data.fname;
-            localStorage.setItem("userid", userSignUp);
-            localStorage.setItem("firstName", userFirstName);
-            navigate("/");
-        })
-         .catch(error => console.log(error))
-};
+        axios.post(`${API}/users`, user)
+            .then(res => {
+                userSignUp = res.data.id;
+                userFirstName = res.data.fname;
+                localStorage.setItem("userid", userSignUp);
+                localStorage.setItem("firstName", userFirstName);
+                navigate("/");
+            })
+            .catch(error => console.log(error))
+    };
 
-let { fname, lname, email, password } = user;
+    let { fname, lname, email, password } = user;
 
     return(
         <div className="newForm">
             <div className="banner-container">
                 <h1 id='descript'> 🥰🤪😂🥳😬🙃😎🤩<p> Practice mindfulness with eMoodji! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you ! </p></h1>
             </div>
+            
             <div>
                 <form 
                 onSubmit={handleSubmit} 

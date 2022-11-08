@@ -1,10 +1,10 @@
-import Users from  "../../components/user-components/Users.js";
+// import Users from  "../../components/user-components/Users.js";
 
-export default function ShowUsers(){
-    return(
-        <div className='usShow'>
-            <h1>All Users</h1>
-            <Users/>
-        </div>
-    )
-};
+// export default function ShowUsers(){
+//     return(
+//         <div className='usShow'>
+//             <h1>All Users</h1>
+//             <Users/>
+//         </div>
+//     )
+// };

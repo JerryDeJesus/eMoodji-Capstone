@@ -32,25 +32,29 @@ export default function EditUserForm(){
       }, [id]);
 
 const handleTextChange = (e) => {
-     console.log(e.target.value);
     if(e.target.id === "email" ){
         let results = validateEmail(e.target.value);
-        if(results.length === 0){
-             console.log("invalid");
+        if(results === null){
+            console.log("invalid");
             return
         }else{
             console.log("valid");
         }
     }
-
     setUser({...user, [e.target.id]: e.target.value})
 };
 
 const handleEdit = (e) => {
     e.preventDefault();
     axios.put(`${API}/users/${id}`, user)
-        .then(res => navigate(`/users/${id}`))
-        .catch(error => console.log(error))
+    .then(res =>{
+        console.log(localStorage.getItem("userid"))
+
+        localStorage.setItem("userid",user.fname);
+        console.log(localStorage.getItem("userid"))
+        navigate(`/users/${id}`)
+    })
+    .catch(error => console.log(error))
 };
 
 let { fname, lname, email, password } = user;
