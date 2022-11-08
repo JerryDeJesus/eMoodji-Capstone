@@ -1,6 +1,6 @@
 /* general styling ---------------------------------------- */
 
-button{
+a,button{
   transition: all 0.2s ease;
 }
 
@@ -142,64 +142,106 @@ a{
 }
 /* - Login ---------------------------------------------------- */
 
-.login{
+.login-container{
+  display: flex;
+  width: 100vw;
+}
+
+.login-image-container{
+  background-image: url("../src/assets/banner/nyc-waters.jpeg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display:flex;
   align-items: center;
+  width:50vw;
+  justify-content: center;
+}
+
+.login-image-container h1{
+  margin-bottom: 300px;
+  text-align: center;
+  color:white;
+}
+
+.login-form-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  width:50vw;
+  flex-direction: column;
+}
+
+.login-form-container form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 4px 4px 24px 4px #73A0D0; 
+  padding:25px;
+  border-radius: 50px;
+  max-width: 45vw;
+}
+
+.login{
   justify-items: center;
-  display : grid;
-  grid-template-columns: repeat(3 1fr);
-  border-radius: 10px;
-  margin: 0px;
+  display: grid;
+  height:85vh;
+}
+
+.register{
+  margin-top: 40px;
+}
+
+.register a{
+  color:#5388c0;
 }
 
 #email{
-  background-color: #73A0D0;
-  border: none;
-  border-radius: 10px;
+  background-color: #73A0D0b3;
+  border: 1px solid white;
+  border-radius: 50px;
   color: white;
   font-size: 25px;
-  font-weight: 600;
-  grid-column-start: 2;
-  grid-column-end: 2;
+  font-weight: 400;
   height: 45px;
-  margin-top: 100px;
   outline: none;
   text-align: center;
   width: 300px;
+  margin: 5px 0;
+  max-width: 40vw;
 }
 
 #password{
-  background-color: #73A0D0;
-  border: none; 
-  border-radius: 10px;
+  background-color: #73a0d0b3;
+  border: 1px solid white; 
+  border-radius: 50px;
   color: white;
   font-size: 25px;
-  font-weight: 600;
-  grid-column-start: 3;
-  grid-column-end: 3;
+  font-weight: 400;
   height: 45px;
-  margin-left: 30px;
   outline: none;
   text-align: center;
   width: 300px;
+  margin: 5px 0 5px 0;
+  max-width: 40vw;
 }
 
-#logIn{
+#confirm-login{
+  background-color: #73A0D0;
+  border: 1px solid white;
+  border-radius: 50px;
+  color: white;
+  font-weight: 400;
+  font-size: 25px;
+  height: 45px;
   outline: none;
   text-align: center;
-  grid-column-start: 2;
-  grid-column-end: 3; 
-  width: 200px;
-  height: 45px;
-  border-radius: 10px;
-  margin-top: 50px;
-  background-color: #73A0D0;
-  color: white;
-  font-weight: 600;
-  font-size: 25px;
-  border: none;
+  width: 300px;
+  margin-top: 5px;
+  max-width: 35vw;
 }
 
-#logIn:hover{
+#confirm-login:hover{
   cursor: pointer;
   background-color: white;
   color: #73A0D0;
@@ -394,6 +436,7 @@ a{
 /* - Footer ---------------------------------------------------- */
 
 .footer{
+  background-color: white;
   border-top: 2px solid #73A0D0c7;
   color: #73A0D0c7;
   padding: 0px 15px 0px 15px;
@@ -538,6 +581,9 @@ a{
 .user-details-page{
   text-align: center;
   margin-top: 50px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 .user-info-button:hover{
@@ -545,7 +591,7 @@ a{
 }
 
 .user-details{
-  max-width:fit-content;
+  max-width: fit-content;
   margin: 0 auto;
   text-align: left;
 }
@@ -553,6 +599,12 @@ a{
 .user-details h3{
   border-bottom: 2px dotted rgba(137, 137, 137, 0.46);
   margin-bottom: 15px;
+}
+
+.user-details-icon{
+  max-height:300px;
+  text-align: center;
+  margin-bottom: 25px;
 }
 
   /* bit of media queries */

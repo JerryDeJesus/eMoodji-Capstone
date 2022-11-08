@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import icon from "../../assets/logo/user-details.icon.png";
+import icon from "../../assets/logo/user-details-icon.png";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -41,18 +41,19 @@ export default function UserDetails(){
     };
 
     return(
-        <article>
-           
+        <article className="user-details-page">
                 <div className="user-details">
+                <div style={{'textAlign':'center'}}>
+                    <img className="user-details-icon" src={icon} alt="user details icon"/>
+                </div>
                 <h1>Your Information</h1>
                     <h3>First name: {fname}</h3>
                     <h3>Last name: {lname}</h3>
                     <h3>Email: {email}</h3>
                     <h3>Total Entries Made: {entriesCount}</h3>
-            <button onClick={handleDelete} className="homepage-button nav-button user-info-button">Delete Account</button>
-            <Link to={`/users/${id}/edit`}><button className="homepage-button nav-button user-info-button">Edit Information</button></Link>
+                    <button onClick={handleDelete} className="homepage-button nav-button user-info-button">Delete Account</button>
+                    <Link to={`/users/${id}/edit`}><button className="homepage-button nav-button user-info-button">Edit Information</button></Link>
                 </div>
-                <div><img src={icon} alt="user details icon"/></div>
         </article>
     )
 }

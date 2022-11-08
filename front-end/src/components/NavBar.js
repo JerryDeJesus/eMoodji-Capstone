@@ -20,28 +20,18 @@ export default function NavBar () {
         .then(res => {
           setWeather(res.data);
           setLoadingStatus(false);
-          console.log(res.data);
         })  
         
     },[]);
 
     const loggedOutButtons = <>
-    <Link to="/loginpage">
-        <button className="homepage-button nav-button">Log In</button>
-    </Link>
-
-    <Link to="/createaccount">
-        <button className="homepage-button nav-button" > Create Account</button>
-    </Link> </>;
+    <Link to="/loginpage" className="homepage-button nav-button">Log In</Link>
+    {/* <Link to="/createaccount" className="homepage-button nav-button">Create Account</Link>  */}
+    </>;
 
     const loggedInButtons = <>
-    <Link to={`/users/${localStorage.getItem("userid")}`} >
-        <button className="homepage-button nav-button">View Account</button>
-    </Link>
-
-    <Link to="/">
-         <button className='homepage-button nav-button' id='logout' onClick={handleLogOut}>Log Out</button>
-    </Link> 
+    <Link to={`/users/${localStorage.getItem("userid")}`} className="homepage-button nav-button">View Account</Link>
+    <Link to="/" className='homepage-button nav-button' id='logout' onClick={handleLogOut}>Log Out</Link> 
     </>;
 
     return (

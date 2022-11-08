@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -23,44 +23,52 @@ export default function Login(){
         e.preventDefault();
         axios.post(`${API}/users/loginpage`, user)
          .then(res => {
-            // console.log(res.data);
             userFirstName = res.data.fname;
             setUser({...user, id: res.data.id});
             localStorage.setItem("userid", res.data.id);
             localStorage.setItem("firstName", userFirstName);
             navigate("/");
         })
-        .catch(error => alert("invalid login credentials"))
+        .catch(error => alert("Invalid email and/or password!"))
     }
     
     return(
         <div className='login'>
-            <div className="banner-container">
-                <h1 id='descript'><p>Practice mindfulness with eMoodjí! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you!</p>🥰🤪😂🥳😬🙃😎🤩</h1>
-            </div>
-            <form onSubmit={handleSubmit}>
+            <div className="login-container">
 
-                <input
-                    id = "email"
-                    value = {user.email} 
-                    type = "email" 
-                    onChange = {handleTextChange} 
-                    placeholder="Email"
-                    required
-                    />
-              
-                <input 
-                id = "password"
-                value = {user.password}
-                type = "password"
-                onChange = {handleTextChange} 
-                placeholder="Password"
-                required
-                />
-                <br />
-                <button id='logIn' type="submit" >Log In</button>
-                
-            </form>
+                <div className="login-image-container">
+                    <h1>Welcome Back to eMoodjí! 😊</h1>
+                </div>
+
+                <div className="login-form-container">
+                    <form onSubmit={handleSubmit} >
+                        <h2>Already a Member?</h2>
+                        <input
+                            id = "email"
+                            value = {user.email} 
+                            type = "email" 
+                            onChange = {handleTextChange} 
+                            placeholder="Email"
+                            required
+                        />
+                    
+                        <input 
+                        id = "password"
+                        value = {user.password}
+                        type = "password"
+                        onChange = {handleTextChange} 
+                        placeholder="Password"
+                        required
+                        />
+
+                        <button id='confirm-login' type="submit" >Log In</button>
+                    </form>
+                    <div className="register">
+                        Dont have an account yet?
+                        <Link to="/createaccount"> Create An Account Now!</Link> 
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
