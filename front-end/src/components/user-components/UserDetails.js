@@ -20,7 +20,7 @@ export default function UserDetails(){
         })
     }, [id, navigate]);
 
-    let { fname, lname, email, password } = user;
+    let { fname, lname, email} = user;
 
     const handleDelete = () => {
         axios.delete(`${API}/users/${id}`)
@@ -35,7 +35,6 @@ export default function UserDetails(){
                     <h3>First name: {fname}</h3>
                     <h3>Last name: {lname}</h3>
                     <h3>Email: {email}</h3>
-                    {/* <h3>Password: {showPassword ? password : '******'}</h3> */}
                 </div>
             <button onClick={handleDelete}>Delete Account</button>
             <Link to={`/users/${id}/edit`}><button>Edit User Information</button></Link>

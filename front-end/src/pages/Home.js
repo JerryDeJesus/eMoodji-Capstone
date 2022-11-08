@@ -40,41 +40,41 @@ export default function Home() {
         return (
         <div className="home">
             <div id="wallpaper">
-            <div style={{ height: "30px" }}></div>
-            <div className="homepage-bubble">
-                Practice mindfulness with eMoodjí!
+                <div style={{ height: "30px" }}></div>
+                    <section className="home-info">
+                        <div className="left-info-box">
+                            <h2>
+                            One-stop quick reflections on your well-being! Discover relaxing
+                            activities and events in the <br />
+                            <p>New York Metropolitan Area!</p>
+                            </h2>
+                        </div>
+                        <div className="right-info-box">
+                            <h3>Describe</h3>
+                            <p>
+                            Your current feelings with the use of a simple emoji
+                            </p>
+                            <h3>Choose</h3>
+                            <p>
+                            An interest from a short list of supported topics
+                            </p>
+                            <h3>Discover</h3>
+                            <p>
+                            NYC locations and businesses that provide therapeutic activities and events!
+                            </p>
+                        </div>
+                    </section>
+                {/* <div className="homepage-bubble">
+                    Practice mindfulness with eMoodjí!
+                </div> */}
+
+                <div className="inHomeBox">
+                    <Link to="/wizard">
+                        <button className="homepage-button">Get Started</button>
+                    </Link>
+                </div>
             </div>
 
-            <div className="inHomeBox">
-                <Link to="/wizard">
-                <button className="homepage-button">Get Started</button>
-                </Link>
-            </div>
-            </div>
-
-            <section className="home-info">
-            <div className="left-info-box">
-                <h2>
-                One-stop quick reflections on your well-being! Discover relaxing
-                activities and events in the <br />
-                <p>New York Metropolitan Area!</p>
-                </h2>
-            </div>
-            <div className="right-info-box">
-                <h3>Describe</h3>
-                <p>
-                Your current feelings with the use of a simple emoji
-                </p>
-                <h3>Choose</h3>
-                <p>
-                An interest from a short list of supported topics
-                </p>
-                <h3>Discover</h3>
-                <p>
-                NYC locations and businesses that provide therapeutic activities and events!
-                </p>
-            </div>
-            </section>
 
             <div className="email-subscription-form">
             <div className="email-subscription-title">

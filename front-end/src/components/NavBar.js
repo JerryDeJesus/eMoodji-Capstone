@@ -51,7 +51,7 @@ export default function NavBar () {
 
             <div className='sub-navbar'>
                 <div className='weatherDisplay'>
-                    {loadingStatus ? <Loading/> : 
+                    {loadingStatus ? <Loading width='50px' height='50px'/> : 
                     <>
                         <div><img id='weather-icon' alt='weatherIcon' src={`https:${weather?.current.condition.icon}`} /></div>
                         <div>{weather?.location.name}<br/>{weather?.current.temp_f + '°F'}</div>

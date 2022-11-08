@@ -101,26 +101,26 @@ a{
 
 .inHomeBox{
   text-align: center;
-  margin: 60px;
+  margin: 32px 60px;
 }
 
 .homepage-button{
   width : 200px;
   height: 45px;
   border-radius : 25px;
-  background-color: #73A0D0;
+  background-color: #1266a0;
   color: white;
   font-weight: 600;
   font-size: 25px;
   border: none;
-  margin: 10px;
+  margin: 20px 20px 20px 20px;
 }
 
 .homepage-button:hover{
   cursor: pointer;
   background-color: white;
-  color: #73A0D0;
-  box-shadow: 0px 0px 20px 10px #73A0D0;
+  color: #1266A0;
+  box-shadow: 0px 0px 20px 10px #1266A0;
 }
 
 .nav-button{
@@ -130,10 +130,13 @@ a{
   padding:8px 12px;
   font-size:16px;
   border: 1px solid white;
+  background-color: #73A0D0;
+  margin:10px;
 }
 
 .nav-button:hover{
   box-shadow: none;
+  color:#73A0D0
 }
 /* - Login ---------------------------------------------------- */
 
@@ -393,10 +396,9 @@ a{
   background-color: #fff;
   border-top: 2px solid #73A0D0c7;
   color: #73A0D0c7;
-  /* position: absolute; */
-  /* bottom: 0; */
   padding: 0px 15px 0px 15px;
-  display: grid;
+  display: flex;
+  justify-content: space-between;
   grid-template-columns: repeat(2,1fr);
   margin-top: auto;
   height:60px;
@@ -411,10 +413,13 @@ a{
   width:50px;
 }
 
+.dev-links{
+  margin: auto 140px auto 0;
+}
+
 .copyright {
-  text-align: right;
   color: #73A0D0;
-  margin-top: 20px;
+  margin: auto 0;
 }
 /* footer end */
 .home-info{
@@ -422,6 +427,8 @@ a{
   grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 126px;
   padding: 3rem 10rem;
+  margin-top: 150px;
+  background-color: #ffffffb3;
 }
 
 .home-info h2{
@@ -433,11 +440,11 @@ a{
 }
 
 .home-info h2 p{
-  color:#73A0D0;
+  color:#1266A0;
 }
 
 .home-info h3{
-  color: #73A0D0;
+  color: #1266A0;
   font-size: 32px;
 }
 
@@ -459,14 +466,17 @@ a{
 
 /* email subscription */
 
+.email-subscription-form ::placeholder{
+  color:#73A0D0
+}
+
 .email-subscription-form{
-  margin: 100px auto;
+  margin: 70px auto 120px auto;
   border: 1px solid #73a0d0;
   padding: 40px 25px;
-  border-radius: 7px;
-  max-width: 520px;
-  background-color: rgba(125, 132, 178, 0.15);
+  background-color: rgba(125, 132, 178, 0.2);
   text-align: center;
+  color:#5388c0;
 }
 
 .email-subscription-title{
@@ -487,6 +497,8 @@ a{
   display: flex;
   flex-wrap: wrap;
   margin-bottom: 8px;
+  max-width:520px;
+  margin: 5px auto;
 }
 
 .email-subscription-input input{
@@ -494,10 +506,13 @@ a{
   padding: 15px;
   border: #73a0d0 1px solid;
   border-radius: 3px;
+  color: #73A0D0;
+  max-width: 520px;
 }
 
 .email-subscription-button{
   width: 100%;
+  max-width: 520px;
   padding: 15px;
   color: white;
   border: none;
@@ -508,10 +523,10 @@ a{
   background: linear-gradient(
     rgba(143, 166, 203, 1) 0%,
     rgba(125, 132, 178, 1) 100%
-  )
+  );
 }
 
-  .email-subscription-button:hover{
+.email-subscription-button:hover{
     background: linear-gradient(
       rgba(125, 132, 178, 1) 0%,
       rgba(143, 166, 203, 1) 100%
@@ -556,6 +571,7 @@ a{
   .footer-logo{
     margin: auto;
   }
+
   .copyright{
     margin: auto;
   }

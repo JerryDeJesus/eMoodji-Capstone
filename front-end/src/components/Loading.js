@@ -6,7 +6,7 @@ export default function Loading () {
         <div id="loading-container">
             <ReactLoading
                 type='spin'
-                color="#73a0d0"
+                color="#1266a0"
                 height="50px"
                 width="50px"
                 className="loading"

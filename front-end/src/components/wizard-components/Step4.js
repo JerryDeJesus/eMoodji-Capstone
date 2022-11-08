@@ -68,7 +68,7 @@ export default function Step4(props) {
     
     setTimeout(function () {
         setLoadingStatus(false);
-      }, 1000);
+      }, 750);
 
     const selectedActivityData = activitiesData[entry.interest].findIndex((el) => el.name === entry.activity);
 

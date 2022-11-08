@@ -30,7 +30,7 @@
     /* width: 75%; */
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    background-color: #73A0D0;
+    background-color: #73a0d036;
     border-radius: 30px;
 }
 
@@ -117,7 +117,7 @@
     width: 70%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #73A0D0;
+    background-color: #73a0d036;
     border-radius: 20px;
     padding: 40px 5px;
     gap: 25px 25px;
@@ -137,7 +137,7 @@
     width: 75%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    background-color: #73A0D0;
+    background-color: #73a0d036;
     border-radius: 20px;
     padding: 25px;
     grid-gap: 10px;
@@ -149,7 +149,7 @@
     height: 80px;
     align-items: center;
     text-align: center;
-    color: white;
+    color: #1266a0;
     font-weight: 800;
 }
 
@@ -277,17 +277,23 @@ div.vertical-align-emoji {
 }
 
 #loading-container{
-    height:500px;
-    background-color: #73A0D0c7;
+    height:380px;
     grid-column-start: 3;
     display:grid;
     grid-template-rows: 1fr 1fr 1fr;
+    padding: 50px 0 0 0;
 }
 
 .loading{
     grid-column-start: 2;
     grid-row-start:2;
 }
+
+
+.weatherDisplay #loading-container{
+    height:50px;
+    padding:0 20px 0 0;
+  }
 
 /* FLIP CARD STYLE START */
 .card-container{
