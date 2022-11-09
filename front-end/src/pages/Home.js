@@ -1,37 +1,37 @@
 import { Link } from "react-router-dom";
 import SignedInHomePage from "../components/SignedInHomePage";
-import { useState } from  "react";
+// import { useState } from  "react";
 
 
 export default function Home() {
-    const [firstName, setFirstName] = useState('');
-    const [email, setEmail] = useState('');
-    const [loader, setLoader] = useState(false);
+    // const [firstName, setFirstName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [loader, setLoader] = useState(false);
 
-    const submitEmailSubscription = (e) => {
+    // const submitEmailSubscription = (e) => {
 
-    //     // set loader to true
-        setLoader(true);
-        e.preventDefault();
+    // //     // set loader to true
+    //     setLoader(true);
+    //     e.preventDefault();
 
-    //     const requestParams = {
-    //         method: 'POST',
+    // //     const requestParams = {
+    // //         method: 'POST',
             
-    //     }
+    // //     }
 
-    //     fetch('https://www.myendpoint.com', requestParams)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //         setLoader(false);
+    // //     fetch('https://www.myendpoint.com', requestParams)
+    // //     .then(response => response.json())
+    // //     .then(data => {
+    // //         setLoader(false);
 
-    //         // replace view with success view
-    //     }).catch(err => {
-    //         // set loader to false
+    // //         // replace view with success view
+    // //     }).catch(err => {
+    // //         // set loader to false
 
-    //         // set an error state
-    //     })
+    // //         // set an error state
+    // //     })
 
-    };
+    // };
 
 
     if (localStorage.getItem("userid")) {
@@ -76,7 +76,7 @@ export default function Home() {
             </div>
 
 
-            <div className="email-subscription-form">
+            {/* <div className="email-subscription-form">
             <div className="email-subscription-title">
                 Join the newsletter!
             </div>
@@ -107,7 +107,7 @@ export default function Home() {
                 {loader ? "Great! You'll be hearing from eMoodji soon!" : 'Subscribe'}
                 </button>
             </form>
-            </div>
+            </div> */}
         </div>
         );
     }

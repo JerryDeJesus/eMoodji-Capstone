@@ -1,19 +1,19 @@
 import { Link } from "react-router-dom";
-import { useState, useEffect } from  "react";
+import { useEffect } from  "react";
 import axios from "axios";
 
 export default function SignedInHomePage(){
-    const [firstName, setFirstName] = useState('');
-    const [email, setEmail] = useState('');
-    const [loader, setLoader] = useState(false);
-    const [quote, setQuote] = useState([]);
+    // const [firstName, setFirstName] = useState('');
+    // const [email, setEmail] = useState('');
+    // const [loader, setLoader] = useState(false);
+    // const [quote, setQuote] = useState([]);
     const API = process.env.REACT_APP_API_URL;
 
     useEffect(() => {
-        axios("https://type.fit/api/quotes")
-        .then(res => {
-          setQuote(res.data[Math.floor(Math.random() * 50)]);
-        });
+        // axios("https://type.fit/api/quotes")
+        // .then(res => {
+        //   setQuote(res.data[Math.floor(Math.random() * 50)]);
+        // });
         //temp entry storage from the end of wizard route
         if(typeof localStorage.getItem("tempEntryMood") === "string"){
             let entry = {
@@ -30,30 +30,30 @@ export default function SignedInHomePage(){
         }
     }, [API]);
 
-    const submitEmailSubscription = (e) => {
+    // const submitEmailSubscription = (e) => {
 
-        //     // set loader to true
-            setLoader(true);
-            e.preventDefault();
+    //     //     // set loader to true
+    //         setLoader(true);
+    //         e.preventDefault();
     
-        //     const requestParams = {
-        //         method: 'POST',
+    //     //     const requestParams = {
+    //     //         method: 'POST',
                 
-        //     }
+    //     //     }
     
-        //     fetch('https://www.myendpoint.com', requestParams)
-        //     .then(response => response.json())
-        //     .then(data => {
-        //         setLoader(false);
+    //     //     fetch('https://www.myendpoint.com', requestParams)
+    //     //     .then(response => response.json())
+    //     //     .then(data => {
+    //     //         setLoader(false);
     
-        //         // replace view with success view
-        //     }).catch(err => {
-        //         // set loader to false
+    //     //         // replace view with success view
+    //     //     }).catch(err => {
+    //     //         // set loader to false
     
-        //         // set an error state
-        //     })
+    //     //         // set an error state
+    //     //     })
     
-        };
+    //     };
 
     const userEntriesLink = `/users/${localStorage.getItem('userid')}/entries`;
     return(
@@ -100,7 +100,7 @@ export default function SignedInHomePage(){
 
                     </div>
         
-                    <div className="email-subscription-form">
+                    {/* <div className="email-subscription-form">
                         <div className="email-subscription-title">
                             Join the newsletter!
                         </div>
@@ -134,9 +134,9 @@ export default function SignedInHomePage(){
                             >
                             {loader ? "Great! You'll be hearing from eMoodji soon!" : 'Subscribe'}
                             </button>
-                        </form>
+                        </form> */}
 
-                    </div>
+                    {/* </div> */}
                 </div>
     )
 }
