@@ -6,20 +6,23 @@ export default function FlipCardAllEntries ({entry, formattedDate, resourceLink,
     let handleFlip = () => {
         setFlip(!flip);
     }
-
+    let interestCapitalized = entry.interest[0].toUpperCase() + entry.interest.slice(1);
     return (
         <div className="card-outer-all-entries" onClick = {() => handleFlip()}>
-            <div className={`card-all-entries ${flip ? "flip" : ""}`}>
-                <div className="front-all-entries">
-                    <h2>{formattedDate}</h2>
-                    <h1 className="largest-emoji-size">{entry.mood}</h1>
+             <div className={`card-all-entries ${flip ? "flip" : ""}`}>
+               <div className="front-all-entries">
+                     <h1 className="largest-emoji-size">{entry.mood}</h1>
+                     <h2 className="entry-date">{formattedDate}</h2>
+                        <a href={resourceLink} className="activity-link" target="_blank" rel="noreferrer noopener">Visit {entry.activity}'s site</a>
+                 
                 </div>
-                <div className="back-all-entries">
-                    <h3>{entry.interest.toUpperCase()}</h3>
-                    <h3><a href={resourceLink} target="_blank" rel="noreferrer noopener">{entry.activity}</a></h3>
-                    <h4>{resourceDescription}</h4>
-                </div>
-            </div>
-        </div>
+
+                 <div className="back-all-entries">
+                     <h3>{interestCapitalized}</h3>
+                     <h4>{resourceDescription}</h4>
+                 </div>
+             </div>
+         </div>
+       
     )
 }

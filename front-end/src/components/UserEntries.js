@@ -23,6 +23,7 @@ export default function UserEntries (){
         .then((res)=> {
             if(res.data){
                 setUserEntries(res.data)
+                console.log(res.data)
                 setLoadingStatus(false)
             } else {
                 navigate("/not-found")
@@ -32,14 +33,13 @@ export default function UserEntries (){
 
     let displayUserEntries = userEntries.map((entry, index)=>{
         let formattedDate = format(parseISO(entry.date_created), "MM/dd hh:mmaaaaa'm");
-        // let linkToEntry = `/entries/${entry.id}`;
+        let resourceArray = entry.interest && entry.activity ? activitiesData[entry.interest] : null;
         let resourceLink = "";
         let resourceDescription = "";
-        let resourceArray = entry.interest && entry.activity ? activitiesData[entry.interest] : null;
-        for(let each of resourceArray){
-            if(each.name === entry.activity){
-                resourceLink = each.website;
-                resourceDescription = each.description;
+        for(let i = 0; i < resourceArray.length; i++){
+            if(resourceArray[0].name === entry.activity){
+                resourceLink = resourceArray[0].website;
+                resourceDescription = resourceArray[0].description;
             }
         }
         return(
@@ -63,7 +63,7 @@ export default function UserEntries (){
     });
 
     let emojiNums = Object.values(emojiCount);
-    console.log(emojiCount);
+    // console.log(emojiCount);
     let doughnutChart = 
         <div id="doughnut-chart"><Doughnut 
         data={{
@@ -123,12 +123,12 @@ export default function UserEntries (){
                 }
             }
         }}
-
         /></div>;
     return(
     <div id="entriesPageContainer">
         <div className="sUE">
             {loadingStatus ? <Loading/> : userEntries.length ? displayUserEntries : "No entries...yet!"}
+            {/* {userEntries.length < displayUserEntries.length ? <button className="show-more-entries-button">Load 5 more...</button> : null} */}
         </div>
             {doughnutChart}
     </div>

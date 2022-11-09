@@ -30,7 +30,7 @@ a{
   align-items: center;
   justify-items: center;
   background-color: #73a0d0;
-  height: 65px;
+  height: 7.5vh;
   font-size:18px;
   justify-content: space-between;
   padding: 0 20px;
@@ -57,15 +57,6 @@ a{
 #welcome{
   color: white;
   margin: 0 20px;
-}
-
-.nav-button{
-  width:auto;
-  height:40px;
-  font-weight: 500;
-  padding:8px 12px;
-  font-size:16px;
-  border: 1px solid white;
 }
 
 #logout{
@@ -263,21 +254,6 @@ a{
   grid-template-rows: 1fr;
 }
 
-.homepage-bubble{
-  color: white;
-  background-color: #73a0d0c7;
-  border: 5px solid white;
-  border-radius: 50px;
-  padding: 10px;
-  margin: 70px 40px 60px 40px;
-  text-align: center;
-  font-style: italic;
-  font-size: 24px;
-  width: 30rem;
-  height: fit-content;
-  padding: 15px;
-}
-
 .entry-box-container{
   display: grid;
   grid-template-columns: repeat(5, 1fr);
@@ -296,6 +272,19 @@ a{
 
 /* - NewUserForm sign up---------------------------------------------------- */
 
+.bubble{
+  background-color: #73a0d0c7;
+  border: 5px solid white;
+  border-radius: 50px;
+  color: white;
+  font-size: 24px;
+  height: fit-content;
+  width: 30rem;
+  padding: 15px;
+  text-align: center;
+  margin-bottom: 50vh;
+}
+
 .uNew{
   align-items: center;
   justify-items: center;
@@ -303,62 +292,95 @@ a{
 }
 
 .newForm{
-  align-items: center;
-  justify-items: center;
   display : grid;
-  grid-template-columns: repeat(3 1fr);
+  grid-template-columns: 1fr 1fr;
   border-radius: 10px;
+  height:85.7vh;
+}
+
+.signup-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width:45vw;
+  box-shadow: 4px 4px 24px 4px #73a0d0;
+  padding:25px;
+  border-radius: 50px;
+}
+
+.new-user-form{
+  display:flex;
+  width: 50vw;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.new-user-form form{
+  padding: 25px;
+}
+
+.new-user-image-container{
+  display: flex;
+  width:50vw;
+  background-image: url("../src/assets/banner/central-park-2.jpeg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
 }
 
 #fname{
-  text-align: center;
-  width: 200px;
-  height: 45px;
-  border-radius: 10px;
-  background-color: #73A0D0;
+  background-color: #73A0D0b3;
+  border: 1px solid white;
+  border-radius: 50px;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 25px;
-  border: none;
+  height: 45px;
   outline: none;
+  text-align: center;
+  width: 300px;
+  max-width: 40vw;
+  margin:5px 0;
 }
 
 #lname{
-  text-align: center;
-  width: 200px;
-  height: 45px;
-  border-radius: 10px;
-  background-color: #73A0D0;
+  background-color: #73A0D0b3;
+  border: 1px solid white;
+  border-radius: 50px;
   color: white;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 25px;
-  border: none;
+  height: 45px;
   outline: none;
+  text-align: center;
+  width: 300px;
+  max-width: 40vw;
+  margin: 5px 0;
 }
 
-#nSubmit{
-  text-align: center;
-  width: 200px;
-  height: 45px;
-  border-radius: 10px;
-  margin: 25px;
+#confirm-account-creation{
   background-color: #73A0D0;
+  border: 1px solid white;
+  border-radius: 50px;
   color: white;
-  font-weight: 600;
   font-size: 25px;
-  border: none;
+  font-weight: 400;
+  height: 45px;
+  margin: 5px 0;
   outline: none;
+  text-align: center;
+  width: 250px;
+  max-width: 40vw;
 }
 
-#nSubmit:hover{
+#confirm-account-creation:hover{
   cursor: pointer;
   background-color: white;
   color: #73A0D0;
   box-shadow: 4px 4px 24px 4px #73A0D0;
-}
-
-.usEntri{
-  text-align: -webkit-center;
 }
 
 /* -All UserEntries ---------------------------------------------------- */
@@ -368,6 +390,7 @@ a{
   width: 80%;
   grid-template-columns: 1fr 1fr;
   padding-left: 5%;
+  padding-bottom: 60px;
 }
 
 #userEntriesPage{
@@ -441,6 +464,29 @@ a{
   grid-template-columns: 3fr 2fr;
 }
 
+.show-more-entries-button{
+  width : 300px;
+  height: 60px;
+  border-radius : 100px;
+  background-color: #1265a0b9;
+  color: white;
+  font-weight: 600;
+  font-size: 25px;
+  border: 1px solid #1265a0b9;
+  margin: 20px;
+}
+
+.homepage-button{
+  
+}
+
+.homepage-button:hover{
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #1266A0;
+  box-shadow: 0px 0px 20px 2px #1266A0;
+}
+
 /* - Footer ---------------------------------------------------- */
 
 .footer{
@@ -452,7 +498,7 @@ a{
   justify-content: space-between;
   grid-template-columns: repeat(2,1fr);
   margin-top: auto;
-  height:60px;
+  height:7vh;
   width:100vw;
 }
 
@@ -466,6 +512,7 @@ a{
 
 .dev-links{
   margin: auto 140px auto 0;
+  color:#1266A0;
 }
 
 .copyright {
@@ -473,7 +520,7 @@ a{
   margin: auto 0;
 }
 
-/* footer end */
+/* homepage cont */
 
 .home-info{
   display: grid;
@@ -623,7 +670,7 @@ a{
     padding: 0px;
   }
 
-  .homepage-bubble{
+  .bubble{
     width:300px;
   }
 

@@ -43,8 +43,6 @@ export default function App() {
             <Route path="*" element={<FourOFour />} />
           </Routes>
         </div>
-        <div>
-        </div>
       </main>
           <Footer />
     </Router>

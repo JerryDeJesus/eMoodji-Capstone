@@ -266,6 +266,10 @@ div.vertical-align-emoji {
     border: none;
 }
 
+.modal-body a{
+    margin: 15px;
+}
+
 .interest-img {
     width: 100px;
     padding: 10px;
@@ -376,6 +380,7 @@ div.vertical-align-emoji {
 }
 
 .front-all-entries {
+    padding:20px;
     border-radius: 20px;
     background-color: #73A0D0;
     color: white;
@@ -393,10 +398,29 @@ div.vertical-align-emoji {
     font-family: sans-serif;
     display: flex;
     flex-direction: column;
-    padding: 20px;
+    padding: 20px 35px;
+}
+
+.back-all-entries h3{
+    padding-bottom: 20px;
 }
 
 .largest-emoji-size {
-    font-size: 180px;
+    font-size: 160px;
+}
+
+.activity-link{
+    /* background-color: #5893d2f2; */
+    padding:5px;
+    border: 1px solid white;
+    border-radius: 20px;
+    color:white;
+}
+
+.activity-link:hover{
+    background-color: #7eb4f3f2;
+    color:white;
+    box-shadow: 4px 0.7px 20px 3px #7eb4f3f2;
+    cursor:pointer;
 }
 /* FLIP CARD ALL ENTRIES END */

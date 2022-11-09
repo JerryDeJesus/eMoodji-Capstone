@@ -39,64 +39,59 @@ export default function NewUserForm(){
 
     return(
         <div className="newForm">
-            <div className="banner-container">
-                <h1 id='descript'> 🥰🤪😂🥳😬🙃😎🤩<p> Practice mindfulness with eMoodji! Reflect on your emotions and receive helpful therapeutic recommendations for relaxing activities/events going on near you ! </p></h1>
+            <div className="new-user-image-container">
+                <div className="bubble">Welcome to eMoodjí! 😊</div>
             </div>
             
-            <div>
-                <form 
-                onSubmit={handleSubmit} 
-                style={{'color':'white', 'paddingTop': '35px'}} 
-                >
-                    <input 
-                        style={{'margin':'25px'}}
-                        id = "fname" 
-                        value = {fname} 
-                        type = "text" 
-                        onChange = {handleTextChange} 
-                        placeholder = "First Name"
-                        required 
-                    />
-                
-                    <input 
-                        style={{'margin':'25px'}}
-                        id = "lname"
-                        value = {lname} 
-                        type = "text" 
-                        onChange = {handleTextChange} 
-                        placeholder = "Last Name"
-                        />
-                    <br/>
+                <form onSubmit={handleSubmit} className="new-user-form">
+                    <div className="signup-container">
 
-                    <input 
-                        style={{'margin':'25px'}}
-                        id = "email"
-                        value = {email} 
-                        type = "email" 
-                        onChange = {handleTextChange} 
-                        placeholder = "Email"
-                        required
-                    />
-                
-                    <input 
-                        style={{'margin':'25px'}}
-                        id = "password"
-                        value = {password} 
-                        type = "password" 
-                        onChange = {handleTextChange} 
-                        placeholder = "Password"
-                        required
-                    />
-                    <br />
+                    <h3 className="signup-heading">We just need a bit of information about you to get your account set up!</h3>
+                    <div>
+                        <input 
+                            id = "fname" 
+                            value = {fname} 
+                            type = "text" 
+                            onChange = {handleTextChange} 
+                            placeholder = "First Name"
+                            required 
+                            />
+                    
+                        <input 
+                            id = "lname"
+                            value = {lname} 
+                            type = "text" 
+                            onChange = {handleTextChange} 
+                            placeholder = "Last Name"
+                            />
+                    </div>
 
-                    <button 
-                    id='nSubmit' 
-                    type="Submit" 
-                    style={{'margin':'25px'}} 
-                    >Create Account
+                    <div>
+                        <input 
+                            id = "email"
+                            value = {email} 
+                            type = "email" 
+                            onChange = {handleTextChange} 
+                            placeholder = "Email"
+                            required
+                            />
+                    
+                        <input 
+                            id = "password"
+                            value = {password} 
+                            type = "password" 
+                            onChange = {handleTextChange} 
+                            placeholder = "Password"
+                            required
+                            />
+                    </div>
+
+                    <button id='confirm-account-creation' type="Submit" >
+                        Create Account
                     </button>
+                    </div>
                 </form>
-            </div>
+            
         </div>
     )
 }
