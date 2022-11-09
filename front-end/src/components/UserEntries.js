@@ -33,13 +33,13 @@ export default function UserEntries (){
 
     let displayUserEntries = userEntries.map((entry, index)=>{
         let formattedDate = format(parseISO(entry.date_created), "MM/dd hh:mmaaaaa'm");
-        let resourceArray = entry.interest && entry.activity ? activitiesData[entry.interest] : null;
         let resourceLink = "";
         let resourceDescription = "";
+        let resourceArray = entry.interest && entry.activity ? activitiesData[entry.interest] : null;
         for(let i = 0; i < resourceArray.length; i++){
-            if(resourceArray[0].name === entry.activity){
-                resourceLink = resourceArray[0].website;
-                resourceDescription = resourceArray[0].description;
+            if(resourceArray[i].name === entry.activity){
+                resourceLink = resourceArray[i].website;
+                resourceDescription = resourceArray[i].description;
             }
         }
         return(
