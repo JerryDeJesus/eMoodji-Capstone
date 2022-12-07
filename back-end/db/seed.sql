@@ -1,6 +1,6 @@
 \c capstone_dev; 
 
-INSERT INTO users (fname, lname, email, password) VALUES 
+INSERT INTO users (firstname, lastname, email, password) VALUES 
 ('George', 'Demo', 'demo@gmail.com', 'demo'),
 ('Billy','Jean','billyjean@hotmail.com','password1234'),
 ('Joey', 'Dean', 'jdbikes@aol.com', 'h0gwarts');

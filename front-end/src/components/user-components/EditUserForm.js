@@ -9,8 +9,8 @@ export default function EditUserForm(){
     let { id } = useParams();
 
     const [user, setUser] = useState({
-        fname: "",
-        lname: "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: ""
     });
@@ -50,23 +50,23 @@ const handleEdit = (e) => {
     .then(res =>{
         console.log(localStorage.getItem("userid"))
 
-        localStorage.setItem("userid",user.fname);
+        localStorage.setItem("userid",user.firstName);
         console.log(localStorage.getItem("userid"))
         navigate(`/users/${id}`)
     })
     .catch(error => console.log(error))
 };
 
-let { fname, lname, email, password } = user;
+let { firstName, lastName, email, password } = user;
 
     return(
         <div id="edit-form">
                 <form onSubmit={handleEdit}>
                     
-                <label htmlFor = "fname">First Name</label>
+                <label htmlFor = "firstName">First Name</label>
                 <input 
-                    id = "fname" 
-                    value = {fname} 
+                    id = "firstName" 
+                    value = {firstName} 
                     type = "text" 
                     onChange = {handleTextChange} 
                     placeholder = "First Name"
@@ -75,10 +75,10 @@ let { fname, lname, email, password } = user;
                 <br/>
 
                 
-                <label htmlFor = "lname">Last Name</label>
+                <label htmlFor = "lastName">Last Name</label>
                 <input 
-                    id = "lname"
-                    value = {lname} 
+                    id = "lastName"
+                    value = {lastName} 
                     type = "text" 
                     onChange = {handleTextChange} 
                     placeholder = "Last Name"

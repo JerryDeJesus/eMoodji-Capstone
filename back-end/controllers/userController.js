@@ -1,7 +1,10 @@
 const express = require("express");
 const users = express.Router({ mergeParams: true });
 const { getAllUsers, getUser, createUser, deleteUser, updateUser, userByEmail } = require('../queries/users');
-const {getUserEntries} = require("../queries/entries.js");
+const { getUserEntries } = require("../queries/entries.js");
+const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
+const jwtTokens = require('../utils/jwt-helpers');
 
 users.get('/', async (req, res) => {
     try{
@@ -37,11 +40,25 @@ users.get("/:id/entries", async (req,res) => {
 users.post("/", async (req,res) => {
 
     try {
-        const {body} = req;
-        const createdUser = await createUser(body);
-        res.status(200).json(createdUser);
+        const { firstName, lastName, email, password } = req.body;
+        const hashedPassword = await bcrypt.hash(password, 10);
+        const emailToLowerCase = email.toLowerCase();
+
+        //validate password health
+        // if(password.length < 6){
+        //     throw({message: 'Password must be 6 characters or more!})
+        // }
+
+        const createdUser = await createUser(firstName, lastName, emailToLowerCase, hashedPassword);
+        console.log(createdUser);
+        if(createdUser){
+            //Generate JWT token
+            let token = jwtTokens(createdUser);
+            console.log(token)
+            res.status(200).json(token);
+        }
     } catch (error) {
-        res.status(500).json({error: "user creation error"})
+        res.status(500).json({error: "error while creating a user"})
     }
 });
 
@@ -68,13 +85,30 @@ users.put("/:id", async (req, res) => {
 
 //login
 users.post("/loginpage", async (req, res) => {
-    const { email, password } = req.body;
-    const user = await userByEmail(email, password);
-    
-    if(user){
-            res.status(200).json(user);
-    }else{
-        res.status(404).json({error: "invalid email and/or password"})
+    try {
+        const { email, password } = req.body;
+        const emailToLowerCase = email.toLowerCase();
+
+        const user = await userByEmail(emailToLowerCase);
+        
+        if(!user){
+            res.status(401).json({error: "Email is not correct"})
+            return
+        }
+
+        const validPassword = await bcrypt.compare(password, user.password);
+
+        if(!validPassword){
+            res.status(401).json({error: "Password is not valid"})
+        }
+
+        if(user && validPassword){
+            let data = jwtTokens(user);
+            res.status(200).json({"accessToken":data.accessToken,"refreshToken":data.refreshToken, "firstname":user.firstname, "lastname":user.lastname, "id":user.id, "email":user.email});
+        }
+        
+    } catch (error) {
+        return error
     }
 });
 

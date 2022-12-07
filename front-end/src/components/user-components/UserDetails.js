@@ -6,7 +6,7 @@ import icon from "../../assets/logo/user-details-icon.png";
 const API = process.env.REACT_APP_API_URL;
 
 export default function UserDetails(){
-    const [user, setUser] = useState([]);
+    const [user, setUser] = useState({});
     const [entriesCount, setEntriesCount] = useState(0);
 
     let { id } = useParams();
@@ -16,6 +16,7 @@ export default function UserDetails(){
         axios.get(`${API}/users/${id}`)
         .then((res) => {
             if(res.data.id){
+                console.log(res.data);
                 setUser(res.data);
             }else{
                 navigate(`/not-found`)
@@ -30,16 +31,14 @@ export default function UserDetails(){
             }
         })
         .catch(error => console.log(error))
-    }, [id, navigate]);
-
-    let { fname, lname, email } = user;
+    }, []);
+    let { firstname, lastname, email } = user;
 
     const handleDelete = () => {
         axios.delete(`${API}/users/${id}`)
             .then(res => navigate("/"))
             .catch(error => console.log(error))
     };
-
     return(
         <article className="user-details-page">
                 <div className="user-details">
@@ -47,8 +46,8 @@ export default function UserDetails(){
                     <img className="user-details-icon" src={icon} alt="user details icon"/>
                 </div>
                 <h1>Your Information</h1>
-                    <h3>First name: {fname}</h3>
-                    <h3>Last name: {lname}</h3>
+                    <h3>First name: {firstname}</h3>
+                    <h3>Last name: {lastname}</h3>
                     <h3>Email: {email}</h3>
                     <h3>Total Entries Made: {entriesCount}</h3>
                     <button onClick={handleDelete} className="homepage-button nav-button user-info-button">Delete Account</button>

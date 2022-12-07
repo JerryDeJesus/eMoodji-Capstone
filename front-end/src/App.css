@@ -331,7 +331,7 @@ a{
   align-items: center;
 }
 
-#fname{
+#firstName{
   background-color: #73A0D0b3;
   border: 1px solid white;
   border-radius: 50px;
@@ -346,7 +346,7 @@ a{
   margin:5px 0;
 }
 
-#lname{
+#lastName{
   background-color: #73A0D0b3;
   border: 1px solid white;
   border-radius: 50px;

@@ -6,8 +6,8 @@ const API = process.env.REACT_APP_API_URL;
 
 export default function NewUserForm(){
     const [user, setUser] = useState({
-        fname: "",
-        lname: "",
+        firstName: "",
+        lastName: "",
         email: "",
         password: ""
     });
@@ -18,8 +18,7 @@ export default function NewUserForm(){
         setUser({...user, [e.target.id]: e.target.value})
     };
 
-    let userSignUp = {};
-    let userFirstName = {};
+    let userSignUp = '';
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -27,15 +26,15 @@ export default function NewUserForm(){
         axios.post(`${API}/users`, user)
             .then(res => {
                 userSignUp = res.data.id;
-                userFirstName = res.data.fname;
+                // userFirstName = res.data.firstName;
                 localStorage.setItem("userid", userSignUp);
-                localStorage.setItem("firstName", userFirstName);
+                localStorage.setItem("firstName", firstName);
                 navigate("/");
             })
             .catch(error => console.log(error))
     };
 
-    let { fname, lname, email, password } = user;
+    let { firstName, lastName, email, password } = user;
 
     return(
         <div className="newForm">
@@ -49,8 +48,8 @@ export default function NewUserForm(){
                     <h3 className="signup-heading">We just need a bit of information about you to get your account set up!</h3>
                     <div>
                         <input 
-                            id = "fname" 
-                            value = {fname} 
+                            id = "firstName" 
+                            value = {firstName} 
                             type = "text" 
                             onChange = {handleTextChange} 
                             placeholder = "First Name"
@@ -58,11 +57,12 @@ export default function NewUserForm(){
                             />
                     
                         <input 
-                            id = "lname"
-                            value = {lname} 
+                            id = "lastName"
+                            value = {lastName} 
                             type = "text" 
                             onChange = {handleTextChange} 
                             placeholder = "Last Name"
+                            required
                             />
                     </div>
 

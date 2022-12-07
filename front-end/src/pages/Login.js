@@ -17,16 +17,21 @@ export default function Login(){
         setUser({...user, [e.target.id]: e.target.value})
     }
 
-    let userFirstName = "";
+    let userFirstName = '';
+    let userId = {};
     
     const handleSubmit = (e) => {
         e.preventDefault();
         axios.post(`${API}/users/loginpage`, user)
          .then(res => {
-            userFirstName = res.data.fname;
+            console.log(res)
+            userFirstName = res.data.firstname;
+            userId = res.data.id;
+            
             setUser({...user, id: res.data.id});
-            localStorage.setItem("userid", res.data.id);
+            localStorage.setItem("userid", userId);
             localStorage.setItem("firstName", userFirstName);
+            localStorage.setItem("accessToken",res.data.accessToken);
             navigate("/");
         })
         .catch(error => alert("Invalid email and/or password!"))
