@@ -10,7 +10,7 @@ export default function Step1(props) {
     const [moodInput, setMoodInput] = useState("");
     const [disabled, setDisabled] = useState(true);
     const [loadingStatus, setLoadingStatus] = useState(true);
-   
+
     useEffect (() => {
         axios(`https://emoji-api.com/emojis?access_key=${ACCESS_KEY}`)
         .then(res => {
